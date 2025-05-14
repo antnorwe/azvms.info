@@ -191,6 +191,8 @@ function getSupportedStr(val) {
 function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
   var res = loaded_data;
 
+  document.getElementById("updateTime").innerHTML = process.env.UPDATE_TIME ;
+
   instances_data.length = 0;
 
   for (var type in res) {
