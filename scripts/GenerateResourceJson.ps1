@@ -1,4 +1,5 @@
-$tenantID = "fbd4347a-3682-41ac-8e52-8a2cbf8dd0dc"
+$tenantID = Read-Host "Please enter your tenant ID to connect to"
+#fbd4347a-3682-41ac-8e52-8a2cbf8dd0dc
 
 if ($(Get-AzContext | Select-Object -ExpandProperty Tenant | Select-Object -ExpandProperty Id) -ne $tenantID) {
     Connect-AzAccount -Tenant $tenantID
@@ -23,6 +24,7 @@ $output = @{}
 $vmSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
     $vmSize = $_
     $vm = $virtualMachines | Where-Object { $_.size -eq $vmSize }
+    Write-Output "Retrieving $($vm | Select-Object -ExpandProperty name -First 1)"
 
     $vmSpecs = $vm | Select-Object -First 1 | foreach-object {
         New-Object PsObject -Property @{
@@ -48,39 +50,68 @@ $vmSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
         "$($vmSize): $($_.capabilities | Where-Object name -eq "vCPUs" | Select-Object -ExpandProperty value) Cores, $($_.capabilities | Where-Object name -eq "MemoryGB" | Select-Object -ExpandProperty value) GB RAM, $($($($_.capabilities | Where-Object name -eq "MaxResourceVolumeMB" | Select-Object -ExpandProperty value) / 1024)) GB Temporary storage"
     }
 
-    $priceUri = "https://prices.azure.com/api/retail/prices?currencyCode='USD'&`$filter=skuName eq '$vmSize' and serviceFamily eq 'Compute'"
+    $priceUri = "https://prices.azure.com/api/retail/prices?currencyCode='USD'&`$filter=armSkuName eq '$($vm | Select-Object -expandProperty name -First 1)' and serviceFamily eq 'Compute' and serviceName eq 'Virtual Machines'"
     $prices = Invoke-RestMethod -Method GET -Uri $priceUri
 
-    $linux = $prices.items | Where-Object { $_.productName -notmatch "Windows" }
-    $windows = $prices.items | Where-Object { $_.productName -match "Windows" }
+    $linux = $prices.items | Where-Object { $_.productName -notmatch "Win" -and $_.productName -notmatch "Cloud" }
+    $windows = $prices.items | Where-Object { $_.productName -match "Win" -and $_.productName -notmatch "Cloud" }
 
-    [PsCustomObject]$linondemand = @{}
+    $linondemand = @{}
+    $linondemandLP = @{}
+    $linondemandSpot = @{}
     $winondemand = @{}
+    $winondemandLP = @{}
+    $winondemandSpot = @{}
+    
     $3yr = @{}
     $1yr = @{}
 
     $linux | Where-Object { $_.type -eq "Consumption" } | foreach-object {
-        $linondemand | Add-Member -MemberType NoteProperty -Name $($_.armRegionName) -Value $(New-Object PsObject -Property @{
+        if ($_.skuName -match "Low Priority"){
+            $linondemandLP | Add-Member -MemberType NoteProperty -Name $($_.armRegionName) -Value $(New-Object PsObject -Property @{
                 "value" = $_.retailPrice
             })
+        }
+        elseif ($_.skuName -match "Spot") {
+            $linondemandSpot | Add-Member -MemberType NoteProperty -Name $($_.armRegionName) -Value $(New-Object PsObject -Property @{
+                "value" = $_.retailPrice
+            })
+        }
+        else {
+            $linondemand | Add-Member -MemberType NoteProperty -Name $($_.armRegionName) -Value $(New-Object PsObject -Property @{
+                "value" = $_.retailPrice
+            })
+        }
     }
 
     $linux | Where-Object { $_.reservationTerm -eq "1 Year" } | foreach-object {
         $1yr | Add-Member -MemberType NoteProperty -Name $_.armRegionName -Value $(New-Object PsObject -Property @{
-                "value" = $($_.retailPrice) / 730
+                "value" = $($_.retailPrice) / (365 * 24)
             })
     }
 
     $linux | Where-Object { $_.reservationTerm -eq "3 Year" } | foreach-object {
         $3yr | Add-Member -MemberType NoteProperty -Name $_.armRegionName -Value $(New-Object PsObject -Property @{
-                "value" = $($_.retailPrice) / 730
+                "value" = $($_.retailPrice) / ((3 * 365) * 24)
             })
     }
 
     $windows | Where-Object { $_.type -eq "Consumption" } | foreach-object {
-        $winondemand | Add-Member -MemberType NoteProperty -Name $_.armRegionName -Value $(New-Object PsObject -Property @{
+        if ($_.skuName -match "Low Priority"){
+            $winondemandLP | Add-Member -MemberType NoteProperty -Name $($_.armRegionName) -Value $(New-Object PsObject -Property @{
                 "value" = $_.retailPrice
             })
+        }
+        elseif ($_.skuName -match "Spot") {
+            $winondemandSpot | Add-Member -MemberType NoteProperty -Name $($_.armRegionName) -Value $(New-Object PsObject -Property @{
+                "value" = $_.retailPrice
+            })
+        }
+        else {
+            $winondemand | Add-Member -MemberType NoteProperty -Name $($_.armRegionName) -Value $(New-Object PsObject -Property @{
+                "value" = $_.retailPrice
+            })
+        }
     }
 
     $output | Add-Member -MemberType NoteProperty -Name $vmSize -Value $(New-Object PsObject -Property @{
@@ -95,7 +126,17 @@ $vmSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
                 "windows" = New-Object PsObject -Property @{
                     "ondemand" = $winondemand | ConvertTo-JSON | ConvertFrom-JSON
                 }
-            }})
+            }
+            "lowpriority"    = New-Object PsObject -Property @{
+                "linux"   = New-Object PsObject -Property @{
+                    "ondemand" = $linondemandLP | ConvertTo-JSON | ConvertFrom-JSON
+                }
+                "windows" = New-Object PsObject -Property @{
+                    "ondemand" = $winondemandLP | ConvertTo-JSON | ConvertFrom-JSON
+                }
+            }
+        }
+        )
     }
 
     Write-Output "Writing file to $PsScriptRoot\..\web\azure.json"
