@@ -17,6 +17,8 @@ var g_settings_defaults = {
   compare_on: false
 };
 
+document.getElementById("updateTime").innerHTML = process.env.UPDATE_TIME ;
+
 function init_data_table() {
   // create a second header row
   $("#data thead tr").clone(true).appendTo("#data thead");
@@ -191,7 +193,7 @@ function getSupportedStr(val) {
 function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
   var res = loaded_data;
 
-  document.getElementById("updateTime").innerHTML = process.env.UPDATE_TIME ;
+  
 
   instances_data.length = 0;
 
