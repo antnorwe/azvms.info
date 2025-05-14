@@ -17,7 +17,7 @@ var g_settings_defaults = {
   compare_on: false
 };
 
-document.getElementById("updateTime").innerHTML = process.env.UPDATE_TIME ;
+//document.getElementById("updateTime").innerHTML = process.env.UPDATE_TIME ;
 
 function init_data_table() {
   // create a second header row
