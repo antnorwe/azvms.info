@@ -21,6 +21,19 @@ var g_settings_defaults = {
 
 //document.getElementById("updateTime").innerHTML = process.env.UPDATE_TIME ;
 
+
+document.addEventListener("DOMContentLoaded", async () => {
+      try {
+          const response = await fetch("/api/getEnvVar");
+          const data = await response.json();
+          document.getElementById("updateTime").textContent = data.value;
+      } catch (error) {
+          console.error("Failed to load environment variable:", error);
+          document.getElementById("updateTime").textContent = "Error loading data";
+      }
+  });
+  
+
 function init_data_table() {
   // create a second header row
   $("#data thead tr").clone(true).appendTo("#data thead");
