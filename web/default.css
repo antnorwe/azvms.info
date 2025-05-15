@@ -19,11 +19,11 @@ body {
   margin-bottom: 10px;
   /* float so that the search input from the data table below can share the same 'row' as the filters */
   float: left !important;
-  min-width: 600px;
+  min-width: 800px;
 }
 
   #filters input {
-    width: 5rem;
+    width: 7rem;
   }
 
 #data {
