@@ -12,6 +12,8 @@ $headers = @{
     "content-type"  = "application/json"
 }
 
+
+
 $subId = Get-AzContext | Select-Object -ExpandProperty Subscription
 
 $uri = "https://management.azure.com/subscriptions/$subId/providers/Microsoft.Compute/skus?api-version=2021-07-01"
@@ -40,7 +42,7 @@ $vmSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
             "vm_generation"           = $_.capabilities | Where-Object name -eq "HyperVGenerations" | Select-Object -ExpandProperty value
             "local_disk"              = $($($_.capabilities | Where-Object name -eq "MaxResourceVolumeMB" | Select-Object -ExpandProperty value) / 1024)
             "max_data_disk"           = $_.capabilities | Where-Object name -eq "MaxDataDiskCount" | Select-Object -ExpandProperty value
-            "iops"                    = "$($_.capabilities | Where-Object name -eq "UncachedDiskIOPS" | Select-Object -ExpandProperty value)/$([math]::ceiling($($($_.capabilities | Where-Object name -eq "UncachedDiskBytesPerSecond" | Select-Object -ExpandProperty value)/(1024*1024) * 8)))"
+            "iops"                    = "$($_.capabilities | Where-Object name -eq "UncachedDiskIOPS" | Select-Object -ExpandProperty value)/$([math]::ceiling($($($_.capabilities | Where-Object name -eq "UncachedDiskBytesPerSecond" | Select-Object -ExpandProperty value)/(1000*1000))))"
             "max_nics"                = $_.capabilities | Where-Object name -eq "MaxNetworkInterfaces" | Select-Object -ExpandProperty value
             "expected_network_mbps"   = ""
         }
