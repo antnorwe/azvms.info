@@ -20,8 +20,8 @@
       
     <h1>Azure VM Info <small>Easy <b>Azure</b> Virtual Machines Comparison</small></h1>
     
+      <p class="pull-right label label-info">Last Update: 2025-05-15 12:00:00 UTC</p>
 
-      <p class="pull-right label label-info">Last Update: 2025-05-15 08:00:00 UTC</p>
       <ul class="nav nav-tabs">
         <li role="presentation" class="active"><a href="/">Azure VM</a></li>
         <!-- li role="presentation" class=""><a href="/rds/">RDS</a></li -->
@@ -88,8 +88,10 @@
 
     <div class="form-inline" id="filters">
       <strong> Filter:</strong>
-      Min Memory (GiB): <input data-action="datafilter" data-type="memory" class="form-control" />
-      Min vCPUs: <input data-action="datafilter" data-type="vcpus" class="form-control" />
+      Min Memory (GiB): <input data-action="datafilter" data-type="min-memory" class="form-control" />
+      Max Memory (GiB): <input data-action="datafilter" data-type="max-memory" class="form-control" />
+      Min vCPUs: <input data-action="datafilter" data-type="min-vcpus" class="form-control" />
+      Max vCPUs: <input data-action="datafilter" data-type="max-vcpus" class="form-control" />
       <!-- Min Storage (GiB): <input data-action="datafilter" data-type="storage" class="form-control" / -->
     </div>
 
@@ -144,7 +146,7 @@
       </p>
       <p>
         <strong>How?</strong>
-        Data is collated and combined from the <a href="https://learn.microsoft.com/en-us/rest/api/compute/resource-skus/list?view=rest-compute-2025-02-01&tabs=HTTP#resourceskucapabilities" target="_blank">Resource Skus - List</a> and the <a href="https://learn.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices#api-response-pagination" target="_blank">Azure Retail Prices</a> REST APIs. This was last done at 2025-05-15 08:00:00 UTC.
+        Data is collated and combined from the <a href="https://learn.microsoft.com/en-us/rest/api/compute/resource-skus/list?view=rest-compute-2025-02-01&tabs=HTTP#resourceskucapabilities" target="_blank">Resource Skus - List</a> and the <a href="https://learn.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices#api-response-pagination" target="_blank">Azure Retail Prices</a> REST APIs. This was last done at 2025-05-15 12:00:00 UTC.
       </p>
 
       <p class="bg-warning">
