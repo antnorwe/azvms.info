@@ -11,7 +11,9 @@ var g_settings_defaults = {
   region: 'uksouth',
   reserved_term: 'yrTerm1Standard.noUpfront',
   min_memory: 0,
+  max_memory: 99999,
   min_vcpus: 0,
+  max_vcpus: 99999,
   min_storage: 0,
   selected: '',
   compare_on: false
@@ -193,8 +195,6 @@ function getSupportedStr(val) {
 function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
   var res = loaded_data;
 
-  
-
   instances_data.length = 0;
 
   for (var type in res) {
@@ -209,13 +209,15 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
       // var typeRegions = (res[type][typeInfo] && typeof res[type][typeInfo].regions !== 'undefined') ? res[type][typeInfo].regions : {};
 
       var min_memory = getParam(g_settings, 'min_memory');
+      var max_memory = getParam(g_settings, 'max_memory');
       var min_vcpus = getParam(g_settings, 'min_vcpus');
+      var max_vcpus = getParam(g_settings, 'max_vcpus');
       
       row[1] = getParam(typeSpecs, 'name');
 
       row[2] = getParam(typeSpecs, 'ram');
 
-      if (Number(row[2]) < Number(min_memory)) {
+      if (Number(row[2]) < Number(min_memory) || Number(row[2]) >= Number(max_memory)) {
         continue;
       }
 
@@ -227,7 +229,7 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
       }
 
       row[3] = getParam(typeSpecs, 'cpu');
-      if (row[3] < min_vcpus || (min_vcpus && row[3] === 'shared')) {
+      if ((row[3] < min_vcpus || row[3] >= max_vcpus) || (min_vcpus && row[3] === 'shared')) {
         continue;
       }
 
@@ -529,7 +531,9 @@ function clear_row_selections() {
 function url_for_selections() {
   var params = {
     min_memory: g_settings.min_memory,
+    max_memory: g_settings.max_memory,
     min_vcpus: g_settings.min_vcpus,
+    max_vcpus: g_settings.max_vcpus,
     min_storage: g_settings.min_storage,
     filter: g_data_table.settings()[0].oPreviousSearch['sSearch'],
     region: g_settings.region,
@@ -586,18 +590,23 @@ function maybe_update_url() {
   }
 }
 
-var apply_min_values = function () {
+var apply_minmax_values = function () {
   var all_filters = $('[data-action="datafilter"]');
   var data_rows = $('#data tr:has(td)');
 
   // data_rows.show();
 
   all_filters.each(function () {
-    var filter_on = $(this).data('type');
+    var filter_on = $(this).data('type').split('-');
     var filter_val = parseFloat($(this).val()) || 0;
 
     // update global variable for dynamic URL
-    g_settings["min_" + filter_on] = filter_val;
+    if (filter_on[0] == 'min'){
+      g_settings["min_" + filter_on[1]] = filter_val;
+    }
+    else if (filter_on[0] == 'max') {
+      g_settings["max_" + filter_on[1]] = filter_val;
+    }
 
     /*var match_fail = data_rows.filter(function () {
       var row_val;
@@ -621,11 +630,13 @@ function on_data_table_initialized() {
   load_settings();
 
   // populate filter inputs
-  $('[data-action="datafilter"][data-type="memory"]').val(g_settings['min_memory']);
-  $('[data-action="datafilter"][data-type="vcpus"]').val(g_settings['min_vcpus']);
+  $('[data-action="datafilter"][data-type="min-memory"]').val(g_settings['min_memory']);
+  $('[data-action="datafilter"][data-type="max-memory"]').val(g_settings['max_memory']);
+  $('[data-action="datafilter"][data-type="min-vcpus"]').val(g_settings['min_vcpus']);
+  $('[data-action="datafilter"][data-type="max-vcpus"]').val(g_settings['max_vcpus']);
   $('[data-action="datafilter"][data-type="storage"]').val(g_settings['min_storage']);
   g_data_table.search(g_settings['filter']);
-  apply_min_values();
+  apply_minmax_values();
 
   // apply highlight to selected rows
   $.each(g_settings.selected.split(','), function (_, id) {
@@ -636,7 +647,7 @@ function on_data_table_initialized() {
   configure_highlighting();
 
   // Allow row filtering by min-value match.
-  $('[data-action=datafilter]').on('keyup', apply_min_values);
+  $('[data-action=datafilter]').on('keyup', apply_minmax_values);
 
   // change_region(g_settings.region);
   // change_cost(g_settings.cost_duration);
