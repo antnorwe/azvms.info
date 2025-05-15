@@ -217,7 +217,7 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
 
       row[2] = getParam(typeSpecs, 'ram');
 
-      if (Number(row[2]) < Number(min_memory) || Number(row[2]) >= Number(max_memory)) {
+      if (Number(row[2]) < Number(min_memory) || Number(row[2]) > Number(max_memory)) {
         continue;
       }
 
@@ -229,7 +229,7 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
       }
 
       row[3] = getParam(typeSpecs, 'cpu');
-      if ((row[3] < min_vcpus || row[3] >= max_vcpus) || (min_vcpus && row[3] === 'shared')) {
+      if ((row[3] < min_vcpus || row[3] > max_vcpus) || (min_vcpus && row[3] === 'shared')) {
         continue;
       }
 
