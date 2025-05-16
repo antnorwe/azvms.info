@@ -1,5 +1,4 @@
 $tenantID = Read-Host "Please enter your tenant ID to connect to"
-#fbd4347a-3682-41ac-8e52-8a2cbf8dd0dc
 
 if ($(Get-AzContext | Select-Object -ExpandProperty Tenant | Select-Object -ExpandProperty Id) -ne $tenantID) {
     Connect-AzAccount -Tenant $tenantID
