@@ -1,5 +1,4 @@
 $tenantID = Read-Host "Please enter your tenant ID to connect to"
-#fbd4347a-3682-41ac-8e52-8a2cbf8dd0dc
 
 if ($(Get-AzContext | Select-Object -ExpandProperty Tenant | Select-Object -ExpandProperty Id) -ne $tenantID) {
     Connect-AzAccount -Tenant $tenantID
@@ -92,7 +91,7 @@ $vmSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
             })
     }
 
-    $linux | Where-Object { $_.reservationTerm -eq "3 Year" } | foreach-object {
+    $linux | Where-Object { $_.reservationTerm -eq "3 Years" } | foreach-object {
         $3yr | Add-Member -MemberType NoteProperty -Name $_.armRegionName -Value $(New-Object PsObject -Property @{
                 "value" = $($_.retailPrice) / ((3 * 365) * 24)
             })
