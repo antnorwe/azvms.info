@@ -92,7 +92,7 @@ $vmSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
             })
     }
 
-    $linux | Where-Object { $_.reservationTerm -eq "3 Year" } | foreach-object {
+    $linux | Where-Object { $_.reservationTerm -eq "3 Years" } | foreach-object {
         $3yr | Add-Member -MemberType NoteProperty -Name $_.armRegionName -Value $(New-Object PsObject -Property @{
                 "value" = $($_.retailPrice) / ((3 * 365) * 24)
             })
