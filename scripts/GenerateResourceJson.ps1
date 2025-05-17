@@ -11,8 +11,6 @@ $headers = @{
     "content-type"  = "application/json"
 }
 
-
-
 $subId = Get-AzContext | Select-Object -ExpandProperty Subscription
 
 $uri = "https://management.azure.com/subscriptions/$subId/providers/Microsoft.Compute/skus?api-version=2021-07-01"
@@ -45,6 +43,13 @@ $vmSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
             "throughput"              = "$([math]::ceiling($($($_.capabilities | Where-Object name -eq "UncachedDiskBytesPerSecond" | Select-Object -ExpandProperty value)/(1000*1000))))"
             "max_nics"                = $_.capabilities | Where-Object name -eq "MaxNetworkInterfaces" | Select-Object -ExpandProperty value
             "expected_network_mbps"   = ""
+            "encryption_at_host"      = $($_.capabilities | Where-Object name -eq "EncryptionAtHostSupported" | Select-Object -ExpandProperty value)
+            "capacity_reservation"    = $($_.capabilities | Where-Object name -eq "CapacityReservationSupported" | Select-Object -ExpandProperty value)
+            "accelerated_networking"  = $($_.capabilities | Where-Object name -eq "AcceleratedNetworkingEnabled" | Select-Object -ExpandProperty value)
+            "ephemeral_os_disk"       = $($_.capabilities | Where-Object name -eq "EphemeralOSDiskSupported" | Select-Object -ExpandProperty value)
+            "rdma_enabled" = $($_.capabilities | Where-Object name -eq "RdmaEnabled" | Select-Object -ExpandProperty value)
+            "trusted_launch_disabled" = $($_.capabilities | Where-Object name -eq "TrustedLaunchDisabled" | Select-Object -ExpandProperty value)
+            "vm_deployment_types" = $_.capabilities | Where-Object name -eq "VMDeploymentTypes" | Select-Object -ExpandProperty value
         }
     }
 

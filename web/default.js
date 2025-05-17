@@ -52,7 +52,7 @@ function init_data_table() {
         "aTargets": [
           "memory",
           "gpu_number",
-          "max_local_disk",
+          "vm_deployment_types",
           "max_data_disk",
           "max_network",
           "disk_iops",
@@ -64,6 +64,12 @@ function init_data_table() {
           "res3year",
           "cost-ondemand-linux",
           "cost-ondemand-mswin",
+          "encryption_at_host",
+          "capacity_reservation",
+          "accelerated_networking",
+          "ephemeral_os_disk",
+          "rdma_enabled",
+          "trusted_launch_disabled",
         ],
         "sType": "cust-sort"
       },
@@ -77,7 +83,7 @@ function init_data_table() {
           "premium_storage_cache",
           "live_migration",
           "vm_generation",
-          "max_local_disk",
+          "vm_deployment_types",
           "storage",
           "networkperf",
           "low_priority",
@@ -85,6 +91,12 @@ function init_data_table() {
           "res3year",
           "cost-ondemand-linux",
           "cost-ondemand-mswin",
+          "encryption_at_host",
+          "capacity_reservation",
+          "accelerated_networking",
+          "ephemeral_os_disk",
+          "rdma_enabled",
+          "trusted_launch_disabled",
         ],
         "bVisible": false
       }
@@ -204,7 +216,7 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
     var typeSize = res[type];
     
     //for (var typeInfo in typeSize) {
-      var row = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      var row = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
       row[0] = typeSize.description;
       
@@ -260,7 +272,7 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
 
       row[10] = getParam(typeSpecs, 'vm_generation');
 
-      row[11] = getParam(typeSpecs, 'local_disk');
+      row[11] = getParam(typeSpecs, 'vm_deployment_types');
       if (!row[11]) {
         row[11] = '';
       }
@@ -381,6 +393,13 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
           row[k] = 'Unavailable';
         }
       }
+
+      row[23] = getParam(typeSpecs, 'encryption_at_host');
+      row[24] = getParam(typeSpecs, 'capacity_reservation');
+      row[25] = getParam(typeSpecs, 'accelerated_networking');
+      row[26] = getParam(typeSpecs, 'ephemeral_os_disk');
+      row[27] = getParam(typeSpecs, 'rdma_enabled');
+      row[28] = getParam(typeSpecs, 'trusted_launch_disabled');
 
       var row_filtered = row.slice(1);
       instances_data.push(row_filtered);
