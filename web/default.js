@@ -14,6 +14,8 @@ var g_settings_defaults = {
   max_memory: 99999,
   min_vcpus: 0,
   max_vcpus: 99999,
+  min_iops: 0,
+  min_throughput: 0,
   min_storage: 0,
   selected: '',
   compare_on: false
@@ -54,6 +56,7 @@ function init_data_table() {
           "max_data_disk",
           "max_network",
           "disk_iops",
+          "disk_throughput",
           "storage",
           "networkperf",
           "low_priority",
@@ -201,7 +204,7 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
     var typeSize = res[type];
     
     //for (var typeInfo in typeSize) {
-      var row = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      var row = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
       row[0] = typeSize.description;
       
@@ -212,6 +215,8 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
       var max_memory = getParam(g_settings, 'max_memory');
       var min_vcpus = getParam(g_settings, 'min_vcpus');
       var max_vcpus = getParam(g_settings, 'max_vcpus');
+      var min_iops = getParam(g_settings, 'min_iops');
+      var min_throughput = getParam(g_settings, 'min_throughput');
       
       row[1] = getParam(typeSpecs, 'name');
 
@@ -249,9 +254,9 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
       row[8] = getParam(typeSpecs, 'premium_storage_caching');
       row[9] = getParam(typeSpecs, 'live_migration');
 
-      row[7] = row[7] ? 'True' : 'False';
-      row[8] = row[8] ? 'True' : 'False';
-      row[9] = row[9] ? 'True' : 'False';
+      //row[7] = row[7] ? 'True' : 'False';
+      //row[8] = row[8] ? 'True' : 'False';
+      //row[9] = row[9] ? 'True' : 'False';
 
       row[10] = getParam(typeSpecs, 'vm_generation');
 
@@ -261,24 +266,39 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
       }
       row[12] = getParam(typeSpecs, 'max_data_disk');
       row[13] = getParam(typeSpecs, 'iops');
-      row[14] = getParam(typeSpecs, 'max_nics');
 
-      row[15] = getParam(typeSpecs, 'local_disk');
-      if (!row[15]) {
-        row[15] = '';
+      if (Number(row[13]) < Number(min_iops)) {
+        continue;
       }
-      row[16] = getParam(typeSpecs, 'expected_network_mbps');
+
+      row[14] = getParam(typeSpecs, 'throughput');
+
+      if (Number(row[14]) < Number(min_throughput)) {
+        continue;
+      }
+
+      if (row[14]) {
+        row[14] = row[14] + ' MBps';
+      }
+
+      row[15] = getParam(typeSpecs, 'max_nics');
+
+      row[16] = getParam(typeSpecs, 'local_disk');
       if (!row[16]) {
         row[16] = '';
       }
+      row[17] = getParam(typeSpecs, 'expected_network_mbps');
+      if (!row[17]) {
+        row[17] = '';
+      }
 
-      row[16] = row[16].replace(' ', '');
+      row[17] = row[17].replace(' ', '');
       
-      row[17] = 0;
       row[18] = 0;
       row[19] = 0;
       row[20] = 0;
       row[21] = 0;
+      row[22] = 0;
 
       var lowPriorityData = getParam(typeSize, 'lowpriority');
       if (lowPriorityData) {
@@ -288,7 +308,7 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
           var onDemandData = getParam(linuxData, 'ondemand');
 
           if (onDemandData && typeof onDemandData[region] !== 'undefined') {
-            row[17] = onDemandData[region].value;
+            row[18] = onDemandData[region].value;
           }
         }
 
@@ -298,7 +318,7 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
           var onDemandData = getParam(windowsData, 'ondemand');
 
           if (onDemandData && typeof onDemandData[region] !== 'undefined') {
-            row[17] = onDemandData[region].value;
+            row[18] = onDemandData[region].value;
           }
         }
       }
@@ -311,19 +331,19 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
           var onDemand1YrData = getParam(linuxData, '1yr');
 
           if (onDemand1YrData && typeof onDemand1YrData[region] !== 'undefined') {
-            row[18] = onDemand1YrData[region].value;
+            row[19] = onDemand1YrData[region].value;
           }
 
           var onDemand3YrData = getParam(linuxData, '3yr');
 
           if (onDemand3YrData && typeof onDemand3YrData[region] !== 'undefined') {
-            row[19] = onDemand3YrData[region].value;
+            row[20] = onDemand3YrData[region].value;
           }
 
           var onDemandData = getParam(linuxData, 'ondemand');
 
           if (onDemandData && typeof onDemandData[region] !== 'undefined') {
-            row[20] = onDemandData[region].value;
+            row[21] = onDemandData[region].value;
           }
         }
 
@@ -333,24 +353,24 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
           var onDemand1YrData = getParam(windowsData, '1yr');
 
           if (onDemand1YrData && typeof onDemand1YrData[region] !== 'undefined') {
-            row[18] = onDemand1YrData[region].value;
+            row[19] = onDemand1YrData[region].value;
           }
 
           var onDemand3YrData = getParam(linuxData, '3yr');
 
           if (onDemand3YrData && typeof onDemand3YrData[region] !== 'undefined') {
-            row[19] = onDemand3YrData[region].value;
+            row[20] = onDemand3YrData[region].value;
           }
 
           var onDemandData = getParam(windowsData, 'ondemand');
 
           if (onDemandData && typeof onDemandData[region] !== 'undefined') {
-            row[21] = onDemandData[region].value;
+            row[22] = onDemandData[region].value;
           }
         }
       }
 
-      for (var k = 17; k < 22; k++) {
+      for (var k = 18; k < 23; k++) {
         if (row[k]) {
           row[k] *= multiplier;
           row[k] = row[k].toFixed(5).replace(/(0)*$/, '');
@@ -534,6 +554,8 @@ function url_for_selections() {
     max_memory: g_settings.max_memory,
     min_vcpus: g_settings.min_vcpus,
     max_vcpus: g_settings.max_vcpus,
+    min_iops: g_settings.min_iops,
+    min_throughput: g_settings.min_throughput,
     min_storage: g_settings.min_storage,
     filter: g_data_table.settings()[0].oPreviousSearch['sSearch'],
     region: g_settings.region,
@@ -634,6 +656,8 @@ function on_data_table_initialized() {
   $('[data-action="datafilter"][data-type="max-memory"]').val(g_settings['max_memory']);
   $('[data-action="datafilter"][data-type="min-vcpus"]').val(g_settings['min_vcpus']);
   $('[data-action="datafilter"][data-type="max-vcpus"]').val(g_settings['max_vcpus']);
+  $('[data-action="datafilter"][data-type="min-iops"]').val(g_settings['min_iops']);
+  $('[data-action="datafilter"][data-type="min-throughput"]').val(g_settings['min_throughput']);
   $('[data-action="datafilter"][data-type="storage"]').val(g_settings['min_storage']);
   g_data_table.search(g_settings['filter']);
   apply_minmax_values();
