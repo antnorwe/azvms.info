@@ -231,6 +231,21 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
     var min_iops = getParam(g_settings, 'min_iops');
     var min_throughput = getParam(g_settings, 'min_throughput');
 
+    var stdData = getParam(typeSize, 'standard');
+        if (stdData) {
+      var linuxData = getParam(stdData, 'linux');
+      if (linuxData) {
+      var onDemandData = getParam(linuxData, 'ondemand');
+      }
+        }
+
+    var zones = getParam(typeSize, 'zones');
+
+    if ((typeof zones[region] == 'undefined' || zones[region].value == null || zones[region].value == "") && typeof onDemandData[region] == 'undefined') {
+      continue;
+    }
+    else {
+
     row[1] = getParam(typeSpecs, 'name');
 
     row[2] = getParam(typeSpecs, 'ram');
@@ -256,8 +271,7 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
     }
 
     row[4] = 0;
-    var zones = getParam(typeSize, 'zones');
-
+    
     if (zones && typeof zones[region] !== 'undefined') {
       row[4] = zones[region].value;
     }
@@ -342,9 +356,7 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
       }
     }
 
-    var stdData = getParam(typeSize, 'standard');
-    if (stdData) {
-      var linuxData = getParam(stdData, 'linux');
+    
 
       if (linuxData) {
         var onDemand1YrData = getParam(linuxData, '1yr');
@@ -366,7 +378,7 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
         }
       }
 
-      var windowsData = getParam(stdData, 'windows');
+      
 
       if (windowsData) {
         var onDemand1YrData = getParam(windowsData, '1yr');
@@ -386,7 +398,6 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
         if (onDemandData && typeof onDemandData[region] !== 'undefined') {
           row[22] = onDemandData[region].value;
         }
-      }
     }
 
     for (var k = 18; k < 23; k++) {
@@ -410,6 +421,7 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
 
     var row_filtered = row.slice(1);
     instances_data.push(row_filtered);
+  }
     //}
   }
 
