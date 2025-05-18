@@ -30,7 +30,7 @@ function init_data_table() {
   $("#data thead tr:eq(1) th").each(function (i) {
     var title = $(this).text();
     $(this).html("<input type='text' placeholder='Search '" + title + "' />");
-    $("input", this).on( "keyup change", function () {
+    $("input", this).on("keyup change", function () {
       if (g_data_table.column(i).search() !== this.value) {
         g_data_table.column(i).search(this.value).draw();
       }
@@ -76,7 +76,6 @@ function init_data_table() {
       {
         // The columns below are hidden by default
         "aTargets": [
-          "cpu_type",
           "gpu_number",
           "gpu_type",
           "premium_storage",
@@ -150,40 +149,41 @@ function getParam(obj, key) {
 $(document).ready(function () {
   $.ajax({
     url: "azure.json",
-  }).done(function(res) {
+  }).done(function (res) {
     loaded_data = res;
     console.log(res);
     var allRegions = [];
-    
+
     for (var type in res) {
       var typeInfo = res[type];
-      
-      // for (var typeInfo in typeSize) {
-        var typeSpecs = (typeInfo.spec !== 'undefined') ? typeInfo.spec : {};
-        var typeRegionsBasic = (typeInfo.basic !== 'undefined') ? typeInfo.basic : {};
-        var typeRegionsStandard = (typeInfo.standard !== 'undefined') ? typeInfo.standard : {};
-        var typeRegionsLow = (typeInfo.lowpriority !== 'undefined') ? typeInfo.lowpriority : {};
 
-        for (var os in typeRegionsStandard) {
-          for (var type in typeRegionsStandard[os]) {
-            for (var region of Object.keys(typeRegionsStandard[os][type])) {
-              if (allRegions.indexOf(region) === -1) {
-                allRegions.push(region);
-              }
-            }
-            // sort array of regions alphabetically ascending
-            allRegions.sort()
-          }
-          /*if (region !== 'australia' && region !== 'asia' && region !== 'us') {
+      // for (var typeInfo in typeSize) {
+      var typeSpecs = (typeInfo.spec !== 'undefined') ? typeInfo.spec : {};
+      var typeZones = (typeInfo.zones !== 'undefined') ? typeInfo.zones : {};
+      var typeRegionsBasic = (typeInfo.basic !== 'undefined') ? typeInfo.basic : {};
+      var typeRegionsStandard = (typeInfo.standard !== 'undefined') ? typeInfo.standard : {};
+      var typeRegionsLow = (typeInfo.lowpriority !== 'undefined') ? typeInfo.lowpriority : {};
+
+      for (var os in typeRegionsStandard) {
+        for (var type in typeRegionsStandard[os]) {
+          for (var region of Object.keys(typeRegionsStandard[os][type])) {
             if (allRegions.indexOf(region) === -1) {
               allRegions.push(region);
             }
-          }*/
+          }
+          // sort array of regions alphabetically ascending
+          allRegions.sort()
         }
+        /*if (region !== 'australia' && region !== 'asia' && region !== 'us') {
+          if (allRegions.indexOf(region) === -1) {
+            allRegions.push(region);
+          }
+        }*/
+      }
       // }
     }
-  
-    allRegions.forEach(function(val) {
+
+    allRegions.forEach(function (val) {
       $('#region-menu').append('<li><a href="javascript:;" data-region="' + val + '">' + val + '</a></li>');
     });
 
@@ -214,195 +214,202 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
 
   for (var type in res) {
     var typeSize = res[type];
-    
+
     //for (var typeInfo in typeSize) {
-      var row = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    var row = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-      row[0] = typeSize.description;
-      
-      var typeSpecs = (typeof typeSize.spec !== 'undefined') ? typeSize.spec : {};
-      // var typeRegions = (res[type][typeInfo] && typeof res[type][typeInfo].regions !== 'undefined') ? res[type][typeInfo].regions : {};
+    row[0] = typeSize.description;
 
-      var min_memory = getParam(g_settings, 'min_memory');
-      var max_memory = getParam(g_settings, 'max_memory');
-      var min_vcpus = getParam(g_settings, 'min_vcpus');
-      var max_vcpus = getParam(g_settings, 'max_vcpus');
-      var min_iops = getParam(g_settings, 'min_iops');
-      var min_throughput = getParam(g_settings, 'min_throughput');
-      
-      row[1] = getParam(typeSpecs, 'name');
+    var typeSpecs = (typeof typeSize.spec !== 'undefined') ? typeSize.spec : {};
+    var typeZones = (typeof typeSize.zones !== 'undefined') ? typeSize.zones : {};
+    // var typeRegions = (res[type][typeInfo] && typeof res[type][typeInfo].regions !== 'undefined') ? res[type][typeInfo].regions : {};
 
-      row[2] = getParam(typeSpecs, 'ram');
+    var min_memory = getParam(g_settings, 'min_memory');
+    var max_memory = getParam(g_settings, 'max_memory');
+    var min_vcpus = getParam(g_settings, 'min_vcpus');
+    var max_vcpus = getParam(g_settings, 'max_vcpus');
+    var min_iops = getParam(g_settings, 'min_iops');
+    var min_throughput = getParam(g_settings, 'min_throughput');
 
-      if (Number(row[2]) < Number(min_memory) || Number(row[2]) > Number(max_memory)) {
-        continue;
+    row[1] = getParam(typeSpecs, 'name');
+
+    row[2] = getParam(typeSpecs, 'ram');
+
+    if (Number(row[2]) < Number(min_memory) || Number(row[2]) > Number(max_memory)) {
+      continue;
+    }
+
+    if (row[2]) {
+      row[2] = row[2] + ' Gib';
+    }
+    else {
+      row[2] = '';
+    }
+
+    row[3] = getParam(typeSpecs, 'cpu');
+    if ((row[3] < min_vcpus || row[3] > max_vcpus) || (min_vcpus && row[3] === 'shared')) {
+      continue;
+    }
+
+    if (!row[3]) {
+      row[3] = '';
+    }
+
+    row[4] = 0;
+    var zones = getParam(typeSize, 'zones');
+
+    if (zones && typeof zones[region] !== 'undefined') {
+      row[4] = zones[region].value;
+    }
+
+    row[5] = getParam(typeSpecs, 'gpu_number');
+    row[6] = getParam(typeSpecs, 'gpu');
+
+    if (!row[6]) {
+      row[6] = '';
+    }
+
+    row[7] = getParam(typeSpecs, 'premium_storage');
+    row[8] = getParam(typeSpecs, 'premium_storage_caching');
+    row[9] = getParam(typeSpecs, 'live_migration');
+
+    //row[7] = row[7] ? 'True' : 'False';
+    //row[8] = row[8] ? 'True' : 'False';
+    //row[9] = row[9] ? 'True' : 'False';
+
+    row[10] = getParam(typeSpecs, 'vm_generation');
+
+    row[11] = getParam(typeSpecs, 'vm_deployment_types');
+    if (!row[11]) {
+      row[11] = '';
+    }
+    row[12] = getParam(typeSpecs, 'max_data_disk');
+    row[13] = getParam(typeSpecs, 'iops');
+
+    if (Number(row[13]) < Number(min_iops)) {
+      continue;
+    }
+
+    row[14] = getParam(typeSpecs, 'throughput');
+
+    if (Number(row[14]) < Number(min_throughput)) {
+      continue;
+    }
+
+    if (row[14]) {
+      row[14] = row[14] + ' MBps';
+    }
+
+    row[15] = getParam(typeSpecs, 'max_nics');
+
+    row[16] = getParam(typeSpecs, 'local_disk');
+    if (!row[16]) {
+      row[16] = '';
+    }
+    row[17] = getParam(typeSpecs, 'expected_network_mbps');
+    if (!row[17]) {
+      row[17] = '';
+    }
+
+    row[17] = row[17].replace(' ', '');
+
+    row[18] = 0;
+    row[19] = 0;
+    row[20] = 0;
+    row[21] = 0;
+    row[22] = 0;
+
+    var lowPriorityData = getParam(typeSize, 'lowpriority');
+    if (lowPriorityData) {
+      var linuxData = getParam(lowPriorityData, 'linux');
+
+      if (linuxData) {
+        var onDemandData = getParam(linuxData, 'ondemand');
+
+        if (onDemandData && typeof onDemandData[region] !== 'undefined') {
+          row[18] = onDemandData[region].value;
+        }
       }
 
-      if (row[2]) {
-        row[2] = row[2] + ' Gib';
+      var windowsData = getParam(lowPriorityData, 'windows');
+
+      if (windowsData) {
+        var onDemandData = getParam(windowsData, 'ondemand');
+
+        if (onDemandData && typeof onDemandData[region] !== 'undefined') {
+          row[18] = onDemandData[region].value;
+        }
+      }
+    }
+
+    var stdData = getParam(typeSize, 'standard');
+    if (stdData) {
+      var linuxData = getParam(stdData, 'linux');
+
+      if (linuxData) {
+        var onDemand1YrData = getParam(linuxData, '1yr');
+
+        if (onDemand1YrData && typeof onDemand1YrData[region] !== 'undefined') {
+          row[19] = onDemand1YrData[region].value;
+        }
+
+        var onDemand3YrData = getParam(linuxData, '3yr');
+
+        if (onDemand3YrData && typeof onDemand3YrData[region] !== 'undefined') {
+          row[20] = onDemand3YrData[region].value;
+        }
+
+        var onDemandData = getParam(linuxData, 'ondemand');
+
+        if (onDemandData && typeof onDemandData[region] !== 'undefined') {
+          row[21] = onDemandData[region].value;
+        }
+      }
+
+      var windowsData = getParam(stdData, 'windows');
+
+      if (windowsData) {
+        var onDemand1YrData = getParam(windowsData, '1yr');
+
+        if (onDemand1YrData && typeof onDemand1YrData[region] !== 'undefined') {
+          row[19] = onDemand1YrData[region].value;
+        }
+
+        var onDemand3YrData = getParam(linuxData, '3yr');
+
+        if (onDemand3YrData && typeof onDemand3YrData[region] !== 'undefined') {
+          row[20] = onDemand3YrData[region].value;
+        }
+
+        var onDemandData = getParam(windowsData, 'ondemand');
+
+        if (onDemandData && typeof onDemandData[region] !== 'undefined') {
+          row[22] = onDemandData[region].value;
+        }
+      }
+    }
+
+    for (var k = 18; k < 23; k++) {
+      if (row[k]) {
+        row[k] *= multiplier;
+        row[k] = row[k].toFixed(5).replace(/(0)*$/, '');
+        row[k] += ' ' + per_time;
+        row[k] = '$' + row[k];
       }
       else {
-        row[2] = '';
+        row[k] = 'Unavailable';
       }
+    }
 
-      row[3] = getParam(typeSpecs, 'cpu');
-      if ((row[3] < min_vcpus || row[3] > max_vcpus) || (min_vcpus && row[3] === 'shared')) {
-        continue;
-      }
+    row[23] = getParam(typeSpecs, 'encryption_at_host');
+    row[24] = getParam(typeSpecs, 'capacity_reservation');
+    row[25] = getParam(typeSpecs, 'accelerated_networking');
+    row[26] = getParam(typeSpecs, 'ephemeral_os_disk');
+    row[27] = getParam(typeSpecs, 'rdma_enabled');
+    row[28] = getParam(typeSpecs, 'trusted_launch_disabled');
 
-      if (!row[3]) {
-        row[3] = '';
-      }
-
-      row[4] = getParam(typeSpecs, 'cpu_type');
-      row[5] = getParam(typeSpecs, 'gpu_number');
-      row[6] = getParam(typeSpecs, 'gpu');
-
-      if (!row[6]) {
-        row[6] = '';
-      }
-
-      row[7] = getParam(typeSpecs, 'premium_storage');
-      row[8] = getParam(typeSpecs, 'premium_storage_caching');
-      row[9] = getParam(typeSpecs, 'live_migration');
-
-      //row[7] = row[7] ? 'True' : 'False';
-      //row[8] = row[8] ? 'True' : 'False';
-      //row[9] = row[9] ? 'True' : 'False';
-
-      row[10] = getParam(typeSpecs, 'vm_generation');
-
-      row[11] = getParam(typeSpecs, 'vm_deployment_types');
-      if (!row[11]) {
-        row[11] = '';
-      }
-      row[12] = getParam(typeSpecs, 'max_data_disk');
-      row[13] = getParam(typeSpecs, 'iops');
-
-      if (Number(row[13]) < Number(min_iops)) {
-        continue;
-      }
-
-      row[14] = getParam(typeSpecs, 'throughput');
-
-      if (Number(row[14]) < Number(min_throughput)) {
-        continue;
-      }
-
-      if (row[14]) {
-        row[14] = row[14] + ' MBps';
-      }
-
-      row[15] = getParam(typeSpecs, 'max_nics');
-
-      row[16] = getParam(typeSpecs, 'local_disk');
-      if (!row[16]) {
-        row[16] = '';
-      }
-      row[17] = getParam(typeSpecs, 'expected_network_mbps');
-      if (!row[17]) {
-        row[17] = '';
-      }
-
-      row[17] = row[17].replace(' ', '');
-      
-      row[18] = 0;
-      row[19] = 0;
-      row[20] = 0;
-      row[21] = 0;
-      row[22] = 0;
-
-      var lowPriorityData = getParam(typeSize, 'lowpriority');
-      if (lowPriorityData) {
-        var linuxData = getParam(lowPriorityData, 'linux');
-
-        if (linuxData) {
-          var onDemandData = getParam(linuxData, 'ondemand');
-
-          if (onDemandData && typeof onDemandData[region] !== 'undefined') {
-            row[18] = onDemandData[region].value;
-          }
-        }
-
-        var windowsData = getParam(lowPriorityData, 'windows');
-
-        if (windowsData) {
-          var onDemandData = getParam(windowsData, 'ondemand');
-
-          if (onDemandData && typeof onDemandData[region] !== 'undefined') {
-            row[18] = onDemandData[region].value;
-          }
-        }
-      }
-      
-      var stdData = getParam(typeSize, 'standard');
-      if (stdData) {
-        var linuxData = getParam(stdData, 'linux');
-        
-        if (linuxData) {
-          var onDemand1YrData = getParam(linuxData, '1yr');
-
-          if (onDemand1YrData && typeof onDemand1YrData[region] !== 'undefined') {
-            row[19] = onDemand1YrData[region].value;
-          }
-
-          var onDemand3YrData = getParam(linuxData, '3yr');
-
-          if (onDemand3YrData && typeof onDemand3YrData[region] !== 'undefined') {
-            row[20] = onDemand3YrData[region].value;
-          }
-
-          var onDemandData = getParam(linuxData, 'ondemand');
-
-          if (onDemandData && typeof onDemandData[region] !== 'undefined') {
-            row[21] = onDemandData[region].value;
-          }
-        }
-
-        var windowsData = getParam(stdData, 'windows');
-        
-        if (windowsData) {
-          var onDemand1YrData = getParam(windowsData, '1yr');
-
-          if (onDemand1YrData && typeof onDemand1YrData[region] !== 'undefined') {
-            row[19] = onDemand1YrData[region].value;
-          }
-
-          var onDemand3YrData = getParam(linuxData, '3yr');
-
-          if (onDemand3YrData && typeof onDemand3YrData[region] !== 'undefined') {
-            row[20] = onDemand3YrData[region].value;
-          }
-
-          var onDemandData = getParam(windowsData, 'ondemand');
-
-          if (onDemandData && typeof onDemandData[region] !== 'undefined') {
-            row[22] = onDemandData[region].value;
-          }
-        }
-      }
-
-      for (var k = 18; k < 23; k++) {
-        if (row[k]) {
-          row[k] *= multiplier;
-          row[k] = row[k].toFixed(5).replace(/(0)*$/, '');
-          row[k] += ' ' + per_time;
-          row[k] = '$' + row[k];
-        }
-        else {
-          row[k] = 'Unavailable';
-        }
-      }
-
-      row[23] = getParam(typeSpecs, 'encryption_at_host');
-      row[24] = getParam(typeSpecs, 'capacity_reservation');
-      row[25] = getParam(typeSpecs, 'accelerated_networking');
-      row[26] = getParam(typeSpecs, 'ephemeral_os_disk');
-      row[27] = getParam(typeSpecs, 'rdma_enabled');
-      row[28] = getParam(typeSpecs, 'trusted_launch_disabled');
-
-      var row_filtered = row.slice(1);
-      instances_data.push(row_filtered);
+    var row_filtered = row.slice(1);
+    instances_data.push(row_filtered);
     //}
   }
 
@@ -438,14 +445,14 @@ function change_cost(duration) {
   var per_time;
 
   generate_data_table(g_settings.region, multiplier, duration);
-  
+
   g_data_table.clear();
   g_data_table.rows.add(instances_data);
   g_data_table.draw();
 
   g_settings.compare_on = false;
   update_compare_button();
-  
+
   var $rows = $('#data tbody tr');
 
   $rows.unbind('click').click(function () {
@@ -537,7 +544,7 @@ function setup_column_toggle() {
       $('<li>')
         .toggleClass('active', column.visible())
         .append(
-          $('<a>', {href: "javascript:;"})
+          $('<a>', { href: "javascript:;" })
             .text($(column.header()).text())
             .click(function (e) {
               toggle_column(i);
@@ -642,7 +649,7 @@ var apply_minmax_values = function () {
     var filter_val = parseFloat($(this).val()) || 0;
 
     // update global variable for dynamic URL
-    if (filter_on[0] == 'min'){
+    if (filter_on[0] == 'min') {
       g_settings["min_" + filter_on[1]] = filter_val;
     }
     else if (filter_on[0] == 'max') {
@@ -833,7 +840,7 @@ function configure_highlighting() {
 
 function update_visible_rows() {
   var $rows = $('#data tbody tr');
-  if (! g_settings.compare_on) {
+  if (!g_settings.compare_on) {
     $rows.show();
   } else {
     $rows.filter(':not(.highlight)').hide();
@@ -842,16 +849,16 @@ function update_visible_rows() {
 
 function update_compare_button() {
   var $compareBtn = $('.btn-compare'),
-      $rows = $('#data tbody tr');
+    $rows = $('#data tbody tr');
 
-  if (! g_settings.compare_on) {
+  if (!g_settings.compare_on) {
     $compareBtn.text($compareBtn.data('textOff'))
-        .addClass('btn-primary')
-        .removeClass('btn-success')
-        .prop('disabled', !$rows.is('.highlight'));
+      .addClass('btn-primary')
+      .removeClass('btn-success')
+      .prop('disabled', !$rows.is('.highlight'));
   } else {
     $compareBtn.text($compareBtn.data('textOn'))
-        .addClass('btn-success')
-        .removeClass('btn-primary');
+      .addClass('btn-success')
+      .removeClass('btn-primary');
   }
 }

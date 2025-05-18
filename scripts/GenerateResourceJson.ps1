@@ -47,14 +47,25 @@ $vmSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
             "capacity_reservation"    = $($_.capabilities | Where-Object name -eq "CapacityReservationSupported" | Select-Object -ExpandProperty value)
             "accelerated_networking"  = $($_.capabilities | Where-Object name -eq "AcceleratedNetworkingEnabled" | Select-Object -ExpandProperty value)
             "ephemeral_os_disk"       = $($_.capabilities | Where-Object name -eq "EphemeralOSDiskSupported" | Select-Object -ExpandProperty value)
-            "rdma_enabled" = $($_.capabilities | Where-Object name -eq "RdmaEnabled" | Select-Object -ExpandProperty value)
+            "rdma_enabled"            = $($_.capabilities | Where-Object name -eq "RdmaEnabled" | Select-Object -ExpandProperty value)
             "trusted_launch_disabled" = $($_.capabilities | Where-Object name -eq "TrustedLaunchDisabled" | Select-Object -ExpandProperty value)
-            "vm_deployment_types" = $_.capabilities | Where-Object name -eq "VMDeploymentTypes" | Select-Object -ExpandProperty value
+            "vm_deployment_types"     = $_.capabilities | Where-Object name -eq "VMDeploymentTypes" | Select-Object -ExpandProperty value
         }
     }
 
     $vmDescription = $vm | Select-Object -First 1 | foreach-object {
         "$($vmSize): $($_.capabilities | Where-Object name -eq "vCPUs" | Select-Object -ExpandProperty value) Cores, $($_.capabilities | Where-Object name -eq "MemoryGB" | Select-Object -ExpandProperty value) GB RAM, $($($($_.capabilities | Where-Object name -eq "MaxResourceVolumeMB" | Select-Object -ExpandProperty value) / 1024)) GB Temporary storage"
+    }
+
+    $zones = @{}
+
+    $vm | foreach-object {
+        $location = $_ | Select-Object -ExpandProperty Locations
+
+        $zones | Add-Member -MemberType NoteProperty -Name $location -Value $(New-Object PsObject -Property @{
+            "value" = $($_ | Select-Object -ExpandProperty locationInfo | Select-Object -expandProperty zones | Sort-Object) -join ', '
+        }
+        )
     }
 
     $priceUri = "https://prices.azure.com/api/retail/prices?currencyCode='USD'&`$filter=armSkuName eq '$($vm | Select-Object -expandProperty name -First 1)' and serviceFamily eq 'Compute' and serviceName eq 'Virtual Machines'"
@@ -74,20 +85,20 @@ $vmSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
     $1yr = @{}
 
     $linux | Where-Object { $_.type -eq "Consumption" } | foreach-object {
-        if ($_.skuName -match "Low Priority"){
+        if ($_.skuName -match "Low Priority") {
             $linondemandLP | Add-Member -MemberType NoteProperty -Name $($_.armRegionName) -Value $(New-Object PsObject -Property @{
-                "value" = $_.retailPrice
-            })
+                    "value" = $_.retailPrice
+                })
         }
         elseif ($_.skuName -match "Spot") {
             $linondemandSpot | Add-Member -MemberType NoteProperty -Name $($_.armRegionName) -Value $(New-Object PsObject -Property @{
-                "value" = $_.retailPrice
-            })
+                    "value" = $_.retailPrice
+                })
         }
         else {
             $linondemand | Add-Member -MemberType NoteProperty -Name $($_.armRegionName) -Value $(New-Object PsObject -Property @{
-                "value" = $_.retailPrice
-            })
+                    "value" = $_.retailPrice
+                })
         }
     }
 
@@ -104,26 +115,27 @@ $vmSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
     }
 
     $windows | Where-Object { $_.type -eq "Consumption" } | foreach-object {
-        if ($_.skuName -match "Low Priority"){
+        if ($_.skuName -match "Low Priority") {
             $winondemandLP | Add-Member -MemberType NoteProperty -Name $($_.armRegionName) -Value $(New-Object PsObject -Property @{
-                "value" = $_.retailPrice
-            })
+                    "value" = $_.retailPrice
+                })
         }
         elseif ($_.skuName -match "Spot") {
             $winondemandSpot | Add-Member -MemberType NoteProperty -Name $($_.armRegionName) -Value $(New-Object PsObject -Property @{
-                "value" = $_.retailPrice
-            })
+                    "value" = $_.retailPrice
+                })
         }
         else {
             $winondemand | Add-Member -MemberType NoteProperty -Name $($_.armRegionName) -Value $(New-Object PsObject -Property @{
-                "value" = $_.retailPrice
-            })
+                    "value" = $_.retailPrice
+                })
         }
     }
 
     $output | Add-Member -MemberType NoteProperty -Name $vmSize -Value $(New-Object PsObject -Property @{
             "description" = $vmDescription
             "spec"        = $vmSpecs
+            "zones"       = $zones | ConvertTo-JSON | ConvertFrom-JSON
             "standard"    = New-Object PsObject -Property @{
                 "linux"   = New-Object PsObject -Property @{
                     "ondemand" = $linondemand | ConvertTo-JSON | ConvertFrom-JSON
@@ -134,7 +146,7 @@ $vmSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
                     "ondemand" = $winondemand | ConvertTo-JSON | ConvertFrom-JSON
                 }
             }
-            "lowpriority"    = New-Object PsObject -Property @{
+            "lowpriority" = New-Object PsObject -Property @{
                 "linux"   = New-Object PsObject -Property @{
                     "ondemand" = $linondemandLP | ConvertTo-JSON | ConvertFrom-JSON
                 }
@@ -143,8 +155,8 @@ $vmSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
                 }
             }
         }
-        )
-    }
+    )
+}
 
-    Write-Output "Writing file to $PsScriptRoot\..\web\azure.json"
+Write-Output "Writing file to $PsScriptRoot\..\web\azure.json"
 $output | ConvertTo-JSON -Depth 100 | Out-File -FilePath "$PsScriptRoot\..\web\azure.json"
