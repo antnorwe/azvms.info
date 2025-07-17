@@ -16,6 +16,7 @@ var g_settings_defaults = {
   max_vcpus: 99999,
   min_iops: 0,
   min_throughput: 0,
+  min_netint: 0,
   min_storage: 0,
   selected: '',
   compare_on: false
@@ -230,6 +231,7 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
     var max_vcpus = getParam(g_settings, 'max_vcpus');
     var min_iops = getParam(g_settings, 'min_iops');
     var min_throughput = getParam(g_settings, 'min_throughput');
+    var min_netint = getParam(g_settings, 'min_netint');
 
     var stdData = getParam(typeSize, 'standard');
         if (stdData) {
@@ -315,6 +317,9 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
     }
 
     row[15] = getParam(typeSpecs, 'max_nics');
+    if (Number(row[15]) < Number(min_netint)) {
+      continue;
+    }
 
     row[16] = getParam(typeSpecs, 'local_disk');
     if (!row[16]) {
@@ -594,6 +599,7 @@ function url_for_selections() {
     max_vcpus: g_settings.max_vcpus,
     min_iops: g_settings.min_iops,
     min_throughput: g_settings.min_throughput,
+    min_netint: g_settings.min_netint,
     min_storage: g_settings.min_storage,
     filter: g_data_table.settings()[0].oPreviousSearch['sSearch'],
     region: g_settings.region,
@@ -696,6 +702,7 @@ function on_data_table_initialized() {
   $('[data-action="datafilter"][data-type="max-vcpus"]').val(g_settings['max_vcpus']);
   $('[data-action="datafilter"][data-type="min-iops"]').val(g_settings['min_iops']);
   $('[data-action="datafilter"][data-type="min-throughput"]').val(g_settings['min_throughput']);
+  $('[data-action="datafilter"][data-type="min-netint"]').val(g_settings['min_netint']);
   $('[data-action="datafilter"][data-type="storage"]').val(g_settings['min_storage']);
   g_data_table.search(g_settings['filter']);
   apply_minmax_values();
