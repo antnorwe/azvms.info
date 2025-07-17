@@ -69,10 +69,25 @@ $vmSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
     }
 
     $priceUri = "https://prices.azure.com/api/retail/prices?currencyCode='USD'&`$filter=armSkuName eq '$($vm | Select-Object -expandProperty name -First 1)' and serviceFamily eq 'Compute' and serviceName eq 'Virtual Machines'"
-    $prices = Invoke-RestMethod -Method GET -Uri $priceUri
 
-    $linux = $prices.items | Where-Object { $_.productName -notmatch "Win" -and $_.productName -notmatch "Cloud" }
-    $windows = $prices.items | Where-Object { $_.productName -match "Win" -and $_.productName -notmatch "Cloud" }
+    $prices = do {
+        $results = Invoke-RestMethod -Method GET -Uri $priceUri
+
+        $results.items | foreach-object {
+            $_
+        }
+
+        $nextLinkExists = [bool]($($results.nextPageLink -ne $null))
+
+        if ($nextLinkExists) {
+            $priceUri = $results.NextPageLink
+            Start-Sleep -Seconds 30
+        }
+
+    } while ($nextLinkExists) 
+
+    $linux = $prices | Where-Object { $_.productName -notmatch "Win" -and $_.productName -notmatch "Cloud" }
+    $windows = $prices | Where-Object { $_.productName -match "Win" -and $_.productName -notmatch "Cloud" }
 
     $linondemand = @{}
     $linondemandLP = @{}
