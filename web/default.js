@@ -148,6 +148,7 @@ function getParam(obj, key) {
 }
 
 $(document).ready(function () {
+  loadLastUpdateTime()
   $.ajax({
     url: "azure.json",
   }).done(function (res) {
@@ -879,5 +880,20 @@ function update_compare_button() {
     $compareBtn.text($compareBtn.data('textOn'))
       .addClass('btn-success')
       .removeClass('btn-primary');
+  }
+}
+
+async function loadLastUpdateTime() {
+  try {
+    const response = await fetch('/api/get-lastupdatetime');
+    const config = await response.json();
+
+    const lastUpdateTime = config.lastUpdateTime;
+
+    document.getElementById('lastUpdateTimeHeader').textContent = lastUpdateTime;
+    document.getElementById('lastUpdateTimeFooter').textContent = lastUpdateTime;
+  }
+  catch (error) {
+    console.error("Failed to replace last update time:", error)
   }
 }
