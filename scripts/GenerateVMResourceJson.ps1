@@ -15,7 +15,47 @@ $subId = Get-AzContext | Select-Object -ExpandProperty Subscription
 
 $uri = "https://management.azure.com/subscriptions/$subId/providers/Microsoft.Compute/skus?api-version=2021-07-01"
 
-$virtualMachines = Invoke-RestMethod -Uri $uri -Method GET -Headers $headers | Select-Object -ExpandProperty Value | Where-Object { $_.resourceType -eq "virtualMachines" } 
+# The Retail Prices API (and, occasionally, ARM) rate-limits with a 429 when called this often -
+# especially from shared CI runner IPs. Retry with backoff, honouring Retry-After when the API sends one.
+function Invoke-RestMethodWithRetry {
+    param(
+        [Parameter(Mandatory)] [string] $Uri,
+        [string] $Method = 'GET',
+        [hashtable] $Headers,
+        [int] $MaxRetries = 8,
+        [int] $InitialDelaySeconds = 5
+    )
+
+    for ($attempt = 1; $true; $attempt++) {
+        try {
+            if ($Headers) {
+                return Invoke-RestMethod -Method $Method -Uri $Uri -Headers $Headers
+            }
+            return Invoke-RestMethod -Method $Method -Uri $Uri
+        }
+        catch {
+            $response = $_.Exception.Response
+            $statusCode = if ($response) { [int]$response.StatusCode } else { $null }
+
+            if ($statusCode -ne 429 -or $attempt -ge $MaxRetries) {
+                throw
+            }
+
+            $retryAfter = $response.Headers.RetryAfter
+            $delaySeconds = if ($retryAfter -and $retryAfter.Delta) {
+                [math]::Ceiling($retryAfter.Delta.Value.TotalSeconds)
+            }
+            else {
+                $InitialDelaySeconds * [math]::Pow(2, $attempt - 1)
+            }
+
+            Write-Warning "Rate limited (429) calling $Uri - waiting $delaySeconds seconds before retry $attempt/$MaxRetries"
+            Start-Sleep -Seconds $delaySeconds
+        }
+    }
+}
+
+$virtualMachines = Invoke-RestMethodWithRetry -Uri $uri -Method GET -Headers $headers | Select-Object -ExpandProperty Value | Where-Object { $_.resourceType -eq "virtualMachines" }
 
 $vmSkus = $virtualMachines | Select-Object Name, Tier, Size -unique
 
@@ -71,7 +111,7 @@ $vmSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
     $priceUri = "https://prices.azure.com/api/retail/prices?currencyCode='USD'&`$filter=armSkuName eq '$($vm | Select-Object -expandProperty name -First 1)' and serviceFamily eq 'Compute' and serviceName eq 'Virtual Machines'"
 
     $prices = do {
-        $results = Invoke-RestMethod -Method GET -Uri $priceUri
+        $results = Invoke-RestMethodWithRetry -Method GET -Uri $priceUri
 
         $results.items | foreach-object {
             $_
@@ -84,7 +124,10 @@ $vmSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
             Start-Sleep -Seconds 30
         }
 
-    } while ($nextLinkExists) 
+    } while ($nextLinkExists)
+
+    # Pace requests between SKUs so we don't hammer the Retail Prices API and trip its rate limit.
+    Start-Sleep -Seconds 1
 
     $linux = $prices | Where-Object { $_.productName -notmatch "Win" -and $_.productName -notmatch "Cloud" }
     $windows = $prices | Where-Object { $_.productName -match "Win" -and $_.productName -notmatch "Cloud" }
