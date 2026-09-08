@@ -1,0 +1,45 @@
+name: Refresh Azure VM Data
+
+on:
+  schedule:
+    - cron: '0 5 * * *' # Daily at 05:00 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: refresh-azure-vm-data
+  cancel-in-progress: false
+
+permissions:
+  id-token: write # required to obtain the OIDC token for azure/login
+  contents: write # required to push the updated data files
+
+jobs:
+  refresh-data:
+    runs-on: ubuntu-latest
+    name: Refresh VM SKU and pricing data
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Azure login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          enable-AzPSSession: true
+
+      - name: Generate VM SKU/pricing data
+        shell: pwsh
+        run: ./scripts/GenerateVMResourceJson.ps1
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add web/azure.json web/lastupdate.json
+          if git diff --cached --quiet; then
+            echo "No changes to VM data - nothing to commit."
+          else
+            git commit -m "Automated refresh of Azure VM SKU/pricing data"
+            git push
+          fi
