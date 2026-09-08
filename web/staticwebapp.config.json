@@ -1,0 +1,16 @@
+{
+  "routes": [
+    {
+      "route": "/azure.json",
+      "headers": {
+        "Cache-Control": "no-cache"
+      }
+    },
+    {
+      "route": "/lastupdate.json",
+      "headers": {
+        "Cache-Control": "no-cache"
+      }
+    }
+  ]
+}

@@ -151,6 +151,7 @@ $(document).ready(function () {
   loadLastUpdateTime()
   $.ajax({
     url: "azure.json",
+    cache: false,
   }).done(function (res) {
     loaded_data = res;
     console.log(res);
@@ -885,7 +886,7 @@ function update_compare_button() {
 
 async function loadLastUpdateTime() {
   try {
-    const response = await fetch('lastupdate.json');
+    const response = await fetch('lastupdate.json', { cache: 'no-store' });
     const config = await response.json();
 
     const lastUpdateTime = config.lastUpdateTime;
