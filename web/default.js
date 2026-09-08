@@ -885,7 +885,7 @@ function update_compare_button() {
 
 async function loadLastUpdateTime() {
   try {
-    const response = await fetch('/api/get-lastupdatetime');
+    const response = await fetch('lastupdate.json');
     const config = await response.json();
 
     const lastUpdateTime = config.lastUpdateTime;

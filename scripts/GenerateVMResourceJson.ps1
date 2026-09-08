@@ -1,7 +1,7 @@
-$tenantID = Read-Host "Please enter your tenant ID to connect to"
-
-if ($(Get-AzContext | Select-Object -ExpandProperty Tenant | Select-Object -ExpandProperty Id) -ne $tenantID) {
-    Connect-AzAccount -Tenant $tenantID
+# Reuses an existing Az context (e.g. set up by `azure/login` in CI) if there is one,
+# otherwise falls back to an interactive login for local/manual runs.
+if (-not (Get-AzContext)) {
+    Connect-AzAccount
 }
 
 $accessToken = Get-AzAccessToken -ResourceUrl "https://management.azure.com" -AsSecureString | Select-Object -ExpandProperty Token | ConvertFrom-SecureString -AsPlainText
@@ -175,3 +175,7 @@ $vmSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
 
 Write-Output "Writing file to $PsScriptRoot\..\web\azure.json"
 $output | ConvertTo-JSON -Depth 100 | Out-File -FilePath "$PsScriptRoot\..\web\azure.json"
+
+$lastUpdateTime = (Get-Date).ToUniversalTime().ToString("yyyy-MM-dd HH:mm:ss")
+Write-Output "Writing last update time ($lastUpdateTime) to $PsScriptRoot\..\web\lastupdate.json"
+@{ "lastUpdateTime" = $lastUpdateTime } | ConvertTo-JSON | Out-File -FilePath "$PsScriptRoot\..\web\lastupdate.json"
