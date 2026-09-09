@@ -30,21 +30,40 @@ function getParam(obj, key) {
   return obj[key];
 }
 
-// Finds the Consumption-type price for a region whose meterName contains `meterKeyword`
-// (or, for fixed-tier disks with a single meter, any keyword), formatted with its unit.
-function findPrice(prices, region, meterKeyword) {
+$(document).on('click', '.btn-add-estimate[data-disk-key]', function () {
+  var $btn = $(this);
+  Estimate.setDisk({
+    key: $btn.data('diskKey'),
+    name: $btn.data('diskName'),
+    cost: Number($btn.data('diskCost')),
+    region: $btn.data('diskRegion')
+  });
+});
+
+// Finds the Consumption-type price row for a region whose meterName contains `meterKeyword`
+// (or, for fixed-tier disks with a single meter, any keyword).
+function findRawPrice(prices, region, meterKeyword) {
   if (!prices || !prices.length) {
-    return '';
+    return null;
   }
   var match = prices.find(function (p) {
     return p.armRegionName === region
       && p.type === 'Consumption'
       && (!meterKeyword || (p.meterName || '').indexOf(meterKeyword) !== -1);
   });
+  return match || null;
+}
+
+function findPrice(prices, region, meterKeyword) {
+  var match = findRawPrice(prices, region, meterKeyword);
   if (!match) {
     return '';
   }
   return '$' + Number(match.retailPrice).toFixed(4) + ' / ' + match.unitOfMeasure;
+}
+
+function escape_attr(str) {
+  return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 }
 
 function generate_data_table(region) {
@@ -79,8 +98,9 @@ function generate_data_table(region) {
     var tier = getParam(specs, 'tier');
     var isFixedTier = tier === 'Premium' || tier === 'Standard' || tier === 'StandardSSD';
 
-    var row = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-    row[0] = (getParam(specs, 'name') || '') + ' ' + (getParam(specs, 'redundancy') || '');
+    var row = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    var displayName = (getParam(specs, 'name') || '') + ' ' + (getParam(specs, 'redundancy') || '');
+    row[0] = displayName;
     row[1] = TIER_LABELS[tier] || tier || '';
     row[2] = getParam(specs, 'redundancy') || '';
     row[3] = minSizeGiB || '';
@@ -94,6 +114,20 @@ function generate_data_table(region) {
     row[11] = isFixedTier ? '' : findPrice(prices, region, 'Capacity');
     row[12] = isFixedTier ? '' : findPrice(prices, region, 'IOPS');
     row[13] = isFixedTier ? '' : findPrice(prices, region, 'Throughput');
+
+    // Only fixed-tier disks have a single flat monthly price - PremiumV2/UltraSSD are billed per
+    // provisioned GiB/IOPS/MBps, which this UI has no capacity input to compute a real number
+    // from, so leave them out of the estimate rather than showing a misleading total.
+    var rawPrice = isFixedTier ? findRawPrice(prices, region, null) : null;
+    if (rawPrice) {
+      row[14] = '<button type="button" class="btn btn-xs btn-primary btn-add-estimate" '
+        + 'data-disk-key="' + escape_attr(key) + '" '
+        + 'data-disk-name="' + escape_attr(displayName) + '" '
+        + 'data-disk-cost="' + Number(rawPrice.retailPrice) + '" '
+        + 'data-disk-region="' + escape_attr(region) + '">Add to estimate</button>';
+    } else {
+      row[14] = '<button type="button" class="btn btn-xs" disabled title="Only available for fixed-price disks (Premium/Standard/StandardSSD)">Unavailable</button>';
+    }
 
     disks_data.push(row);
   }

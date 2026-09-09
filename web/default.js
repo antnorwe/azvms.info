@@ -164,6 +164,20 @@ function getParam(obj, key) {
   return obj[key];
 }
 
+function escape_attr(str) {
+  return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+}
+
+$(document).on('click', '.btn-add-estimate[data-vm-name]', function () {
+  var $btn = $(this);
+  Estimate.setVm({
+    name: $btn.data('vmName'),
+    description: $btn.data('vmDesc'),
+    cost: Number($btn.data('vmCost')),
+    region: $btn.data('vmRegion')
+  });
+});
+
 // Value-comparison columns: $/hour divided by a spec (vCPUs, GB RAM). Matches the trailing-zero
 // stripping the other cost columns use, and the "$<amount> <unit>" shape cust-sort-pre parses.
 function format_cost_per_unit(hourlyCost, unitAmount, unitLabel) {
@@ -247,7 +261,7 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
     var typeSize = res[type];
 
     //for (var typeInfo in typeSize) {
-    var row = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    var row = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
     row[0] = typeSize.description;
 
@@ -461,6 +475,16 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
     row[28] = getParam(typeSpecs, 'ephemeral_os_disk');
     row[29] = getParam(typeSpecs, 'rdma_enabled');
     row[30] = getParam(typeSpecs, 'trusted_launch_disabled');
+
+    if (raw_linux_ondemand_cost) {
+      row[31] = '<button type="button" class="btn btn-xs btn-primary btn-add-estimate" '
+        + 'data-vm-name="' + escape_attr(typeSpecs.name) + '" '
+        + 'data-vm-desc="' + escape_attr(typeSize.description) + '" '
+        + 'data-vm-cost="' + raw_linux_ondemand_cost + '" '
+        + 'data-vm-region="' + escape_attr(region) + '">Add to estimate</button>';
+    } else {
+      row[31] = '<button type="button" class="btn btn-xs" disabled title="No Linux on-demand price available for this SKU/region">Unavailable</button>';
+    }
 
     var row_filtered = row.slice(1);
     instances_data.push(row_filtered);
