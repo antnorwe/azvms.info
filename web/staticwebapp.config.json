@@ -11,6 +11,12 @@
       "headers": {
         "Cache-Control": "no-cache"
       }
+    },
+    {
+      "route": "/disks.json",
+      "headers": {
+        "Cache-Control": "no-cache"
+      }
     }
   ]
 }

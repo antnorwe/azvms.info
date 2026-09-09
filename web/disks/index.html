@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Azure Managed Disk Comparison</title>
+    <link rel="stylesheet" href="../default.css" media="screen">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" media="screen">
+    <link rel="icon" type="image/png" href="../favicon.png">
+  </head>
+
+  <body class="azureinstances">
+    <div class="page-header">
+      <h1>Azure VM Info <small>Easy <b>Azure</b> Managed Disk Comparison</small></h1>
+
+      <p class="pull-right label label-info">Last Update: <span id="lastUpdateTimeHeader">Loading...</span> UTC</p>
+
+      <ul class="nav nav-tabs">
+        <li role="presentation"><a href="/">Azure VM</a></li>
+        <li role="presentation" class="active"><a href="/disks/">Disks</a></li>
+      </ul>
+    </div>
+
+    <div class="clear-fix"></div>
+
+    <div class="row" id="menu">
+      <div class="col-sm-12">
+        <div class="btn-group" id='region-dropdown'>
+          <a class="btn dropdown-toggle btn-primary" data-toggle="dropdown" href="#">
+            <i class="icon-globe icon-white"></i>
+            Region: <span class="text">uksouth</span>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu" id="region-menu">
+          </ul>
+        </div>
+
+        <div class="btn-group" id="filter-dropdown">
+          <a class="btn dropdown-toggle btn-primary" data-toggle="dropdown" href="#">
+            <i class="icon-filter icon-white"></i>
+            Columns
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <!-- table header elements inserted by js -->
+          </ul>
+        </div>
+
+        <button class="btn btn-primary btn-clear">
+          Clear Filters
+        </button>
+      </div>
+    </div>
+
+    <div class="form-inline" id="filters">
+      <strong> Filter:</strong>
+      Min Size (GiB): <input data-action="datafilter" data-type="min-size" class="form-control" />
+      Max Size (GiB): <input data-action="datafilter" data-type="max-size" class="form-control" />
+      Min IOPS: <input data-action="datafilter" data-type="min-iops" class="form-control" />
+      Min Throughput (MBps): <input data-action="datafilter" data-type="min-throughput" class="form-control" />
+    </div>
+
+    <table cellspacing="0" class="table table-bordered table-hover table-condensed" id="data">
+      <thead>
+        <tr>
+          <th class="name">Name</th>
+          <th class="tier">Tier</th>
+          <th class="redundancy">Redundancy</th>
+          <th class="minsize">Min Size (GiB)</th>
+          <th class="maxsize">Max Size (GiB)</th>
+          <th class="maxiops">Max IOPS</th>
+          <th class="maxthroughput">Max Throughput (MBps)</th>
+          <th class="maxburstiops">Max Burst IOPS</th>
+          <th class="maxburstthroughput">Max Burst Throughput (MBps)</th>
+          <th class="maxshares">Max Shares</th>
+          <th class="price-fixed">Price (per disk)</th>
+          <th class="price-capacity">Capacity Price</th>
+          <th class="price-iops">IOPS Price</th>
+          <th class="price-throughput">Throughput Price</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <div class="well">
+      <p>
+        <strong>Why?</strong>
+        Picking the right VM is only half the sizing decision - the managed disk backing it has its own IOPS, throughput, and size limits, and its own cost. This table lets you compare Azure Managed Disk SKUs the same way the VM table lets you compare VM sizes.
+      </p>
+      <p>
+        <strong>How?</strong>
+        Data is collated and combined from the <a href="https://learn.microsoft.com/en-us/rest/api/compute/resource-skus/list?view=rest-compute-2025-02-01&tabs=HTTP#resourceskucapabilities" target="_blank">Resource Skus - List</a> and the <a href="https://learn.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices#api-response-pagination" target="_blank">Azure Retail Prices</a> REST APIs. This was last done at <span id="lastUpdateTimeFooter">Loading...</span> UTC.
+      </p>
+
+      <p class="bg-warning">
+        <strong>Warning:</strong> This site is not maintained by or affiliated with Microsoft Azure. The data shown is not guaranteed to be accurate or current. Please <a href="https://github.com/antnorwe/azvms.info/issues">report issues</a> you see.
+      </p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.flash.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.print.min.js"></script>
+    <script src="../store/store.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="default.js" type="text/javascript" charset="utf-8"></script>
+
+  </body>
+</html>

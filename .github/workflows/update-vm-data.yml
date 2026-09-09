@@ -1,4 +1,4 @@
-name: Refresh Azure VM Data
+name: Refresh Azure Pricing Data
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: refresh-azure-vm-data
+  group: refresh-azure-pricing-data
   cancel-in-progress: false
 
 permissions:
@@ -17,7 +17,7 @@ permissions:
 jobs:
   refresh-data:
     runs-on: ubuntu-latest
-    name: Refresh VM SKU and pricing data
+    name: Refresh VM and disk SKU/pricing data
     steps:
       - uses: actions/checkout@v4
 
@@ -33,17 +33,21 @@ jobs:
         shell: pwsh
         run: ./scripts/GenerateVMResourceJson.ps1
 
+      - name: Generate disk SKU/pricing data
+        shell: pwsh
+        run: ./scripts/GenerateDiskResourceJson.ps1
+
       - name: Commit and push changes
         id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add web/azure.json web/lastupdate.json
+          git add web/azure.json web/disks.json web/lastupdate.json
           if git diff --cached --quiet; then
-            echo "No changes to VM data - nothing to commit."
+            echo "No changes to pricing data - nothing to commit."
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
-            git commit -m "Automated refresh of Azure VM SKU/pricing data"
+            git commit -m "Automated refresh of Azure VM/disk SKU and pricing data"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
