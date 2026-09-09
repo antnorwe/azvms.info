@@ -37,11 +37,26 @@ function init_data_table() {
       }
     });
   });
+  // DataTables persists column order/visibility/search state to localStorage (bStateSave below).
+  // That state is only valid for the column layout it was saved under - a visitor whose browser
+  // still has state saved from before a column was added/removed gets internal DataTables errors
+  // ("Requested unknown parameter 'N' for row X, column N") when it tries to apply stale state to
+  // the new layout. Key the storage on the actual current column count so any structural change
+  // automatically starts every visitor fresh instead of restoring incompatible state.
+  var stateStorageKey = 'DataTables_data_cols' + $('#data thead tr:eq(0) th').length;
+
   g_data_table = $('#data').DataTable({
     "data": instances_data,
     "bPaginate": false,
     "bInfo": false,
     "bStateSave": true,
+    "stateSaveCallback": function (settings, data) {
+      localStorage.setItem(stateStorageKey, JSON.stringify(data));
+    },
+    "stateLoadCallback": function (settings) {
+      var saved = localStorage.getItem(stateStorageKey);
+      return saved ? JSON.parse(saved) : null;
+    },
     "orderCellsTop": true,
     "oSearch": {
       "bRegex": true,
