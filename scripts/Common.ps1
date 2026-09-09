@@ -71,6 +71,13 @@ function Get-AllRetailPrices {
     )
 
     $items = New-Object System.Collections.Generic.List[object]
+    # The API's $skip-based pagination can return the boundary row twice across two pages -
+    # confirmed directly against the live API (same meterId/armRegionName/type/skuName repeated
+    # at a page boundary). meterId alone isn't a safe dedup key (it's shared across type variants
+    # like Consumption/DevTestConsumption/Reservation for the same underlying meter), so key on
+    # the full row identity instead - this only drops rows that are identical in every field that
+    # matters, never a legitimately distinct one.
+    $seenKeys = New-Object System.Collections.Generic.HashSet[string]
     $encodedFilter = [uri]::EscapeDataString($Filter)
     $uri = "https://prices.azure.com/api/retail/prices?currencyCode='USD'&`$filter=$encodedFilter"
     $page = 0
@@ -79,11 +86,17 @@ function Get-AllRetailPrices {
         $page++
         $respHeaders = $null
         $results = Invoke-RestMethodWithRetry -Uri $uri -ResponseHeaders ([ref]$respHeaders)
-        $items.AddRange([object[]]$results.Items)
+
+        foreach ($item in $results.Items) {
+            $key = "$($item.armRegionName)|$($item.type)|$($item.skuName)|$($item.reservationTerm)|$($item.meterId)"
+            if ($seenKeys.Add($key)) {
+                $items.Add($item)
+            }
+        }
         # Write-Host, not Write-Output: this function returns $items via the pipeline, and
         # Write-Output inside a function feeds that same pipeline - it would otherwise get
         # spliced into the returned collection alongside the actual price objects.
-        Write-Host "  ...page $page, $($items.Count) price rows so far"
+        Write-Host "  ...page $page, $($items.Count) unique price rows so far"
 
         $uri = $results.NextPageLink
 
