@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "web-static",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["swa", "start", "web", "--port", "4280"],
+      "port": 4280
+    }
+  ]
+}

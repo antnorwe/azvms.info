@@ -1,8 +1,6 @@
-$tenantID = Read-Host "Please enter your tenant ID to connect to"
+. "$PSScriptRoot\Common.ps1"
 
-if ($(Get-AzContext | Select-Object -ExpandProperty Tenant | Select-Object -ExpandProperty Id) -ne $tenantID) {
-    Connect-AzAccount -Tenant $tenantID
-}
+Connect-AzIfNeeded
 
 $accessToken = Get-AzAccessToken -ResourceUrl "https://management.azure.com" -AsSecureString | Select-Object -ExpandProperty Token | ConvertFrom-SecureString -AsPlainText
 
@@ -15,7 +13,7 @@ $subId = Get-AzContext | Select-Object -ExpandProperty Subscription
 
 $uri = "https://management.azure.com/subscriptions/$subId/providers/Microsoft.Compute/skus?api-version=2021-07-01"
 
-$disks = Invoke-RestMethod -Uri $uri -Method GET -Headers $headers | Select-Object -ExpandProperty Value | Where-Object { $_.resourceType -eq "disks" } 
+$disks = Invoke-RestMethodWithRetry -Uri $uri -Method GET -Headers $headers | Select-Object -ExpandProperty Value | Where-Object { $_.resourceType -eq "disks" }
 
 $diskSkus = $disks | Select-Object Name, Tier, Size -unique
 
@@ -28,10 +26,13 @@ $diskSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
         $diskName = $disk | Select-Object -ExpandProperty Name -First 1
         $diskType = $diskName.split('_')[0]
 
+        Write-Output "Retrieving $diskName"
+
         $diskSpecs = if ($diskType -eq "PremiumV2" -or $diskType -eq "UltraSSD") {
             $disk | Select-Object -First 1 | foreach-object {
                 New-Object PsObject -Property @{
                     "name"                      = "$($diskType)"
+                    "tier"                      = "$diskType"
                     "redundancy"                = $(($_.name).split('_')[1])
                     "MaxSizeGiB"                = $_.capabilities | Where-Object name -eq "MaxSizeGiB" | Select-Object -ExpandProperty value
                     "MinSizeGiB"                = $_.capabilities | Where-Object name -eq "MinSizeGiB" | Select-Object -ExpandProperty value
@@ -59,6 +60,7 @@ $diskSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
             $disk | Where-Object { $_.size -eq $diskSize } | Select-Object -First 1 | foreach-object {
                 New-Object PsObject -Property @{
                     "name"                       = "$($diskSize)"
+                    "tier"                       = "$diskType"
                     "redundancy"                 = $(($_.name).split('_')[1])
                     "MaxSizeGiB"                 = $_.capabilities | Where-Object name -eq "MaxSizeGiB" | Select-Object -ExpandProperty value
                     "MinSizeGiB"                 = $_.capabilities | Where-Object name -eq "MinSizeGiB" | Select-Object -ExpandProperty value
@@ -79,6 +81,7 @@ $diskSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
             $disk | Where-Object { $_.size -eq $diskSize } | Select-Object -First 1 | foreach-object {
                 New-Object PsObject -Property @{
                     "name"                = "$($diskSize)"
+                    "tier"                = "$diskType"
                     "redundancy"          = $(($_.name).split('_')[1])
                     "MaxSizeGiB"          = $_.capabilities | Where-Object name -eq "MaxSizeGiB" | Select-Object -ExpandProperty value
                     "MinSizeGiB"          = $_.capabilities | Where-Object name -eq "MinSizeGiB" | Select-Object -ExpandProperty value
@@ -89,8 +92,8 @@ $diskSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
                     "MaxValueOfMaxShares" = $_.capabilities | Where-Object name -eq "MaxValueOfMaxShares" | Select-Object -ExpandProperty value
                 }
             }
-        }   
-    
+        }
+
         switch ($diskType) {
             "PremiumV2" {
                 $skuName = "Premium $($diskName.split('_')[1])"
@@ -119,7 +122,7 @@ $diskSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
             $priceUri = "https://prices.azure.com/api/retail/prices?currencyCode='USD'&`$filter=serviceFamily eq 'Storage' and serviceName eq 'Storage' and skuName eq '$skuName' and meterName eq '$_'"
 
             do {
-                $results = Invoke-RestMethod -Method GET -Uri $priceUri
+                $results = Invoke-RestMethodWithRetry -Method GET -Uri $priceUri
 
                 $results.items | Where-Object { $_.productName -match "Disks" -or $_.productName -match "SSD v2" } | foreach-object {
                     $_
@@ -132,14 +135,20 @@ $diskSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
                     Start-Sleep -Seconds 30
                 }
 
-            } while ($nextLinkExists) 
+            } while ($nextLinkExists)
         }
-    }
 
-    $output | Add-Member -MemberType NoteProperty -Name "$($diskSize)_$(($diskName).split('_')[1])" -Value $(New-Object PsObject -Property @{
-            "specs"  = $diskSpecs
-            "prices" = $prices
-        })
+        # Pace requests between SKU/redundancy combinations so we don't hammer the Retail Prices API.
+        Start-Sleep -Seconds 1
+
+        # One entry per (size, redundancy) combination - a size like "P10" has both LRS and ZRS
+        # variants, each with its own specs/pricing, so this has to live inside the redundancy loop.
+        $output | Add-Member -MemberType NoteProperty -Name "$($diskSize)_$(($diskName).split('_')[1])" -Value $(New-Object PsObject -Property @{
+                "specs"  = $diskSpecs
+                "prices" = $prices
+            })
+    }
 }
 
-$output | ConvertTo-JSON -Depth 100 | Out-File -FilePath "C:\Temp\disks.json"
+Write-Output "Writing file to $PsScriptRoot\..\web\disks.json"
+$output | ConvertTo-JSON -Depth 100 | Out-File -FilePath "$PsScriptRoot\..\web\disks.json"
