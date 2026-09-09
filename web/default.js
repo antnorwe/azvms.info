@@ -665,7 +665,9 @@ function url_for_selections() {
   var parameters = [];
   for (var setting in params) {
     if (params[setting] !== undefined) {
-      parameters.push(setting + '=' + params[setting]);
+      // Encode both sides - a search term with &, =, %, #, or spaces would otherwise silently
+      // break the query string (and any such characters wouldn't round-trip on load at all).
+      parameters.push(encodeURIComponent(setting) + '=' + encodeURIComponent(String(params[setting])));
     }
   }
   if (parameters.length > 0) {
@@ -724,7 +726,10 @@ var apply_minmax_values = function () {
   });
   maybe_update_url();
 
-  change_region(g_settings_defaults.region);
+  // Re-render for the *current* region (which load_settings() may have just set from the URL
+  // or localStorage) - not the hardcoded default. change_region() also applies cost_duration
+  // internally, so fixing this restores both from a shared link, not just min/max filters.
+  change_region(g_settings.region);
 };
 
 function on_data_table_initialized() {
@@ -756,9 +761,10 @@ function on_data_table_initialized() {
   // Allow row filtering by min-value match.
   $('[data-action=datafilter]').on('keyup', apply_minmax_values);
 
-  // change_region(g_settings.region);
-  // change_cost(g_settings.cost_duration);
-  // change_reserved_term(g_settings.reserved_term);
+  // region/cost_duration are already applied by apply_minmax_values()'s change_region() call
+  // above (which cascades into change_cost() internally). reserved_term has no separate
+  // rendering path, so it needs its own call to restore the dropdown's active state.
+  change_reserved_term(g_settings.reserved_term);
 
   $.extend($.fn.dataTableExt.oStdClasses, {
     "sWrapper": "dataTables_wrapper form-inline"
@@ -847,9 +853,12 @@ function load_settings() {
   if (location.search) {
     var params = location.search.slice(1).split('&');
     params.forEach(function (param) {
-      var parts = param.split('=');
-      var key = parts[0];
-      var val = parts[1];
+      // Split on the first '=' only (a decoded value could itself contain one) and decode both
+      // sides - url_for_selections() encodes them, so this has to match or values round-trip
+      // wrong (or not at all, for anything with &, %, #, or spaces in it).
+      var eq = param.indexOf('=');
+      var key = decodeURIComponent(eq === -1 ? param : param.slice(0, eq));
+      var val = eq === -1 ? '' : decodeURIComponent(param.slice(eq + 1));
       // support legacy key names
       if (key == 'cost') {
         key = 'cost_duration';

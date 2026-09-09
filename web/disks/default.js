@@ -254,7 +254,9 @@ function maybe_update_url() {
     var url = location.origin + location.pathname;
     var parameters = [];
     for (var setting in params) {
-      parameters.push(setting + '=' + params[setting]);
+      // Encode both sides - a search term with &, =, %, #, or spaces would otherwise silently
+      // break the query string (and any such characters wouldn't round-trip on load at all).
+      parameters.push(encodeURIComponent(setting) + '=' + encodeURIComponent(String(params[setting])));
     }
     if (parameters.length > 0) {
       url = url + '?' + parameters.join('&');
@@ -276,8 +278,12 @@ function load_settings() {
   if (location.search) {
     var params = location.search.slice(1).split('&');
     params.forEach(function (param) {
-      var parts = param.split('=');
-      g_settings[parts[0]] = parts[1];
+      // Split on the first '=' only (a decoded value could itself contain one) and decode both
+      // sides to match how maybe_update_url() encodes them.
+      var eq = param.indexOf('=');
+      var key = decodeURIComponent(eq === -1 ? param : param.slice(0, eq));
+      var val = eq === -1 ? '' : decodeURIComponent(param.slice(eq + 1));
+      g_settings[key] = val;
     });
   }
 
