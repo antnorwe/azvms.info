@@ -65,6 +65,8 @@ function init_data_table() {
           "res3year",
           "cost-ondemand-linux",
           "cost-ondemand-mswin",
+          "cost-per-vcpu",
+          "cost-per-ram",
           "encryption_at_host",
           "capacity_reservation",
           "accelerated_networking",
@@ -147,6 +149,17 @@ function getParam(obj, key) {
   return obj[key];
 }
 
+// Value-comparison columns: $/hour divided by a spec (vCPUs, GB RAM). Matches the trailing-zero
+// stripping the other cost columns use, and the "$<amount> <unit>" shape cust-sort-pre parses.
+function format_cost_per_unit(hourlyCost, unitAmount, unitLabel) {
+  if (!hourlyCost || !unitAmount) {
+    return 'Unavailable';
+  }
+
+  var perUnit = hourlyCost / unitAmount;
+  return '$' + perUnit.toFixed(5).replace(/(0)*$/, '') + ' /' + unitLabel + '/hr';
+}
+
 $(document).ready(function () {
   loadLastUpdateTime()
   $.ajax({
@@ -219,7 +232,7 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
     var typeSize = res[type];
 
     //for (var typeInfo in typeSize) {
-    var row = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    var row = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
     row[0] = typeSize.description;
 
@@ -253,6 +266,7 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
     row[1] = getParam(typeSpecs, 'name');
 
     row[2] = getParam(typeSpecs, 'ram');
+    var raw_ram = Number(row[2]) || 0;
 
     if (Number(row[2]) < Number(min_memory) || Number(row[2]) > Number(max_memory)) {
       continue;
@@ -269,6 +283,8 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
     if ((row[3] < min_vcpus || row[3] > max_vcpus) || (min_vcpus && row[3] === 'shared')) {
       continue;
     }
+
+    var raw_vcpus = (row[3] && !isNaN(Number(row[3]))) ? Number(row[3]) : 0;
 
     if (!row[3]) {
       row[3] = '';
@@ -407,6 +423,8 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
         }
     }
 
+    var raw_linux_ondemand_cost = Number(row[21]) || 0;
+
     for (var k = 18; k < 23; k++) {
       if (row[k]) {
         row[k] *= multiplier;
@@ -419,12 +437,15 @@ function generate_data_table(region, multiplier = 1, per_time = 'hourly') {
       }
     }
 
-    row[23] = getParam(typeSpecs, 'encryption_at_host');
-    row[24] = getParam(typeSpecs, 'capacity_reservation');
-    row[25] = getParam(typeSpecs, 'accelerated_networking');
-    row[26] = getParam(typeSpecs, 'ephemeral_os_disk');
-    row[27] = getParam(typeSpecs, 'rdma_enabled');
-    row[28] = getParam(typeSpecs, 'trusted_launch_disabled');
+    row[23] = format_cost_per_unit(raw_linux_ondemand_cost, raw_vcpus, 'vCPU');
+    row[24] = format_cost_per_unit(raw_linux_ondemand_cost, raw_ram, 'GB RAM');
+
+    row[25] = getParam(typeSpecs, 'encryption_at_host');
+    row[26] = getParam(typeSpecs, 'capacity_reservation');
+    row[27] = getParam(typeSpecs, 'accelerated_networking');
+    row[28] = getParam(typeSpecs, 'ephemeral_os_disk');
+    row[29] = getParam(typeSpecs, 'rdma_enabled');
+    row[30] = getParam(typeSpecs, 'trusted_launch_disabled');
 
     var row_filtered = row.slice(1);
     instances_data.push(row_filtered);
