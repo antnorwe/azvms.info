@@ -17,6 +17,21 @@ $virtualMachines = Invoke-RestMethodWithRetry -Uri $uri -Method GET -Headers $he
 
 $vmSkus = $virtualMachines | Select-Object Name, Tier, Size -unique
 
+# Fetch every VM price in one bulk, paginated query instead of one HTTP call per SKU - the Retail
+# Prices API rate-limits by request count (roughly 10 requests/60s, per its own response headers),
+# so cutting the number of requests matters far more than how fast each individual call is.
+Write-Output "Fetching all VM retail prices..."
+$allVmPrices = Get-AllRetailPrices -Filter "serviceFamily eq 'Compute' and serviceName eq 'Virtual Machines'"
+Write-Output "Fetched $($allVmPrices.Count) price rows; grouping by SKU..."
+
+$pricesBySku = @{}
+foreach ($item in $allVmPrices) {
+    if (-not $pricesBySku.ContainsKey($item.armSkuName)) {
+        $pricesBySku[$item.armSkuName] = New-Object System.Collections.Generic.List[object]
+    }
+    $pricesBySku[$item.armSkuName].Add($item)
+}
+
 $output = @{}
 $vmSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
     $vmSize = $_
@@ -66,26 +81,8 @@ $vmSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
         )
     }
 
-    $priceUri = "https://prices.azure.com/api/retail/prices?currencyCode='USD'&`$filter=armSkuName eq '$($vm | Select-Object -expandProperty name -First 1)' and serviceFamily eq 'Compute' and serviceName eq 'Virtual Machines'"
-
-    $prices = do {
-        $results = Invoke-RestMethodWithRetry -Method GET -Uri $priceUri
-
-        $results.items | foreach-object {
-            $_
-        }
-
-        $nextLinkExists = [bool]($($results.nextPageLink -ne $null))
-
-        if ($nextLinkExists) {
-            $priceUri = $results.NextPageLink
-            Start-Sleep -Seconds 30
-        }
-
-    } while ($nextLinkExists)
-
-    # Pace requests between SKUs so we don't hammer the Retail Prices API and trip its rate limit.
-    Start-Sleep -Seconds 1
+    $vmSkuName = $vm | Select-Object -ExpandProperty name -First 1
+    $prices = if ($pricesBySku.ContainsKey($vmSkuName)) { $pricesBySku[$vmSkuName] } else { @() }
 
     $linux = $prices | Where-Object { $_.productName -notmatch "Win" -and $_.productName -notmatch "Cloud" }
     $windows = $prices | Where-Object { $_.productName -match "Win" -and $_.productName -notmatch "Cloud" }

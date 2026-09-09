@@ -17,6 +17,27 @@ $disks = Invoke-RestMethodWithRetry -Uri $uri -Method GET -Headers $headers | Se
 
 $diskSkus = $disks | Select-Object Name, Tier, Size -unique
 
+# Fetch every disk price in one bulk, paginated query instead of one HTTP call per (size,
+# redundancy, meter) combination - contains() lets a single filter cover every disk tier
+# (fixed-size Premium/Standard/StandardSSD plus the provisioned-unit PremiumV2/UltraSSD meters)
+# without pulling in unrelated Storage products (Blob, Files, etc.). See GenerateVMResourceJson.ps1
+# for why request count, not per-request speed, is what matters against this API's rate limit.
+Write-Output "Fetching all disk retail prices..."
+$allDiskPrices = Get-AllRetailPrices -Filter "serviceFamily eq 'Storage' and serviceName eq 'Storage' and (contains(productName,'Managed Disks') or contains(productName,'SSD v2') or contains(productName,'Ultra Disks'))"
+Write-Output "Fetched $($allDiskPrices.Count) price rows; grouping by SKU/meter..."
+
+$pricesBySkuMeter = @{}
+foreach ($item in $allDiskPrices) {
+    if ($item.productName -notmatch "Disks" -and $item.productName -notmatch "SSD v2") {
+        continue
+    }
+    $key = "$($item.skuName)|$($item.meterName)"
+    if (-not $pricesBySkuMeter.ContainsKey($key)) {
+        $pricesBySkuMeter[$key] = New-Object System.Collections.Generic.List[object]
+    }
+    $pricesBySkuMeter[$key].Add($item)
+}
+
 $output = @{}
 $diskSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
     $diskSize = $_
@@ -119,27 +140,11 @@ $diskSkus | Select-Object -ExpandProperty Size -Unique | foreach-object {
 
         Write-Output "Collecting Price information for $skuName"
         $prices = $meterName | foreach-object {
-            $priceUri = "https://prices.azure.com/api/retail/prices?currencyCode='USD'&`$filter=serviceFamily eq 'Storage' and serviceName eq 'Storage' and skuName eq '$skuName' and meterName eq '$_'"
-
-            do {
-                $results = Invoke-RestMethodWithRetry -Method GET -Uri $priceUri
-
-                $results.items | Where-Object { $_.productName -match "Disks" -or $_.productName -match "SSD v2" } | foreach-object {
-                    $_
-                }
-
-                $nextLinkExists = [bool]($($results.nextPageLink -ne $null))
-
-                if ($nextLinkExists) {
-                    $priceUri = $results.NextPageLink
-                    Start-Sleep -Seconds 30
-                }
-
-            } while ($nextLinkExists)
+            $key = "$skuName|$_"
+            if ($pricesBySkuMeter.ContainsKey($key)) {
+                $pricesBySkuMeter[$key]
+            }
         }
-
-        # Pace requests between SKU/redundancy combinations so we don't hammer the Retail Prices API.
-        Start-Sleep -Seconds 1
 
         # One entry per (size, redundancy) combination - a size like "P10" has both LRS and ZRS
         # variants, each with its own specs/pricing, so this has to live inside the redundancy loop.
