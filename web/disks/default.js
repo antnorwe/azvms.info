@@ -111,11 +111,22 @@ function init_data_table() {
     });
   });
 
+  // Keyed on column count so a future column change can't collide with a visitor's stale saved
+  // state - see the same pattern in ../default.js for why.
+  var stateStorageKey = 'DataTables_disks_cols' + $('#data thead tr:eq(0) th').length;
+
   g_data_table = $('#data').DataTable({
     "data": disks_data,
     "bPaginate": false,
     "bInfo": false,
     "bStateSave": true,
+    "stateSaveCallback": function (settings, data) {
+      localStorage.setItem(stateStorageKey, JSON.stringify(data));
+    },
+    "stateLoadCallback": function (settings) {
+      var saved = localStorage.getItem(stateStorageKey);
+      return saved ? JSON.parse(saved) : null;
+    },
     "orderCellsTop": true,
     "oSearch": {
       "bRegex": true,
