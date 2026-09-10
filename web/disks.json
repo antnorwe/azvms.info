@@ -1,29 +1,5 @@
 {
   "P_LRS": {
-    "specs": {
-      "MaxIopsReadOnly": "80000",
-      "MaxBandwidthMBpsReadWrite": "2000",
-      "MinSizeGiB": "1",
-      "PlatformFaultDomainCount": "2",
-      "MinBandwidthMBpsReadOnly": "125",
-      "MinIOpsReadWrite": "3000",
-      "tier": "PremiumV2",
-      "MaxIopsPerGiBReadOnly": "500",
-      "MinIopsReadOnly": "3000",
-      "MinIopsPerGiBReadWrite": "1",
-      "MinBandwidthMBpsReadWrite": "125",
-      "MaxBandwidthMBpsReadOnly": "2000",
-      "name": "PremiumV2",
-      "MaxValueOfMaxShares": "15",
-      "redundancy": "LRS",
-      "BillingPartitionSizes": "1, 2, 3, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 3072, 4096, 5120, 6144, 7168, 8192, 9216, 10240, 11264, 12288, 13312, 14336, 15360, 16384, 17408, 18432, 19456, 20480, 21504, 22528, 23552,24576,25600,26624,27648,28672,29696,30720,31744,32768,33792,34816,35840,36864,37888,38912,39936,40960,41984,43008,44032,45056,46080,47104,48128,49152,50176,51200,52224,53248,54272,55296,56320,57344,58368,59392,60416,61440,62464,63488,64512,65536",
-      "MinIOSizeKiBps": "4",
-      "MaxIOpsReadWrite": "80000",
-      "MaxSizeGiB": "65536",
-      "MaxIOSizeKiBps": "256",
-      "MinIopsPerGiBReadOnly": "1",
-      "MaxIopsPerGiBReadWrite": "500"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -1325,53 +1301,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 1.3E-05,
-        "unitPrice": 1.3E-05,
-        "armRegionName": "brazilsouth",
-        "location": "BR South",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "082a529c-be47-5b3a-bc71-ef2e78221336",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0011",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "qatarcentral",
-        "location": "QA Central",
-        "effectiveStartDate": "2026-06-01T00:00:00Z",
-        "meterId": "0c124314-a711-520c-8847-cc074783e27f",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0006",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 1E-05,
-        "unitPrice": 1E-05,
         "armRegionName": "qatarcentral",
         "location": "QA Central",
         "effectiveStartDate": "2026-06-01T00:00:00Z",
@@ -1413,53 +1345,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 1.3E-05,
-        "unitPrice": 1.3E-05,
-        "armRegionName": "uaecentral",
-        "location": "AE Central",
-        "effectiveStartDate": "2025-10-01T00:00:00Z",
-        "meterId": "0fabe8c7-4c60-5759-a1b6-8cb03a081459",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001G",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "switzerlandnorth",
-        "location": "CH North",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "1060f4d4-0278-5f94-a8ba-5525d2bb3353",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0017",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 1E-05,
-        "unitPrice": 1E-05,
         "armRegionName": "switzerlandnorth",
         "location": "CH North",
         "effectiveStartDate": "2023-12-01T00:00:00Z",
@@ -1501,53 +1389,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
-        "armRegionName": "usgovvirginia",
-        "location": "US Gov Virginia",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "16206013-4001-564d-986c-437192414680",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001Z",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "italynorth",
-        "location": "IT North",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "1c394a2e-3e5f-5e9b-94e4-600c331c8f59",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0022",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
         "armRegionName": "italynorth",
         "location": "IT North",
         "effectiveStartDate": "2023-12-01T00:00:00Z",
@@ -1589,53 +1433,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
-        "armRegionName": "centralus",
-        "location": "US Central",
-        "effectiveStartDate": "2023-05-01T00:00:00Z",
-        "meterId": "1ceed06a-307a-5e90-ae95-acee24819e27",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0002",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "southcentralus",
-        "location": "US South Central",
-        "effectiveStartDate": "2023-04-01T00:00:00Z",
-        "meterId": "28e51502-7979-5506-b0c2-00b7d645544f",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000D",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 7E-06,
-        "unitPrice": 7E-06,
         "armRegionName": "southcentralus",
         "location": "US South Central",
         "effectiveStartDate": "2023-04-01T00:00:00Z",
@@ -1677,53 +1477,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 9E-06,
-        "unitPrice": 9E-06,
-        "armRegionName": "eastasia",
-        "location": "AP East",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "2bdc1682-3f09-5a7f-95de-37ac1330100e",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000L",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "australiacentral2",
-        "location": "AU Central 2",
-        "effectiveStartDate": "2024-12-01T00:00:00Z",
-        "meterId": "2c1aee52-89b5-58ce-b225-8217839fcb1e",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000M",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
         "armRegionName": "australiacentral2",
         "location": "AU Central 2",
         "effectiveStartDate": "2024-12-01T00:00:00Z",
@@ -1787,53 +1543,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
-        "armRegionName": "westeurope",
-        "location": "EU West",
-        "effectiveStartDate": "2022-11-01T00:00:00Z",
-        "meterId": "3c0ef3d8-de64-5b67-b94a-37118d5bfb65",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0004",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "northeurope",
-        "location": "EU North",
-        "effectiveStartDate": "2023-03-01T00:00:00Z",
-        "meterId": "3e123cf9-94c6-5a0d-bc5a-665f1e2feccb",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0008",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 7E-06,
-        "unitPrice": 7E-06,
         "armRegionName": "northeurope",
         "location": "EU North",
         "effectiveStartDate": "2023-03-01T00:00:00Z",
@@ -1875,53 +1587,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 1E-05,
-        "unitPrice": 1E-05,
-        "armRegionName": "norwayeast",
-        "location": "NO East",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "3e974bfc-cd1b-5004-a119-32ff4e2ae969",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0015",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "australiaeast",
-        "location": "AU East",
-        "effectiveStartDate": "2023-04-01T00:00:00Z",
-        "meterId": "41af10d2-6431-5a1a-b04e-efd982239fe7",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0009",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 7E-06,
-        "unitPrice": 7E-06,
         "armRegionName": "australiaeast",
         "location": "AU East",
         "effectiveStartDate": "2023-04-01T00:00:00Z",
@@ -1963,53 +1631,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 7E-06,
-        "unitPrice": 7E-06,
-        "armRegionName": "malaysiawest",
-        "location": "MY West",
-        "effectiveStartDate": "2025-04-01T00:00:00Z",
-        "meterId": "42799dbb-e74d-50f5-b730-d81990abaea9",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/002J",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "polandcentral",
-        "location": "PL Central",
-        "effectiveStartDate": "2023-08-01T00:00:00Z",
-        "meterId": "4472e334-ac24-561f-8355-98c80c04d94d",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000G",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
         "armRegionName": "polandcentral",
         "location": "PL Central",
         "effectiveStartDate": "2023-08-01T00:00:00Z",
@@ -2051,53 +1675,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
-        "armRegionName": "uaenorth",
-        "location": "AE North",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "4561a4f8-022a-5de8-9d50-303b0209fcc3",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001T",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "japanwest",
-        "location": "JA West",
-        "effectiveStartDate": "2025-02-01T00:00:00Z",
-        "meterId": "496bc0ae-1a64-5086-9b41-1b98121273ed",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0012",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 1.1E-05,
-        "unitPrice": 1.1E-05,
         "armRegionName": "japanwest",
         "location": "JA West",
         "effectiveStartDate": "2025-02-01T00:00:00Z",
@@ -2139,53 +1719,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 7E-06,
-        "unitPrice": 7E-06,
-        "armRegionName": "northcentralus",
-        "location": "US North Central",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "4dc719e5-c3b0-57d5-adc9-33f4055d02ad",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000N",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "francecentral",
-        "location": "FR Central",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "4de1e9dd-79e5-5167-94ab-1425a3f5ef82",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001K",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
         "armRegionName": "francecentral",
         "location": "FR Central",
         "effectiveStartDate": "2023-12-01T00:00:00Z",
@@ -2227,53 +1763,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 1.2E-05,
-        "unitPrice": 1.2E-05,
-        "armRegionName": "germanynorth",
-        "location": "DE North",
-        "effectiveStartDate": "2025-10-01T00:00:00Z",
-        "meterId": "4f90bb3c-4d8d-5a3d-ae0f-759f7eb61d6b",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000P",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "centralindia",
-        "location": "IN Central",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "527eca07-7fab-5e83-b5b2-2a608eca7e17",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0016",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
         "armRegionName": "centralindia",
         "location": "IN Central",
         "effectiveStartDate": "2023-12-01T00:00:00Z",
@@ -2337,53 +1829,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
-        "armRegionName": "canadacentral",
-        "location": "CA Central",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "596642e6-7c0a-5b63-b04e-9b90ef69a20f",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001C",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "southeastasia",
-        "location": "AP Southeast",
-        "effectiveStartDate": "2023-04-01T00:00:00Z",
-        "meterId": "6224b6b6-d161-5ff1-bbf1-aaccd83cb99a",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0001",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
         "armRegionName": "southeastasia",
         "location": "AP Southeast",
         "effectiveStartDate": "2023-04-01T00:00:00Z",
@@ -2425,53 +1873,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 7E-06,
-        "unitPrice": 7E-06,
-        "armRegionName": "swedencentral",
-        "location": "SE Central",
-        "effectiveStartDate": "2023-04-01T00:00:00Z",
-        "meterId": "68757f9c-22d1-588f-bfdc-ef5fb918f37a",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000B",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "chilecentral",
-        "location": "CL Central",
-        "effectiveStartDate": "2025-04-01T00:00:00Z",
-        "meterId": "693164d7-6e29-53e3-8721-c8c4ee64468f",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000X",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 1.3E-05,
-        "unitPrice": 1.3E-05,
         "armRegionName": "chilecentral",
         "location": "CL Central",
         "effectiveStartDate": "2025-04-01T00:00:00Z",
@@ -2513,53 +1917,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 7E-06,
-        "unitPrice": 7E-06,
-        "armRegionName": "eastus",
-        "location": "US East",
-        "effectiveStartDate": "2022-11-01T00:00:00Z",
-        "meterId": "8270e480-5d6c-587b-ab74-227fd63e650d",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0007",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "eastus2",
-        "location": "US East 2",
-        "effectiveStartDate": "2023-03-01T00:00:00Z",
-        "meterId": "82c0fe05-4793-5668-a980-f636ba84316a",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000K",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 7E-06,
-        "unitPrice": 7E-06,
         "armRegionName": "eastus2",
         "location": "US East 2",
         "effectiveStartDate": "2023-03-01T00:00:00Z",
@@ -2601,53 +1961,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
-        "armRegionName": "westcentralus",
-        "location": "US West Central",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "84d708ba-c1ee-5512-8649-3c61bd4aa117",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000Q",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "norwaywest",
-        "location": "NO West",
-        "effectiveStartDate": "2024-11-01T00:00:00Z",
-        "meterId": "8b62a0ee-43b0-5f5c-9ad3-e09b95839920",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001N",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 1.3E-05,
-        "unitPrice": 1.3E-05,
         "armRegionName": "norwaywest",
         "location": "NO West",
         "effectiveStartDate": "2024-11-01T00:00:00Z",
@@ -2689,53 +2005,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
-        "armRegionName": "usgovtexas",
-        "location": "US Gov TX",
-        "effectiveStartDate": "2026-01-01T00:00:00Z",
-        "meterId": "8cf5ea8a-da36-54fd-ab7b-7d0dce55648d",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/009Q",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "southafricanorth",
-        "location": "ZA North",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "8ea2bb43-c9e7-5436-add3-3e2090bfd280",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0013",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 9E-06,
-        "unitPrice": 9E-06,
         "armRegionName": "southafricanorth",
         "location": "ZA North",
         "effectiveStartDate": "2023-12-01T00:00:00Z",
@@ -2777,28 +2049,6 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
-        "armRegionName": "canadaeast",
-        "location": "CA East",
-        "effectiveStartDate": "2024-11-01T00:00:00Z",
-        "meterId": "9182acf8-e3a4-50e2-8422-ff5cda4f1657",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000W",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
@@ -2821,53 +2071,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
-        "armRegionName": "ukwest",
-        "location": "UK West",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "91f08375-fa20-5d41-a8e6-c84d692a8c7d",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000R",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "jioindiawest",
-        "location": "IN West Jio",
-        "effectiveStartDate": "2024-09-01T00:00:00Z",
-        "meterId": "93d72fb5-170d-50e0-b95f-16a4903bd949",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0028",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
         "armRegionName": "jioindiawest",
         "location": "IN West Jio",
         "effectiveStartDate": "2024-09-01T00:00:00Z",
@@ -2931,53 +2137,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
-        "armRegionName": "japaneast",
-        "location": "JA East",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "a621ba89-21c7-537c-b98f-1f0b3b0eeb98",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001V",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "mexicocentral",
-        "location": "MX Central",
-        "effectiveStartDate": "2024-02-01T00:00:00Z",
-        "meterId": "b0985d65-84c3-58fc-8cfd-48ff9e9fc0b7",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001B",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 1E-05,
-        "unitPrice": 1E-05,
         "armRegionName": "mexicocentral",
         "location": "MX Central",
         "effectiveStartDate": "2024-02-01T00:00:00Z",
@@ -3019,53 +2181,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 1E-05,
-        "unitPrice": 1E-05,
-        "armRegionName": "australiasoutheast",
-        "location": "AU Southeast",
-        "effectiveStartDate": "2025-02-01T00:00:00Z",
-        "meterId": "b0b66ac4-5c4b-5f11-9d94-624478688aba",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000S",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "koreacentral",
-        "location": "KR Central",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "b80e5cba-3d7c-5952-8a74-c93dc45e8da1",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001S",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
         "armRegionName": "koreacentral",
         "location": "KR Central",
         "effectiveStartDate": "2023-12-01T00:00:00Z",
@@ -3107,53 +2225,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 7E-06,
-        "unitPrice": 7E-06,
-        "armRegionName": "westus2",
-        "location": "US West 2",
-        "effectiveStartDate": "2023-03-01T00:00:00Z",
-        "meterId": "b951a52d-f151-572f-a26c-b1e0f5fe6403",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000F",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "newzealandnorth",
-        "location": "NZ North",
-        "effectiveStartDate": "2024-09-01T00:00:00Z",
-        "meterId": "c2f1f0a6-c3f0-503a-aead-d8c82d2d31ff",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0025",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 7E-06,
-        "unitPrice": 7E-06,
         "armRegionName": "newzealandnorth",
         "location": "NZ North",
         "effectiveStartDate": "2024-09-01T00:00:00Z",
@@ -3195,53 +2269,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 1.1E-05,
-        "unitPrice": 1.1E-05,
-        "armRegionName": "southindia",
-        "location": "IN South",
-        "effectiveStartDate": "2025-10-01T00:00:00Z",
-        "meterId": "c614fb0d-f8d0-5fdb-bc9f-969316ebad03",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0010",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "usgovarizona",
-        "location": "US Gov AZ",
-        "effectiveStartDate": "2025-08-01T00:00:00Z",
-        "meterId": "ca337782-8220-5271-b39e-0d11603c5c85",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0021",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
         "armRegionName": "usgovarizona",
         "location": "US Gov AZ",
         "effectiveStartDate": "2025-08-01T00:00:00Z",
@@ -3283,53 +2313,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 1.3E-05,
-        "unitPrice": 1.3E-05,
-        "armRegionName": "southafricawest",
-        "location": "ZA West",
-        "effectiveStartDate": "2026-04-01T00:00:00Z",
-        "meterId": "cf0c01f0-172e-5b04-a9c4-244c15b754d4",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001J",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "indonesiacentral",
-        "location": "ID Central",
-        "effectiveStartDate": "2025-05-01T00:00:00Z",
-        "meterId": "d4f00f27-b6bf-5f19-98d3-a5aef3ea1b14",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0029",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 7E-06,
-        "unitPrice": 7E-06,
         "armRegionName": "indonesiacentral",
         "location": "ID Central",
         "effectiveStartDate": "2025-05-01T00:00:00Z",
@@ -3371,53 +2357,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
-        "armRegionName": "westus",
-        "location": "US West",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "d565619d-c48c-5422-9ae3-59b0b4d4eae0",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0018",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "israelcentral",
-        "location": "IL Central",
-        "effectiveStartDate": "2024-08-01T00:00:00Z",
-        "meterId": "da95d79d-33ff-5ecc-8dcb-ee2c1a8ee93c",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001X",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
         "armRegionName": "israelcentral",
         "location": "IL Central",
         "effectiveStartDate": "2024-08-01T00:00:00Z",
@@ -3459,53 +2401,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
-        "armRegionName": "germanywestcentral",
-        "location": "DE West Central",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "dc30b4f6-7627-5ac5-8c78-1083d32911d9",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0014",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "switzerlandwest",
-        "location": "CH West",
-        "effectiveStartDate": "2025-10-01T00:00:00Z",
-        "meterId": "ea23e6c3-797f-5ab8-bf55-2871d1bdc304",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001P",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 1.3E-05,
-        "unitPrice": 1.3E-05,
         "armRegionName": "switzerlandwest",
         "location": "CH West",
         "effectiveStartDate": "2025-10-01T00:00:00Z",
@@ -3547,53 +2445,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 7E-06,
-        "unitPrice": 7E-06,
-        "armRegionName": "westus3",
-        "location": "US West 3",
-        "effectiveStartDate": "2023-04-01T00:00:00Z",
-        "meterId": "ebafef84-0d46-58fc-9e95-422073447eca",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000C",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "brazilsoutheast",
-        "location": "BR Southeast",
-        "effectiveStartDate": "2025-10-01T00:00:00Z",
-        "meterId": "f2eb1c2f-044c-5b47-b6fa-3d7ae25f5d6e",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001L",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 1.6E-05,
-        "unitPrice": 1.6E-05,
         "armRegionName": "brazilsoutheast",
         "location": "BR Southeast",
         "effectiveStartDate": "2025-10-01T00:00:00Z",
@@ -3635,53 +2489,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
-        "armRegionName": "uksouth",
-        "location": "UK South",
-        "effectiveStartDate": "2023-04-01T00:00:00Z",
-        "meterId": "f59b359a-2c37-50cf-893b-9c5acbe20e86",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0003",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "spaincentral",
-        "location": "ES Central",
-        "effectiveStartDate": "2024-08-01T00:00:00Z",
-        "meterId": "f77a844d-5291-587f-b8d2-1a0556ba0d37",
-        "meterName": "Premium LRS Provisioned IOPS",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001H",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 3000.0,
-        "retailPrice": 8E-06,
-        "unitPrice": 8E-06,
         "armRegionName": "spaincentral",
         "location": "ES Central",
         "effectiveStartDate": "2024-08-01T00:00:00Z",
@@ -3723,53 +2533,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.6E-05,
-        "unitPrice": 6.6E-05,
-        "armRegionName": "ukwest",
-        "location": "UK West",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "01223859-c2d3-54a8-899b-f8e519a2c96a",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000R",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "northcentralus",
-        "location": "US North Central",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "0509ca6b-50f9-54c5-abb6-903d885d43ea",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000N",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 5.5E-05,
-        "unitPrice": 5.5E-05,
         "armRegionName": "northcentralus",
         "location": "US North Central",
         "effectiveStartDate": "2023-12-01T00:00:00Z",
@@ -3811,53 +2577,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.5E-05,
-        "unitPrice": 6.5E-05,
-        "armRegionName": "westeurope",
-        "location": "EU West",
-        "effectiveStartDate": "2022-11-01T00:00:00Z",
-        "meterId": "0b46528c-15ce-5ac5-bee3-4dbf86368cce",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0004",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "southafricanorth",
-        "location": "ZA North",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "10213fd6-0881-5488-8aa8-8a785a75e95f",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0013",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 7.1E-05,
-        "unitPrice": 7.1E-05,
         "armRegionName": "southafricanorth",
         "location": "ZA North",
         "effectiveStartDate": "2023-12-01T00:00:00Z",
@@ -3899,53 +2621,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.6E-05,
-        "unitPrice": 6.6E-05,
-        "armRegionName": "westcentralus",
-        "location": "US West Central",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "111e8d22-eddd-5762-8cbf-3eccb1b8688f",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000Q",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "qatarcentral",
-        "location": "QA Central",
-        "effectiveStartDate": "2026-06-01T00:00:00Z",
-        "meterId": "170203be-f567-5fac-a274-41a1d060dbbc",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0006",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 7.9E-05,
-        "unitPrice": 7.9E-05,
         "armRegionName": "qatarcentral",
         "location": "QA Central",
         "effectiveStartDate": "2026-06-01T00:00:00Z",
@@ -3987,53 +2665,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.3E-05,
-        "unitPrice": 6.3E-05,
-        "armRegionName": "francecentral",
-        "location": "FR Central",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "17409feb-ba22-5bf3-be91-4685c7812112",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001K",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "australiacentral2",
-        "location": "AU Central 2",
-        "effectiveStartDate": "2024-12-01T00:00:00Z",
-        "meterId": "1c2bcf11-4d78-50e8-8c53-61acdde5060e",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000M",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.6E-05,
-        "unitPrice": 6.6E-05,
         "armRegionName": "australiacentral2",
         "location": "AU Central 2",
         "effectiveStartDate": "2024-12-01T00:00:00Z",
@@ -4075,53 +2709,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.6E-05,
-        "unitPrice": 6.6E-05,
-        "armRegionName": "japaneast",
-        "location": "JA East",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "229e5207-e8fe-55e9-829e-5572f9bd2bc1",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001V",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "usgovvirginia",
-        "location": "US Gov Virginia",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "27b647bd-d310-5840-9741-591b845bed2a",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001Z",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.6E-05,
-        "unitPrice": 6.6E-05,
         "armRegionName": "usgovvirginia",
         "location": "US Gov Virginia",
         "effectiveStartDate": "2023-12-01T00:00:00Z",
@@ -4163,53 +2753,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.2E-05,
-        "unitPrice": 6.2E-05,
-        "armRegionName": "centralus",
-        "location": "US Central",
-        "effectiveStartDate": "2023-05-01T00:00:00Z",
-        "meterId": "2a65491b-58ba-5fbf-a9a4-d67b4726f43e",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0002",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "germanynorth",
-        "location": "DE North",
-        "effectiveStartDate": "2025-10-01T00:00:00Z",
-        "meterId": "2f6c4197-74eb-5983-a231-06075f44c66f",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000P",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 9.3E-05,
-        "unitPrice": 9.3E-05,
         "armRegionName": "germanynorth",
         "location": "DE North",
         "effectiveStartDate": "2025-10-01T00:00:00Z",
@@ -4251,53 +2797,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 5.5E-05,
-        "unitPrice": 5.5E-05,
-        "armRegionName": "westus3",
-        "location": "US West 3",
-        "effectiveStartDate": "2023-04-01T00:00:00Z",
-        "meterId": "350a10f7-1cd5-5af7-9466-a05e3c37852b",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000C",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "canadaeast",
-        "location": "CA East",
-        "effectiveStartDate": "2024-11-01T00:00:00Z",
-        "meterId": "351e3b8c-0aa9-53e0-897c-297bb5f18711",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000W",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.6E-05,
-        "unitPrice": 6.6E-05,
         "armRegionName": "canadaeast",
         "location": "CA East",
         "effectiveStartDate": "2024-11-01T00:00:00Z",
@@ -4339,53 +2841,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 5.5E-05,
-        "unitPrice": 5.5E-05,
-        "armRegionName": "westus2",
-        "location": "US West 2",
-        "effectiveStartDate": "2023-03-01T00:00:00Z",
-        "meterId": "3c7e7d24-4a03-5d5e-9af4-aadeed4a7488",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000F",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "chilecentral",
-        "location": "CL Central",
-        "effectiveStartDate": "2025-04-01T00:00:00Z",
-        "meterId": "3c86256a-f8bd-542e-96f2-3102f6ee7226",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000X",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 7.6E-05,
-        "unitPrice": 7.6E-05,
         "armRegionName": "chilecentral",
         "location": "CL Central",
         "effectiveStartDate": "2025-04-01T00:00:00Z",
@@ -4427,53 +2885,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.6E-05,
-        "unitPrice": 6.6E-05,
-        "armRegionName": "southeastasia",
-        "location": "AP Southeast",
-        "effectiveStartDate": "2023-04-01T00:00:00Z",
-        "meterId": "48bd76ba-f182-5cc4-8de8-f64e3d9e7e0b",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0001",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "switzerlandwest",
-        "location": "CH West",
-        "effectiveStartDate": "2025-10-01T00:00:00Z",
-        "meterId": "48f38f7b-3ff6-580b-a105-b3efc9eab2b4",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001P",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 0.000101,
-        "unitPrice": 0.000101,
         "armRegionName": "switzerlandwest",
         "location": "CH West",
         "effectiveStartDate": "2025-10-01T00:00:00Z",
@@ -4515,53 +2929,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 7.8E-05,
-        "unitPrice": 7.8E-05,
-        "armRegionName": "norwayeast",
-        "location": "NO East",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "49532e7f-69e2-5cf1-a632-d74f7a3a5768",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0015",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "eastus",
-        "location": "US East",
-        "effectiveStartDate": "2022-11-01T00:00:00Z",
-        "meterId": "4ff4e08c-618b-5d17-b164-50fcb460f587",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0007",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 5.5E-05,
-        "unitPrice": 5.5E-05,
         "armRegionName": "eastus",
         "location": "US East",
         "effectiveStartDate": "2022-11-01T00:00:00Z",
@@ -4603,53 +2973,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 5.5E-05,
-        "unitPrice": 5.5E-05,
-        "armRegionName": "swedencentral",
-        "location": "SE Central",
-        "effectiveStartDate": "2023-04-01T00:00:00Z",
-        "meterId": "52f9d19c-856c-5288-a895-370833e3dc8d",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000B",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "koreacentral",
-        "location": "KR Central",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "539d3c55-6abe-599e-a0ab-420cf1ccc186",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001S",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.3E-05,
-        "unitPrice": 6.3E-05,
         "armRegionName": "koreacentral",
         "location": "KR Central",
         "effectiveStartDate": "2023-12-01T00:00:00Z",
@@ -4691,53 +3017,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.3E-05,
-        "unitPrice": 6.3E-05,
-        "armRegionName": "centralindia",
-        "location": "IN Central",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "64230ef4-42eb-5fab-9d70-1344942293a9",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0016",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "uaecentral",
-        "location": "AE Central",
-        "effectiveStartDate": "2025-10-01T00:00:00Z",
-        "meterId": "6630784c-5352-5c40-ac97-e8fd1bdf32f9",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001G",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 0.000102,
-        "unitPrice": 0.000102,
         "armRegionName": "uaecentral",
         "location": "AE Central",
         "effectiveStartDate": "2025-10-01T00:00:00Z",
@@ -4779,53 +3061,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 7.3E-05,
-        "unitPrice": 7.3E-05,
-        "armRegionName": "eastasia",
-        "location": "AP East",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "6a97b9d7-4dd7-5879-b877-a8b539ef9959",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000L",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "uaenorth",
-        "location": "AE North",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "70d2a8b7-4738-5144-a668-e8a0d533b294",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001T",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.6E-05,
-        "unitPrice": 6.6E-05,
         "armRegionName": "uaenorth",
         "location": "AE North",
         "effectiveStartDate": "2023-12-01T00:00:00Z",
@@ -4867,53 +3105,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6E-05,
-        "unitPrice": 6E-05,
-        "armRegionName": "mexicocentral",
-        "location": "MX Central",
-        "effectiveStartDate": "2024-02-01T00:00:00Z",
-        "meterId": "711e6373-74e5-5b35-9ee5-4d892446f344",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001B",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "canadacentral",
-        "location": "CA Central",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "794b931c-9949-5caf-8af0-89e84b6a024e",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001C",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6E-05,
-        "unitPrice": 6E-05,
         "armRegionName": "canadacentral",
         "location": "CA Central",
         "effectiveStartDate": "2023-12-01T00:00:00Z",
@@ -4977,53 +3171,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.6E-05,
-        "unitPrice": 6.6E-05,
-        "armRegionName": "usgovarizona",
-        "location": "US Gov AZ",
-        "effectiveStartDate": "2025-08-01T00:00:00Z",
-        "meterId": "81fae0a1-1c67-53e6-8a98-0c333fe83c3f",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0021",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "westus",
-        "location": "US West",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "8b84fbd9-d892-54dd-897b-6f69845411e9",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0018",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.6E-05,
-        "unitPrice": 6.6E-05,
         "armRegionName": "westus",
         "location": "US West",
         "effectiveStartDate": "2023-12-01T00:00:00Z",
@@ -5065,53 +3215,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.3E-05,
-        "unitPrice": 6.3E-05,
-        "armRegionName": "jioindiawest",
-        "location": "IN West Jio",
-        "effectiveStartDate": "2024-09-01T00:00:00Z",
-        "meterId": "8cc3f6b4-959f-57dd-9391-119af75e3e1e",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0028",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "germanywestcentral",
-        "location": "DE West Central",
-        "effectiveStartDate": "2024-07-01T00:00:00Z",
-        "meterId": "8f3c1275-4c4c-5bc7-9454-9aeaa065e026",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0014",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.5E-05,
-        "unitPrice": 6.5E-05,
         "armRegionName": "germanywestcentral",
         "location": "DE West Central",
         "effectiveStartDate": "2024-07-01T00:00:00Z",
@@ -5153,53 +3259,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.6E-05,
-        "unitPrice": 6.6E-05,
-        "armRegionName": "israelcentral",
-        "location": "IL Central",
-        "effectiveStartDate": "2024-08-01T00:00:00Z",
-        "meterId": "933c27b7-30fc-5c87-b01d-dbeb37b9a05a",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001X",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "norwaywest",
-        "location": "NO West",
-        "effectiveStartDate": "2024-11-01T00:00:00Z",
-        "meterId": "96d83f8a-6082-5373-ba72-3d3d417b0853",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001N",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 0.000102,
-        "unitPrice": 0.000102,
         "armRegionName": "norwaywest",
         "location": "NO West",
         "effectiveStartDate": "2024-11-01T00:00:00Z",
@@ -5241,53 +3303,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 5.8E-05,
-        "unitPrice": 5.8E-05,
-        "armRegionName": "newzealandnorth",
-        "location": "NZ North",
-        "effectiveStartDate": "2024-09-01T00:00:00Z",
-        "meterId": "9dc8fcdb-b3ac-5bf3-8c15-fb9e5f27ecb4",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0025",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "switzerlandnorth",
-        "location": "CH North",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "a3d368a6-b051-56b7-b360-e082bda660cd",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0017",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 7.8E-05,
-        "unitPrice": 7.8E-05,
         "armRegionName": "switzerlandnorth",
         "location": "CH North",
         "effectiveStartDate": "2023-12-01T00:00:00Z",
@@ -5351,53 +3369,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.5E-05,
-        "unitPrice": 6.5E-05,
-        "armRegionName": "polandcentral",
-        "location": "PL Central",
-        "effectiveStartDate": "2023-08-01T00:00:00Z",
-        "meterId": "aa6d73b1-5ce1-531f-b4e1-8fefe3d0f225",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000G",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "usgovtexas",
-        "location": "US Gov TX",
-        "effectiveStartDate": "2026-01-01T00:00:00Z",
-        "meterId": "af8a6eb0-d926-516b-a248-85df233d7883",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/009Q",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.6E-05,
-        "unitPrice": 6.6E-05,
         "armRegionName": "usgovtexas",
         "location": "US Gov TX",
         "effectiveStartDate": "2026-01-01T00:00:00Z",
@@ -5439,53 +3413,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 5.5E-05,
-        "unitPrice": 5.5E-05,
-        "armRegionName": "eastus2",
-        "location": "US East 2",
-        "effectiveStartDate": "2023-03-01T00:00:00Z",
-        "meterId": "bd8ed25e-cc05-5255-9b21-3a30de6ee476",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000K",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "australiaeast",
-        "location": "AU East",
-        "effectiveStartDate": "2023-04-01T00:00:00Z",
-        "meterId": "bf69119e-cd5e-558a-aab4-da7ceadbf434",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0009",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 5.5E-05,
-        "unitPrice": 5.5E-05,
         "armRegionName": "australiaeast",
         "location": "AU East",
         "effectiveStartDate": "2023-04-01T00:00:00Z",
@@ -5527,53 +3457,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.3E-05,
-        "unitPrice": 6.3E-05,
-        "armRegionName": "uksouth",
-        "location": "UK South",
-        "effectiveStartDate": "2023-08-01T00:00:00Z",
-        "meterId": "c261860b-7b49-5309-b8d5-e07b0258135c",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0003",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "japanwest",
-        "location": "JA West",
-        "effectiveStartDate": "2025-02-01T00:00:00Z",
-        "meterId": "cd763ee0-207b-5db6-9d4d-459b71d8ab1e",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0012",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 8.5E-05,
-        "unitPrice": 8.5E-05,
         "armRegionName": "japanwest",
         "location": "JA West",
         "effectiveStartDate": "2025-02-01T00:00:00Z",
@@ -5615,28 +3501,6 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.5E-05,
-        "unitPrice": 6.5E-05,
-        "armRegionName": "spaincentral",
-        "location": "ES Central",
-        "effectiveStartDate": "2024-08-01T00:00:00Z",
-        "meterId": "cffb9cda-36f6-5453-a313-25dbff415c96",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001H",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
@@ -5659,53 +3523,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 5.9E-05,
-        "unitPrice": 5.9E-05,
-        "armRegionName": "indonesiacentral",
-        "location": "ID Central",
-        "effectiveStartDate": "2025-05-01T00:00:00Z",
-        "meterId": "d20e1de3-d619-5ffe-ba9c-71531cf188ca",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0029",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "australiasoutheast",
-        "location": "AU Southeast",
-        "effectiveStartDate": "2025-02-01T00:00:00Z",
-        "meterId": "d615eaab-c4d1-5f43-94bc-33b57e640111",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000S",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 7.7E-05,
-        "unitPrice": 7.7E-05,
         "armRegionName": "australiasoutheast",
         "location": "AU Southeast",
         "effectiveStartDate": "2025-02-01T00:00:00Z",
@@ -5769,53 +3589,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 0.0001,
-        "unitPrice": 0.0001,
-        "armRegionName": "southafricawest",
-        "location": "ZA West",
-        "effectiveStartDate": "2026-04-01T00:00:00Z",
-        "meterId": "dc110610-f857-5885-ac2c-ff96eff438d6",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001J",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "brazilsoutheast",
-        "location": "BR Southeast",
-        "effectiveStartDate": "2025-10-01T00:00:00Z",
-        "meterId": "def5794f-7884-5c39-bece-975ebe0db414",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/001L",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 0.000127,
-        "unitPrice": 0.000127,
         "armRegionName": "brazilsoutheast",
         "location": "BR Southeast",
         "effectiveStartDate": "2025-10-01T00:00:00Z",
@@ -5857,53 +3633,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 5.9E-05,
-        "unitPrice": 5.9E-05,
-        "armRegionName": "malaysiawest",
-        "location": "MY West",
-        "effectiveStartDate": "2025-04-01T00:00:00Z",
-        "meterId": "e2e151e8-fb62-5375-86a6-30aa5937048e",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/002J",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "northeurope",
-        "location": "EU North",
-        "effectiveStartDate": "2023-03-01T00:00:00Z",
-        "meterId": "e6a20e2c-9abb-5db9-93e8-d81a4076b13e",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0008",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 5.5E-05,
-        "unitPrice": 5.5E-05,
         "armRegionName": "northeurope",
         "location": "EU North",
         "effectiveStartDate": "2023-03-01T00:00:00Z",
@@ -5967,53 +3699,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 8.3E-05,
-        "unitPrice": 8.3E-05,
-        "armRegionName": "southindia",
-        "location": "IN South",
-        "effectiveStartDate": "2025-10-01T00:00:00Z",
-        "meterId": "f69f1dcc-2085-5d82-b3c0-f12aa99dd87d",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0010",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "brazilsouth",
-        "location": "BR South",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "f9eaec45-6888-574e-b77c-f82f2fa2861f",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0011",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 0.000104,
-        "unitPrice": 0.000104,
         "armRegionName": "brazilsouth",
         "location": "BR South",
         "effectiveStartDate": "2023-12-01T00:00:00Z",
@@ -6055,53 +3743,9 @@
       },
       {
         "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 6.3E-05,
-        "unitPrice": 6.3E-05,
-        "armRegionName": "italynorth",
-        "location": "IT North",
-        "effectiveStartDate": "2023-12-01T00:00:00Z",
-        "meterId": "fbc199fd-cebd-53a7-afbc-71cbdee61362",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/0022",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
         "retailPrice": 0.0,
         "unitPrice": 0.0,
-        "armRegionName": "southcentralus",
-        "location": "US South Central",
-        "effectiveStartDate": "2023-04-01T00:00:00Z",
-        "meterId": "fef1bb3d-c4dc-56ab-891b-b26804795260",
-        "meterName": "Premium LRS Provisioned Throughput (MBps)",
-        "productId": "DZH318Z09V07",
-        "skuId": "DZH318Z09V07/000D",
-        "productName": "Azure Premium SSD v2",
-        "skuName": "Premium LRS",
-        "serviceName": "Storage",
-        "serviceId": "DZH317F1HKN0",
-        "serviceFamily": "Storage",
-        "unitOfMeasure": "1/Hour",
-        "type": "Consumption",
-        "isPrimaryMeterRegion": true,
-        "armSkuName": ""
-      },
-      {
-        "currencyCode": "USD",
-        "tierMinimumUnits": 125.0,
-        "retailPrice": 5.5E-05,
-        "unitPrice": 5.5E-05,
         "armRegionName": "southcentralus",
         "location": "US South Central",
         "effectiveStartDate": "2023-04-01T00:00:00Z",
@@ -6119,26 +3763,33 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxIOSizeKiBps": "256",
+      "MaxSizeGiB": "65536",
+      "MaxIopsPerGiBReadWrite": "500",
+      "MaxIOpsReadWrite": "80000",
+      "MaxBandwidthMBpsReadOnly": "2000",
+      "MinBandwidthMBpsReadWrite": "125",
+      "MaxIopsReadOnly": "80000",
+      "redundancy": "LRS",
+      "MinIOSizeKiBps": "4",
+      "MinBandwidthMBpsReadOnly": "125",
+      "MinIOpsReadWrite": "3000",
+      "MinSizeGiB": "1",
+      "MinIopsReadOnly": "3000",
+      "PlatformFaultDomainCount": "2",
+      "MaxValueOfMaxShares": "15",
+      "MinIopsPerGiBReadOnly": "1",
+      "BillingPartitionSizes": "1, 2, 3, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 3072, 4096, 5120, 6144, 7168, 8192, 9216, 10240, 11264, 12288, 13312, 14336, 15360, 16384, 17408, 18432, 19456, 20480, 21504, 22528, 23552,24576,25600,26624,27648,28672,29696,30720,31744,32768,33792,34816,35840,36864,37888,38912,39936,40960,41984,43008,44032,45056,46080,47104,48128,49152,50176,51200,52224,53248,54272,55296,56320,57344,58368,59392,60416,61440,62464,63488,64512,65536",
+      "MaxBandwidthMBpsReadWrite": "2000",
+      "MinIopsPerGiBReadWrite": "1",
+      "MaxIopsPerGiBReadOnly": "500",
+      "tier": "PremiumV2",
+      "name": "PremiumV2"
+    }
   },
   "P1_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": "30",
-      "MaxSizeGiB": "4",
-      "MaxIOps": "120",
-      "redundancy": "LRS",
-      "MinSizeGiB": "0",
-      "MinIOps": "120",
-      "name": "P1",
-      "MaxBurstIops": "3500",
-      "MaxValueOfMaxShares": "3",
-      "BurstCreditBucketSizeInIO": "6084000",
-      "MaxBurstBandwidthMBps": "170",
-      "MinBandwidthMBps": "25",
-      "BurstCreditBucketSizeInGiB": "255",
-      "MaxBandwidthMBps": "25",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -7570,26 +5221,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "4",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "0",
+      "MaxBurstIops": "3500",
+      "MinBandwidthMBps": "25",
+      "MaxBandwidthMBps": "25",
+      "MaxBurstDurationInMin": "30",
+      "redundancy": "LRS",
+      "name": "P1",
+      "MinIOps": "120",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": "170",
+      "BurstCreditBucketSizeInIO": "6084000",
+      "BurstCreditBucketSizeInGiB": "255",
+      "MaxIOps": "120"
+    }
   },
   "P1_ZRS": {
-    "specs": {
-      "MaxBurstDurationInMin": "30",
-      "MaxSizeGiB": "4",
-      "MaxIOps": "120",
-      "redundancy": "ZRS",
-      "MinSizeGiB": "0",
-      "MinIOps": "120",
-      "name": "P1",
-      "MaxBurstIops": "3500",
-      "MaxValueOfMaxShares": "3",
-      "BurstCreditBucketSizeInIO": "6084000",
-      "MaxBurstBandwidthMBps": "170",
-      "MinBandwidthMBps": "25",
-      "BurstCreditBucketSizeInGiB": "255",
-      "MaxBandwidthMBps": "25",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -8493,26 +6144,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "4",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "0",
+      "MaxBurstIops": "3500",
+      "MinBandwidthMBps": "25",
+      "MaxBandwidthMBps": "25",
+      "MaxBurstDurationInMin": "30",
+      "redundancy": "ZRS",
+      "name": "P1",
+      "MinIOps": "120",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": "170",
+      "BurstCreditBucketSizeInIO": "6084000",
+      "BurstCreditBucketSizeInGiB": "255",
+      "MaxIOps": "120"
+    }
   },
   "P10_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": "30",
-      "MaxSizeGiB": "128",
-      "MaxIOps": "500",
-      "redundancy": "LRS",
-      "MinSizeGiB": "64",
-      "MinIOps": "500",
-      "name": "P10",
-      "MaxBurstIops": "3500",
-      "MaxValueOfMaxShares": "3",
-      "BurstCreditBucketSizeInIO": "5400000",
-      "MaxBurstBandwidthMBps": "170",
-      "MinBandwidthMBps": "100",
-      "BurstCreditBucketSizeInGiB": "123",
-      "MaxBandwidthMBps": "100",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -9966,26 +7617,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": "Premium_SSD_Managed_Disk_P10"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "128",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "64",
+      "MaxBurstIops": "3500",
+      "MinBandwidthMBps": "100",
+      "MaxBandwidthMBps": "100",
+      "MaxBurstDurationInMin": "30",
+      "redundancy": "LRS",
+      "name": "P10",
+      "MinIOps": "500",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": "170",
+      "BurstCreditBucketSizeInIO": "5400000",
+      "BurstCreditBucketSizeInGiB": "123",
+      "MaxIOps": "500"
+    }
   },
   "P10_ZRS": {
-    "specs": {
-      "MaxBurstDurationInMin": "30",
-      "MaxSizeGiB": "128",
-      "MaxIOps": "500",
-      "redundancy": "ZRS",
-      "MinSizeGiB": "64",
-      "MinIOps": "500",
-      "name": "P10",
-      "MaxBurstIops": "3500",
-      "MaxValueOfMaxShares": "3",
-      "BurstCreditBucketSizeInIO": "5400000",
-      "MaxBurstBandwidthMBps": "170",
-      "MinBandwidthMBps": "100",
-      "BurstCreditBucketSizeInGiB": "123",
-      "MaxBandwidthMBps": "100",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -10889,26 +8540,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": "Premium_SSD_Managed_Disk_P10"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "128",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "64",
+      "MaxBurstIops": "3500",
+      "MinBandwidthMBps": "100",
+      "MaxBandwidthMBps": "100",
+      "MaxBurstDurationInMin": "30",
+      "redundancy": "ZRS",
+      "name": "P10",
+      "MinIOps": "500",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": "170",
+      "BurstCreditBucketSizeInIO": "5400000",
+      "BurstCreditBucketSizeInGiB": "123",
+      "MaxIOps": "500"
+    }
   },
   "P15_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": "30",
-      "MaxSizeGiB": "256",
-      "MaxIOps": "1100",
-      "redundancy": "LRS",
-      "MinSizeGiB": "128",
-      "MinIOps": "1100",
-      "name": "P15",
-      "MaxBurstIops": "3500",
-      "MaxValueOfMaxShares": "3",
-      "BurstCreditBucketSizeInIO": "4320000",
-      "MaxBurstBandwidthMBps": "170",
-      "MinBandwidthMBps": "125",
-      "BurstCreditBucketSizeInGiB": "79",
-      "MaxBandwidthMBps": "125",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -12362,26 +10013,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": "Premium_SSD_Managed_Disk_P15"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "256",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "128",
+      "MaxBurstIops": "3500",
+      "MinBandwidthMBps": "125",
+      "MaxBandwidthMBps": "125",
+      "MaxBurstDurationInMin": "30",
+      "redundancy": "LRS",
+      "name": "P15",
+      "MinIOps": "1100",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": "170",
+      "BurstCreditBucketSizeInIO": "4320000",
+      "BurstCreditBucketSizeInGiB": "79",
+      "MaxIOps": "1100"
+    }
   },
   "P15_ZRS": {
-    "specs": {
-      "MaxBurstDurationInMin": "30",
-      "MaxSizeGiB": "256",
-      "MaxIOps": "1100",
-      "redundancy": "ZRS",
-      "MinSizeGiB": "128",
-      "MinIOps": "1100",
-      "name": "P15",
-      "MaxBurstIops": "3500",
-      "MaxValueOfMaxShares": "3",
-      "BurstCreditBucketSizeInIO": "4320000",
-      "MaxBurstBandwidthMBps": "170",
-      "MinBandwidthMBps": "125",
-      "BurstCreditBucketSizeInGiB": "79",
-      "MaxBandwidthMBps": "125",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -13285,26 +10936,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": "Premium_SSD_Managed_Disk_P15"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "256",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "128",
+      "MaxBurstIops": "3500",
+      "MinBandwidthMBps": "125",
+      "MaxBandwidthMBps": "125",
+      "MaxBurstDurationInMin": "30",
+      "redundancy": "ZRS",
+      "name": "P15",
+      "MinIOps": "1100",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": "170",
+      "BurstCreditBucketSizeInIO": "4320000",
+      "BurstCreditBucketSizeInGiB": "79",
+      "MaxIOps": "1100"
+    }
   },
   "P2_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": "30",
-      "MaxSizeGiB": "8",
-      "MaxIOps": "120",
-      "redundancy": "LRS",
-      "MinSizeGiB": "4",
-      "MinIOps": "120",
-      "name": "P2",
-      "MaxBurstIops": "3500",
-      "MaxValueOfMaxShares": "3",
-      "BurstCreditBucketSizeInIO": "6084000",
-      "MaxBurstBandwidthMBps": "170",
-      "MinBandwidthMBps": "25",
-      "BurstCreditBucketSizeInGiB": "255",
-      "MaxBandwidthMBps": "25",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -14736,26 +12387,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "8",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "4",
+      "MaxBurstIops": "3500",
+      "MinBandwidthMBps": "25",
+      "MaxBandwidthMBps": "25",
+      "MaxBurstDurationInMin": "30",
+      "redundancy": "LRS",
+      "name": "P2",
+      "MinIOps": "120",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": "170",
+      "BurstCreditBucketSizeInIO": "6084000",
+      "BurstCreditBucketSizeInGiB": "255",
+      "MaxIOps": "120"
+    }
   },
   "P2_ZRS": {
-    "specs": {
-      "MaxBurstDurationInMin": "30",
-      "MaxSizeGiB": "8",
-      "MaxIOps": "120",
-      "redundancy": "ZRS",
-      "MinSizeGiB": "4",
-      "MinIOps": "120",
-      "name": "P2",
-      "MaxBurstIops": "3500",
-      "MaxValueOfMaxShares": "3",
-      "BurstCreditBucketSizeInIO": "6084000",
-      "MaxBurstBandwidthMBps": "170",
-      "MinBandwidthMBps": "25",
-      "BurstCreditBucketSizeInGiB": "255",
-      "MaxBandwidthMBps": "25",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -15659,26 +13310,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "8",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "4",
+      "MaxBurstIops": "3500",
+      "MinBandwidthMBps": "25",
+      "MaxBandwidthMBps": "25",
+      "MaxBurstDurationInMin": "30",
+      "redundancy": "ZRS",
+      "name": "P2",
+      "MinIOps": "120",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": "170",
+      "BurstCreditBucketSizeInIO": "6084000",
+      "BurstCreditBucketSizeInGiB": "255",
+      "MaxIOps": "120"
+    }
   },
   "P20_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": "30",
-      "MaxSizeGiB": "512",
-      "MaxIOps": "2300",
-      "redundancy": "LRS",
-      "MinSizeGiB": "256",
-      "MinIOps": "2300",
-      "name": "P20",
-      "MaxBurstIops": "3500",
-      "MaxValueOfMaxShares": "3",
-      "BurstCreditBucketSizeInIO": "2160000",
-      "MaxBurstBandwidthMBps": "170",
-      "MinBandwidthMBps": "150",
-      "BurstCreditBucketSizeInGiB": "35",
-      "MaxBandwidthMBps": "150",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -17132,26 +14783,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": "Premium_SSD_Managed_Disk_P20"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "512",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "256",
+      "MaxBurstIops": "3500",
+      "MinBandwidthMBps": "150",
+      "MaxBandwidthMBps": "150",
+      "MaxBurstDurationInMin": "30",
+      "redundancy": "LRS",
+      "name": "P20",
+      "MinIOps": "2300",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": "170",
+      "BurstCreditBucketSizeInIO": "2160000",
+      "BurstCreditBucketSizeInGiB": "35",
+      "MaxIOps": "2300"
+    }
   },
   "P20_ZRS": {
-    "specs": {
-      "MaxBurstDurationInMin": "30",
-      "MaxSizeGiB": "512",
-      "MaxIOps": "2300",
-      "redundancy": "ZRS",
-      "MinSizeGiB": "256",
-      "MinIOps": "2300",
-      "name": "P20",
-      "MaxBurstIops": "3500",
-      "MaxValueOfMaxShares": "3",
-      "BurstCreditBucketSizeInIO": "2160000",
-      "MaxBurstBandwidthMBps": "170",
-      "MinBandwidthMBps": "150",
-      "BurstCreditBucketSizeInGiB": "35",
-      "MaxBandwidthMBps": "150",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -18055,26 +15706,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": "Premium_SSD_Managed_Disk_P20"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "512",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "256",
+      "MaxBurstIops": "3500",
+      "MinBandwidthMBps": "150",
+      "MaxBandwidthMBps": "150",
+      "MaxBurstDurationInMin": "30",
+      "redundancy": "ZRS",
+      "name": "P20",
+      "MinIOps": "2300",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": "170",
+      "BurstCreditBucketSizeInIO": "2160000",
+      "BurstCreditBucketSizeInGiB": "35",
+      "MaxIOps": "2300"
+    }
   },
   "P3_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": "30",
-      "MaxSizeGiB": "16",
-      "MaxIOps": "120",
-      "redundancy": "LRS",
-      "MinSizeGiB": "8",
-      "MinIOps": "120",
-      "name": "P3",
-      "MaxBurstIops": "3500",
-      "MaxValueOfMaxShares": "3",
-      "BurstCreditBucketSizeInIO": "6084000",
-      "MaxBurstBandwidthMBps": "170",
-      "MinBandwidthMBps": "25",
-      "BurstCreditBucketSizeInGiB": "255",
-      "MaxBandwidthMBps": "25",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -19506,26 +17157,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "16",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "8",
+      "MaxBurstIops": "3500",
+      "MinBandwidthMBps": "25",
+      "MaxBandwidthMBps": "25",
+      "MaxBurstDurationInMin": "30",
+      "redundancy": "LRS",
+      "name": "P3",
+      "MinIOps": "120",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": "170",
+      "BurstCreditBucketSizeInIO": "6084000",
+      "BurstCreditBucketSizeInGiB": "255",
+      "MaxIOps": "120"
+    }
   },
   "P3_ZRS": {
-    "specs": {
-      "MaxBurstDurationInMin": "30",
-      "MaxSizeGiB": "16",
-      "MaxIOps": "120",
-      "redundancy": "ZRS",
-      "MinSizeGiB": "8",
-      "MinIOps": "120",
-      "name": "P3",
-      "MaxBurstIops": "3500",
-      "MaxValueOfMaxShares": "3",
-      "BurstCreditBucketSizeInIO": "6084000",
-      "MaxBurstBandwidthMBps": "170",
-      "MinBandwidthMBps": "25",
-      "BurstCreditBucketSizeInGiB": "255",
-      "MaxBandwidthMBps": "25",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -20429,26 +18080,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "16",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "8",
+      "MaxBurstIops": "3500",
+      "MinBandwidthMBps": "25",
+      "MaxBandwidthMBps": "25",
+      "MaxBurstDurationInMin": "30",
+      "redundancy": "ZRS",
+      "name": "P3",
+      "MinIOps": "120",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": "170",
+      "BurstCreditBucketSizeInIO": "6084000",
+      "BurstCreditBucketSizeInGiB": "255",
+      "MaxIOps": "120"
+    }
   },
   "P30_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "1024",
-      "MaxIOps": "5000",
-      "redundancy": "LRS",
-      "MinSizeGiB": "512",
-      "MinIOps": "5000",
-      "name": "P30",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "5",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "200",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "200",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -23006,26 +20657,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": "Premium_SSD_Managed_Disks_P30"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "1024",
+      "MaxValueOfMaxShares": "5",
+      "MinSizeGiB": "512",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "200",
+      "MaxBandwidthMBps": "200",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "LRS",
+      "name": "P30",
+      "MinIOps": "5000",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "5000"
+    }
   },
   "P30_ZRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "1024",
-      "MaxIOps": "5000",
-      "redundancy": "ZRS",
-      "MinSizeGiB": "512",
-      "MinIOps": "5000",
-      "name": "P30",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "5",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "200",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "200",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -23929,26 +21580,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": "Premium_SSD_Managed_Disks_P30"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "1024",
+      "MaxValueOfMaxShares": "5",
+      "MinSizeGiB": "512",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "200",
+      "MaxBandwidthMBps": "200",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "ZRS",
+      "name": "P30",
+      "MinIOps": "5000",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "5000"
+    }
   },
   "P4_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": "30",
-      "MaxSizeGiB": "32",
-      "MaxIOps": "120",
-      "redundancy": "LRS",
-      "MinSizeGiB": "16",
-      "MinIOps": "120",
-      "name": "P4",
-      "MaxBurstIops": "3500",
-      "MaxValueOfMaxShares": "3",
-      "BurstCreditBucketSizeInIO": "6084000",
-      "MaxBurstBandwidthMBps": "170",
-      "MinBandwidthMBps": "25",
-      "BurstCreditBucketSizeInGiB": "255",
-      "MaxBandwidthMBps": "25",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -25402,26 +23053,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "32",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "16",
+      "MaxBurstIops": "3500",
+      "MinBandwidthMBps": "25",
+      "MaxBandwidthMBps": "25",
+      "MaxBurstDurationInMin": "30",
+      "redundancy": "LRS",
+      "name": "P4",
+      "MinIOps": "120",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": "170",
+      "BurstCreditBucketSizeInIO": "6084000",
+      "BurstCreditBucketSizeInGiB": "255",
+      "MaxIOps": "120"
+    }
   },
   "P4_ZRS": {
-    "specs": {
-      "MaxBurstDurationInMin": "30",
-      "MaxSizeGiB": "32",
-      "MaxIOps": "120",
-      "redundancy": "ZRS",
-      "MinSizeGiB": "16",
-      "MinIOps": "120",
-      "name": "P4",
-      "MaxBurstIops": "3500",
-      "MaxValueOfMaxShares": "3",
-      "BurstCreditBucketSizeInIO": "6084000",
-      "MaxBurstBandwidthMBps": "170",
-      "MinBandwidthMBps": "25",
-      "BurstCreditBucketSizeInGiB": "255",
-      "MaxBandwidthMBps": "25",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -26325,26 +23976,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "32",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "16",
+      "MaxBurstIops": "3500",
+      "MinBandwidthMBps": "25",
+      "MaxBandwidthMBps": "25",
+      "MaxBurstDurationInMin": "30",
+      "redundancy": "ZRS",
+      "name": "P4",
+      "MinIOps": "120",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": "170",
+      "BurstCreditBucketSizeInIO": "6084000",
+      "BurstCreditBucketSizeInGiB": "255",
+      "MaxIOps": "120"
+    }
   },
   "P40_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "2048",
-      "MaxIOps": "7500",
-      "redundancy": "LRS",
-      "MinSizeGiB": "1024",
-      "MinIOps": "7500",
-      "name": "P40",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "5",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "250",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "250",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -29983,26 +27634,26 @@
         "isPrimaryMeterRegion": false,
         "armSkuName": "Premium_SSD_Managed_Disks_P40"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "2048",
+      "MaxValueOfMaxShares": "5",
+      "MinSizeGiB": "1024",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "250",
+      "MaxBandwidthMBps": "250",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "LRS",
+      "name": "P40",
+      "MinIOps": "7500",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "7500"
+    }
   },
   "P40_ZRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "2048",
-      "MaxIOps": "7500",
-      "redundancy": "ZRS",
-      "MinSizeGiB": "1024",
-      "MinIOps": "7500",
-      "name": "P40",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "5",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "250",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "250",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -30906,26 +28557,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": "Premium_SSD_Managed_Disks_P40"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "2048",
+      "MaxValueOfMaxShares": "5",
+      "MinSizeGiB": "1024",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "250",
+      "MaxBandwidthMBps": "250",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "ZRS",
+      "name": "P40",
+      "MinIOps": "7500",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "7500"
+    }
   },
   "P50_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "4096",
-      "MaxIOps": "7500",
-      "redundancy": "LRS",
-      "MinSizeGiB": "2048",
-      "MinIOps": "7500",
-      "name": "P50",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "5",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "250",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "250",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -34564,26 +32215,26 @@
         "isPrimaryMeterRegion": false,
         "armSkuName": "Premium_SSD_Managed_Disks_P50"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "4096",
+      "MaxValueOfMaxShares": "5",
+      "MinSizeGiB": "2048",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "250",
+      "MaxBandwidthMBps": "250",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "LRS",
+      "name": "P50",
+      "MinIOps": "7500",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "7500"
+    }
   },
   "P50_ZRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "4096",
-      "MaxIOps": "7500",
-      "redundancy": "ZRS",
-      "MinSizeGiB": "2048",
-      "MinIOps": "7500",
-      "name": "P50",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "5",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "250",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "250",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -35487,26 +33138,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": "Premium_SSD_Managed_Disks_P50"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "4096",
+      "MaxValueOfMaxShares": "5",
+      "MinSizeGiB": "2048",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "250",
+      "MaxBandwidthMBps": "250",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "ZRS",
+      "name": "P50",
+      "MinIOps": "7500",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "7500"
+    }
   },
   "P6_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": "30",
-      "MaxSizeGiB": "64",
-      "MaxIOps": "240",
-      "redundancy": "LRS",
-      "MinSizeGiB": "32",
-      "MinIOps": "240",
-      "name": "P6",
-      "MaxBurstIops": "3500",
-      "MaxValueOfMaxShares": "3",
-      "BurstCreditBucketSizeInIO": "5868000",
-      "MaxBurstBandwidthMBps": "170",
-      "MinBandwidthMBps": "50",
-      "BurstCreditBucketSizeInGiB": "211",
-      "MaxBandwidthMBps": "50",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -36960,26 +34611,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": "Premium_SSD_Managed_Disk_P6"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "64",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "32",
+      "MaxBurstIops": "3500",
+      "MinBandwidthMBps": "50",
+      "MaxBandwidthMBps": "50",
+      "MaxBurstDurationInMin": "30",
+      "redundancy": "LRS",
+      "name": "P6",
+      "MinIOps": "240",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": "170",
+      "BurstCreditBucketSizeInIO": "5868000",
+      "BurstCreditBucketSizeInGiB": "211",
+      "MaxIOps": "240"
+    }
   },
   "P6_ZRS": {
-    "specs": {
-      "MaxBurstDurationInMin": "30",
-      "MaxSizeGiB": "64",
-      "MaxIOps": "240",
-      "redundancy": "ZRS",
-      "MinSizeGiB": "32",
-      "MinIOps": "240",
-      "name": "P6",
-      "MaxBurstIops": "3500",
-      "MaxValueOfMaxShares": "3",
-      "BurstCreditBucketSizeInIO": "5868000",
-      "MaxBurstBandwidthMBps": "170",
-      "MinBandwidthMBps": "50",
-      "BurstCreditBucketSizeInGiB": "211",
-      "MaxBandwidthMBps": "50",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -37883,26 +35534,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": "Premium_SSD_Managed_Disk_P6"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "64",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "32",
+      "MaxBurstIops": "3500",
+      "MinBandwidthMBps": "50",
+      "MaxBandwidthMBps": "50",
+      "MaxBurstDurationInMin": "30",
+      "redundancy": "ZRS",
+      "name": "P6",
+      "MinIOps": "240",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": "170",
+      "BurstCreditBucketSizeInIO": "5868000",
+      "BurstCreditBucketSizeInGiB": "211",
+      "MaxIOps": "240"
+    }
   },
   "P60_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "8192",
-      "MaxIOps": "16000",
-      "redundancy": "LRS",
-      "MinSizeGiB": "4096",
-      "MinIOps": "16000",
-      "name": "P60",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "10",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "500",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "500",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -41519,26 +39170,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": "Premium_SSD_Managed_Disks_P60"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "8192",
+      "MaxValueOfMaxShares": "10",
+      "MinSizeGiB": "4096",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "500",
+      "MaxBandwidthMBps": "500",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "LRS",
+      "name": "P60",
+      "MinIOps": "16000",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "16000"
+    }
   },
   "P60_ZRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "8192",
-      "MaxIOps": "16000",
-      "redundancy": "ZRS",
-      "MinSizeGiB": "4096",
-      "MinIOps": "16000",
-      "name": "P60",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "10",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "500",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "500",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -42442,26 +40093,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": "Premium_SSD_Managed_Disks_P60"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "8192",
+      "MaxValueOfMaxShares": "10",
+      "MinSizeGiB": "4096",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "500",
+      "MaxBandwidthMBps": "500",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "ZRS",
+      "name": "P60",
+      "MinIOps": "16000",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "16000"
+    }
   },
   "P70_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "16384",
-      "MaxIOps": "18000",
-      "redundancy": "LRS",
-      "MinSizeGiB": "8192",
-      "MinIOps": "18000",
-      "name": "P70",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "10",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "750",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "750",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -46078,26 +43729,26 @@
         "isPrimaryMeterRegion": false,
         "armSkuName": "Premium_SSD_Managed_Disks_P70"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "16384",
+      "MaxValueOfMaxShares": "10",
+      "MinSizeGiB": "8192",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "750",
+      "MaxBandwidthMBps": "750",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "LRS",
+      "name": "P70",
+      "MinIOps": "18000",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "18000"
+    }
   },
   "P70_ZRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "16384",
-      "MaxIOps": "18000",
-      "redundancy": "ZRS",
-      "MinSizeGiB": "8192",
-      "MinIOps": "18000",
-      "name": "P70",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "10",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "750",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "750",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -47001,26 +44652,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": "Premium_SSD_Managed_Disks_P70"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "16384",
+      "MaxValueOfMaxShares": "10",
+      "MinSizeGiB": "8192",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "750",
+      "MaxBandwidthMBps": "750",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "ZRS",
+      "name": "P70",
+      "MinIOps": "18000",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "18000"
+    }
   },
   "P80_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "32767",
-      "MaxIOps": "20000",
-      "redundancy": "LRS",
-      "MinSizeGiB": "16384",
-      "MinIOps": "20000",
-      "name": "P80",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "10",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "900",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "900",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -50637,26 +48288,26 @@
         "isPrimaryMeterRegion": false,
         "armSkuName": "Premium_SSD_Managed_Disks_P80"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "32767",
+      "MaxValueOfMaxShares": "10",
+      "MinSizeGiB": "16384",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "900",
+      "MaxBandwidthMBps": "900",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "LRS",
+      "name": "P80",
+      "MinIOps": "20000",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "20000"
+    }
   },
   "P80_ZRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "32767",
-      "MaxIOps": "20000",
-      "redundancy": "ZRS",
-      "MinSizeGiB": "16384",
-      "MinIOps": "20000",
-      "name": "P80",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "10",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "900",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "900",
-      "tier": "Premium"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -51560,21 +49211,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": "Premium_SSD_Managed_Disks_P80"
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "32767",
+      "MaxValueOfMaxShares": "10",
+      "MinSizeGiB": "16384",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "900",
+      "MaxBandwidthMBps": "900",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "ZRS",
+      "name": "P80",
+      "MinIOps": "20000",
+      "tier": "Premium",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "20000"
+    }
   },
   "E1_LRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "4",
-      "redundancy": "LRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E1",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "0",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -53006,21 +50662,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "LRS",
+      "name": "E1",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "4",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "0",
+      "MinIOps": "500"
+    }
   },
   "E1_ZRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "4",
-      "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E1",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "0",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -53902,21 +51558,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "ZRS",
+      "name": "E1",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "4",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "0",
+      "MinIOps": "500"
+    }
   },
   "E10_LRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "128",
-      "redundancy": "LRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E10",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "64",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -55414,21 +53070,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "LRS",
+      "name": "E10",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "128",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "64",
+      "MinIOps": "500"
+    }
   },
   "E10_ZRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "128",
-      "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E10",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "64",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -56310,21 +53966,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "ZRS",
+      "name": "E10",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "128",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "64",
+      "MinIOps": "500"
+    }
   },
   "E15_LRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "256",
-      "redundancy": "LRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E15",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "128",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -57800,21 +55456,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "LRS",
+      "name": "E15",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "256",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "128",
+      "MinIOps": "500"
+    }
   },
   "E15_ZRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "256",
-      "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E15",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "128",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -58696,21 +56352,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "ZRS",
+      "name": "E15",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "256",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "128",
+      "MinIOps": "500"
+    }
   },
   "E2_LRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "8",
-      "redundancy": "LRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E2",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "4",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -60164,21 +57820,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "LRS",
+      "name": "E2",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "8",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "4",
+      "MinIOps": "500"
+    }
   },
   "E2_ZRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "8",
-      "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E2",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "4",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -61060,21 +58716,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "ZRS",
+      "name": "E2",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "8",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "4",
+      "MinIOps": "500"
+    }
   },
   "E20_LRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "512",
-      "redundancy": "LRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E20",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "256",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -62550,21 +60206,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "LRS",
+      "name": "E20",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "512",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "256",
+      "MinIOps": "500"
+    }
   },
   "E20_ZRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "512",
-      "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E20",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "256",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -63446,21 +61102,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "ZRS",
+      "name": "E20",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "512",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "256",
+      "MinIOps": "500"
+    }
   },
   "E3_LRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "16",
-      "redundancy": "LRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E3",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "8",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -64914,21 +62570,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "LRS",
+      "name": "E3",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "16",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "8",
+      "MinIOps": "500"
+    }
   },
   "E3_ZRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "16",
-      "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E3",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "8",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -65810,21 +63466,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "ZRS",
+      "name": "E3",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "16",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "8",
+      "MinIOps": "500"
+    }
   },
   "E30_LRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "1024",
-      "redundancy": "LRS",
-      "MaxValueOfMaxShares": "5",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E30",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "512",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -67300,21 +64956,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "LRS",
+      "name": "E30",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "1024",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "5",
+      "MinSizeGiB": "512",
+      "MinIOps": "500"
+    }
   },
   "E30_ZRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "1024",
-      "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "5",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E30",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "512",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -68196,21 +65852,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "ZRS",
+      "name": "E30",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "1024",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "5",
+      "MinSizeGiB": "512",
+      "MinIOps": "500"
+    }
   },
   "E4_LRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "32",
-      "redundancy": "LRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E4",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "16",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -69686,21 +67342,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "LRS",
+      "name": "E4",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "32",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "16",
+      "MinIOps": "500"
+    }
   },
   "E4_ZRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "32",
-      "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E4",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "16",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -70582,21 +68238,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "ZRS",
+      "name": "E4",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "32",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "16",
+      "MinIOps": "500"
+    }
   },
   "E40_LRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "2048",
-      "redundancy": "LRS",
-      "MaxValueOfMaxShares": "5",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E40",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "1024",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -72050,21 +69706,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "LRS",
+      "name": "E40",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "2048",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "5",
+      "MinSizeGiB": "1024",
+      "MinIOps": "500"
+    }
   },
   "E40_ZRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "2048",
-      "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "5",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E40",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "1024",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -72946,21 +70602,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "ZRS",
+      "name": "E40",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "2048",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "5",
+      "MinSizeGiB": "1024",
+      "MinIOps": "500"
+    }
   },
   "E50_LRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "4096",
-      "redundancy": "LRS",
-      "MaxValueOfMaxShares": "5",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E50",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "2048",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -74414,21 +72070,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "LRS",
+      "name": "E50",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "4096",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "5",
+      "MinSizeGiB": "2048",
+      "MinIOps": "500"
+    }
   },
   "E50_ZRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "4096",
-      "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "5",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E50",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "2048",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -75310,21 +72966,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "ZRS",
+      "name": "E50",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "4096",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "5",
+      "MinSizeGiB": "2048",
+      "MinIOps": "500"
+    }
   },
   "E6_LRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "64",
-      "redundancy": "LRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E6",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "32",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -76778,21 +74434,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "LRS",
+      "name": "E6",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "64",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "32",
+      "MinIOps": "500"
+    }
   },
   "E6_ZRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "64",
-      "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "500",
-      "MaxIOps": "500",
-      "name": "E6",
-      "MaxBandwidthMBps": "100",
-      "MinSizeGiB": "32",
-      "MinBandwidthMBps": "100"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -77674,21 +75330,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "ZRS",
+      "name": "E6",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "100",
+      "MaxIOps": "500",
+      "MaxSizeGiB": "64",
+      "MaxBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
+      "MinSizeGiB": "32",
+      "MinIOps": "500"
+    }
   },
   "E60_LRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "8192",
-      "redundancy": "LRS",
-      "MaxValueOfMaxShares": "10",
-      "MinIOps": "2000",
-      "MaxIOps": "2000",
-      "name": "E60",
-      "MaxBandwidthMBps": "400",
-      "MinSizeGiB": "4096",
-      "MinBandwidthMBps": "400"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -79120,21 +76776,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "LRS",
+      "name": "E60",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "400",
+      "MaxIOps": "2000",
+      "MaxSizeGiB": "8192",
+      "MaxBandwidthMBps": "400",
+      "MaxValueOfMaxShares": "10",
+      "MinSizeGiB": "4096",
+      "MinIOps": "2000"
+    }
   },
   "E60_ZRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "8192",
-      "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "10",
-      "MinIOps": "2000",
-      "MaxIOps": "2000",
-      "name": "E60",
-      "MaxBandwidthMBps": "400",
-      "MinSizeGiB": "4096",
-      "MinBandwidthMBps": "400"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -80016,21 +77672,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "ZRS",
+      "name": "E60",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "400",
+      "MaxIOps": "2000",
+      "MaxSizeGiB": "8192",
+      "MaxBandwidthMBps": "400",
+      "MaxValueOfMaxShares": "10",
+      "MinSizeGiB": "4096",
+      "MinIOps": "2000"
+    }
   },
   "E70_LRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "16384",
-      "redundancy": "LRS",
-      "MaxValueOfMaxShares": "10",
-      "MinIOps": "4000",
-      "MaxIOps": "4000",
-      "name": "E70",
-      "MaxBandwidthMBps": "600",
-      "MinSizeGiB": "8192",
-      "MinBandwidthMBps": "600"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -81462,21 +79118,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "LRS",
+      "name": "E70",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "600",
+      "MaxIOps": "4000",
+      "MaxSizeGiB": "16384",
+      "MaxBandwidthMBps": "600",
+      "MaxValueOfMaxShares": "10",
+      "MinSizeGiB": "8192",
+      "MinIOps": "4000"
+    }
   },
   "E70_ZRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "16384",
-      "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "10",
-      "MinIOps": "4000",
-      "MaxIOps": "4000",
-      "name": "E70",
-      "MaxBandwidthMBps": "600",
-      "MinSizeGiB": "8192",
-      "MinBandwidthMBps": "600"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -82358,21 +80014,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "ZRS",
+      "name": "E70",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "600",
+      "MaxIOps": "4000",
+      "MaxSizeGiB": "16384",
+      "MaxBandwidthMBps": "600",
+      "MaxValueOfMaxShares": "10",
+      "MinSizeGiB": "8192",
+      "MinIOps": "4000"
+    }
   },
   "E80_LRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "32767",
-      "redundancy": "LRS",
-      "MaxValueOfMaxShares": "10",
-      "MinIOps": "6000",
-      "MaxIOps": "6000",
-      "name": "E80",
-      "MaxBandwidthMBps": "750",
-      "MinSizeGiB": "16384",
-      "MinBandwidthMBps": "750"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -83804,21 +81460,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "LRS",
+      "name": "E80",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "750",
+      "MaxIOps": "6000",
+      "MaxSizeGiB": "32767",
+      "MaxBandwidthMBps": "750",
+      "MaxValueOfMaxShares": "10",
+      "MinSizeGiB": "16384",
+      "MinIOps": "6000"
+    }
   },
   "E80_ZRS": {
-    "specs": {
-      "tier": "StandardSSD",
-      "MaxSizeGiB": "32767",
-      "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "10",
-      "MinIOps": "6000",
-      "MaxIOps": "6000",
-      "name": "E80",
-      "MaxBandwidthMBps": "750",
-      "MinSizeGiB": "16384",
-      "MinBandwidthMBps": "750"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -84700,26 +82356,21 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "redundancy": "ZRS",
+      "name": "E80",
+      "tier": "StandardSSD",
+      "MinBandwidthMBps": "750",
+      "MaxIOps": "6000",
+      "MaxSizeGiB": "32767",
+      "MaxBandwidthMBps": "750",
+      "MaxValueOfMaxShares": "10",
+      "MinSizeGiB": "16384",
+      "MinIOps": "6000"
+    }
   },
   "S10_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "128",
-      "MaxIOps": "500",
-      "redundancy": "LRS",
-      "MinSizeGiB": "64",
-      "MinIOps": "500",
-      "name": "S10",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "1",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "60",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "60",
-      "tier": "Standard"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -86129,26 +83780,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "128",
+      "MaxValueOfMaxShares": "1",
+      "MinSizeGiB": "64",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "60",
+      "MaxBandwidthMBps": "60",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "LRS",
+      "name": "S10",
+      "MinIOps": "500",
+      "tier": "Standard",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "500"
+    }
   },
   "S15_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "256",
-      "MaxIOps": "500",
-      "redundancy": "LRS",
-      "MinSizeGiB": "128",
-      "MinIOps": "500",
-      "name": "S15",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "1",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "60",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "60",
-      "tier": "Standard"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -87558,26 +85209,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "256",
+      "MaxValueOfMaxShares": "1",
+      "MinSizeGiB": "128",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "60",
+      "MaxBandwidthMBps": "60",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "LRS",
+      "name": "S15",
+      "MinIOps": "500",
+      "tier": "Standard",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "500"
+    }
   },
   "S20_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "512",
-      "MaxIOps": "500",
-      "redundancy": "LRS",
-      "MinSizeGiB": "256",
-      "MinIOps": "500",
-      "name": "S20",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "2",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "60",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "60",
-      "tier": "Standard"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -88987,26 +86638,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "512",
+      "MaxValueOfMaxShares": "2",
+      "MinSizeGiB": "256",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "60",
+      "MaxBandwidthMBps": "60",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "LRS",
+      "name": "S20",
+      "MinIOps": "500",
+      "tier": "Standard",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "500"
+    }
   },
   "S30_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "1024",
-      "MaxIOps": "500",
-      "redundancy": "LRS",
-      "MinSizeGiB": "512",
-      "MinIOps": "500",
-      "name": "S30",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "5",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "60",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "60",
-      "tier": "Standard"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -90416,26 +88067,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "1024",
+      "MaxValueOfMaxShares": "5",
+      "MinSizeGiB": "512",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "60",
+      "MaxBandwidthMBps": "60",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "LRS",
+      "name": "S30",
+      "MinIOps": "500",
+      "tier": "Standard",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "500"
+    }
   },
   "S4_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "32",
-      "MaxIOps": "500",
-      "redundancy": "LRS",
-      "MinSizeGiB": "0",
-      "MinIOps": "500",
-      "name": "S4",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "1",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "60",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "60",
-      "tier": "Standard"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -91845,26 +89496,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "32",
+      "MaxValueOfMaxShares": "1",
+      "MinSizeGiB": "0",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "60",
+      "MaxBandwidthMBps": "60",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "LRS",
+      "name": "S4",
+      "MinIOps": "500",
+      "tier": "Standard",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "500"
+    }
   },
   "S40_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "2048",
-      "MaxIOps": "500",
-      "redundancy": "LRS",
-      "MinSizeGiB": "1024",
-      "MinIOps": "500",
-      "name": "S40",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "5",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "60",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "60",
-      "tier": "Standard"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -93274,26 +90925,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "2048",
+      "MaxValueOfMaxShares": "5",
+      "MinSizeGiB": "1024",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "60",
+      "MaxBandwidthMBps": "60",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "LRS",
+      "name": "S40",
+      "MinIOps": "500",
+      "tier": "Standard",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "500"
+    }
   },
   "S50_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "4096",
-      "MaxIOps": "500",
-      "redundancy": "LRS",
-      "MinSizeGiB": "2048",
-      "MinIOps": "500",
-      "name": "S50",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "5",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "60",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "60",
-      "tier": "Standard"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -94703,26 +92354,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "4096",
+      "MaxValueOfMaxShares": "5",
+      "MinSizeGiB": "2048",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "60",
+      "MaxBandwidthMBps": "60",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "LRS",
+      "name": "S50",
+      "MinIOps": "500",
+      "tier": "Standard",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "500"
+    }
   },
   "S6_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "64",
-      "MaxIOps": "500",
-      "redundancy": "LRS",
-      "MinSizeGiB": "32",
-      "MinIOps": "500",
-      "name": "S6",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "1",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "60",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "60",
-      "tier": "Standard"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -96132,26 +93783,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "64",
+      "MaxValueOfMaxShares": "1",
+      "MinSizeGiB": "32",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "60",
+      "MaxBandwidthMBps": "60",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "LRS",
+      "name": "S6",
+      "MinIOps": "500",
+      "tier": "Standard",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "500"
+    }
   },
   "S60_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "8192",
-      "MaxIOps": "1300",
-      "redundancy": "LRS",
-      "MinSizeGiB": "4096",
-      "MinIOps": "500",
-      "name": "S60",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "5",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "60",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "300",
-      "tier": "Standard"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -97561,26 +95212,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "8192",
+      "MaxValueOfMaxShares": "5",
+      "MinSizeGiB": "4096",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "60",
+      "MaxBandwidthMBps": "300",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "LRS",
+      "name": "S60",
+      "MinIOps": "500",
+      "tier": "Standard",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "1300"
+    }
   },
   "S70_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "16384",
-      "MaxIOps": "2000",
-      "redundancy": "LRS",
-      "MinSizeGiB": "8192",
-      "MinIOps": "1300",
-      "name": "S70",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "5",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "300",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "500",
-      "tier": "Standard"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -98990,26 +96641,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "16384",
+      "MaxValueOfMaxShares": "5",
+      "MinSizeGiB": "8192",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "300",
+      "MaxBandwidthMBps": "500",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "LRS",
+      "name": "S70",
+      "MinIOps": "1300",
+      "tier": "Standard",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "2000"
+    }
   },
   "S80_LRS": {
-    "specs": {
-      "MaxBurstDurationInMin": null,
-      "MaxSizeGiB": "32767",
-      "MaxIOps": "2000",
-      "redundancy": "LRS",
-      "MinSizeGiB": "16384",
-      "MinIOps": "2000",
-      "name": "S80",
-      "MaxBurstIops": null,
-      "MaxValueOfMaxShares": "5",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxBurstBandwidthMBps": null,
-      "MinBandwidthMBps": "500",
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBandwidthMBps": "500",
-      "tier": "Standard"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -100419,33 +98070,26 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxSizeGiB": "32767",
+      "MaxValueOfMaxShares": "5",
+      "MinSizeGiB": "16384",
+      "MaxBurstIops": null,
+      "MinBandwidthMBps": "500",
+      "MaxBandwidthMBps": "500",
+      "MaxBurstDurationInMin": null,
+      "redundancy": "LRS",
+      "name": "S80",
+      "MinIOps": "2000",
+      "tier": "Standard",
+      "MaxBurstBandwidthMBps": null,
+      "BurstCreditBucketSizeInIO": null,
+      "BurstCreditBucketSizeInGiB": null,
+      "MaxIOps": "2000"
+    }
   },
   "U_LRS": {
-    "specs": {
-      "MaxIopsReadOnly": "400000",
-      "MaxBandwidthMBpsReadWrite": "10000",
-      "MinSizeGiB": "4",
-      "PlatformFaultDomainCount": "2",
-      "MinBandwidthMBpsReadOnly": "1",
-      "MinIOpsReadWrite": "100",
-      "tier": "UltraSSD",
-      "MaxIopsPerGiBReadOnly": "1000",
-      "MinIopsReadOnly": "100",
-      "MinIopsPerGiBReadWrite": "0",
-      "MinBandwidthMBpsReadWrite": "1",
-      "MaxBandwidthMBpsReadOnly": "10000",
-      "name": "UltraSSD",
-      "MaxValueOfMaxShares": "15",
-      "redundancy": "LRS",
-      "BillingPartitionSizes": "4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 3072, 4096, 5120, 6144, 7168, 8192, 9216, 10240, 11264, 12288, 13312, 14336, 15360, 16384, 17408, 18432, 19456, 20480, 21504, 22528, 23552,24576,25600,26624,27648,28672,29696,30720,31744,32768,33792,34816,35840,36864,37888,38912,39936,40960,41984,43008,44032,45056,46080,47104,48128,49152,50176,51200,52224,53248,54272,55296,56320,57344,58368,59392,60416,61440,62464,63488,64512,65536",
-      "MinIOSizeKiBps": "0",
-      "MaxIOpsReadWrite": "400000",
-      "MaxSizeGiB": "65536",
-      "MaxIOSizeKiBps": "256",
-      "MinIopsPerGiBReadOnly": "0",
-      "MaxIopsPerGiBReadWrite": "1000"
-    },
     "prices": [
       {
         "currencyCode": "USD",
@@ -103879,6 +101523,30 @@
         "isPrimaryMeterRegion": true,
         "armSkuName": ""
       }
-    ]
+    ],
+    "specs": {
+      "MaxIOSizeKiBps": "256",
+      "MaxSizeGiB": "65536",
+      "MaxIopsPerGiBReadWrite": "1000",
+      "MaxIOpsReadWrite": "400000",
+      "MaxBandwidthMBpsReadOnly": "10000",
+      "MinBandwidthMBpsReadWrite": "1",
+      "MaxIopsReadOnly": "400000",
+      "redundancy": "LRS",
+      "MinIOSizeKiBps": "0",
+      "MinBandwidthMBpsReadOnly": "1",
+      "MinIOpsReadWrite": "100",
+      "MinSizeGiB": "4",
+      "MinIopsReadOnly": "100",
+      "PlatformFaultDomainCount": "2",
+      "MaxValueOfMaxShares": "15",
+      "MinIopsPerGiBReadOnly": "0",
+      "BillingPartitionSizes": "4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 3072, 4096, 5120, 6144, 7168, 8192, 9216, 10240, 11264, 12288, 13312, 14336, 15360, 16384, 17408, 18432, 19456, 20480, 21504, 22528, 23552,24576,25600,26624,27648,28672,29696,30720,31744,32768,33792,34816,35840,36864,37888,38912,39936,40960,41984,43008,44032,45056,46080,47104,48128,49152,50176,51200,52224,53248,54272,55296,56320,57344,58368,59392,60416,61440,62464,63488,64512,65536",
+      "MaxBandwidthMBpsReadWrite": "10000",
+      "MinIopsPerGiBReadWrite": "0",
+      "MaxIopsPerGiBReadOnly": "1000",
+      "tier": "UltraSSD",
+      "name": "UltraSSD"
+    }
   }
 }
