@@ -1016,12 +1016,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 0.000157,
+        "unitPrice": 0.000157,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "ddb1d067-f2da-5b2d-b8d5-0aa93c4a591c",
         "meterName": "Premium LRS Provisioned Capacity",
         "productId": "DZH318Z09V07",
@@ -2029,12 +2028,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 0.0,
+        "unitPrice": 0.0,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "8710c11c-26a3-58de-835e-3b03c2025462",
         "meterName": "Premium LRS Provisioned IOPS",
         "productId": "DZH318Z09V07",
@@ -3020,12 +3018,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 0.0,
+        "unitPrice": 0.0,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "47a35cb2-46b6-536c-b254-61be997736cf",
         "meterName": "Premium LRS Provisioned Throughput (MBps)",
         "productId": "DZH318Z09V07",
@@ -3966,28 +3963,28 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBpsReadOnly": "125",
-      "MinSizeGiB": "1",
+      "MinIopsReadOnly": "3000",
+      "MaxIopsReadOnly": "80000",
       "MinIopsPerGiBReadOnly": "1",
-      "MaxIOSizeKiBps": "256",
-      "MinIopsPerGiBReadWrite": "1",
-      "MaxValueOfMaxShares": "15",
-      "tier": "PremiumV2",
-      "name": "PremiumV2",
-      "PlatformFaultDomainCount": "2",
-      "MaxIOpsReadWrite": "80000",
-      "MinIOSizeKiBps": "4",
       "MinIOpsReadWrite": "3000",
+      "MaxIopsPerGiBReadWrite": "500",
+      "tier": "PremiumV2",
       "MaxBandwidthMBpsReadOnly": "2000",
       "MinBandwidthMBpsReadWrite": "125",
+      "MinSizeGiB": "1",
+      "MinIOSizeKiBps": "4",
+      "MaxValueOfMaxShares": "15",
+      "MinIopsPerGiBReadWrite": "1",
+      "MaxIOpsReadWrite": "80000",
+      "MaxSizeGiB": "65536",
       "MaxBandwidthMBpsReadWrite": "2000",
       "MaxIopsPerGiBReadOnly": "500",
       "redundancy": "LRS",
-      "MaxSizeGiB": "65536",
-      "MaxIopsReadOnly": "80000",
-      "MinIopsReadOnly": "3000",
-      "MaxIopsPerGiBReadWrite": "500",
-      "BillingPartitionSizes": "1, 2, 3, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 3072, 4096, 5120, 6144, 7168, 8192, 9216, 10240, 11264, 12288, 13312, 14336, 15360, 16384, 17408, 18432, 19456, 20480, 21504, 22528, 23552,24576,25600,26624,27648,28672,29696,30720,31744,32768,33792,34816,35840,36864,37888,38912,39936,40960,41984,43008,44032,45056,46080,47104,48128,49152,50176,51200,52224,53248,54272,55296,56320,57344,58368,59392,60416,61440,62464,63488,64512,65536"
+      "PlatformFaultDomainCount": "2",
+      "name": "PremiumV2",
+      "BillingPartitionSizes": "1, 2, 3, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 3072, 4096, 5120, 6144, 7168, 8192, 9216, 10240, 11264, 12288, 13312, 14336, 15360, 16384, 17408, 18432, 19456, 20480, 21504, 22528, 23552,24576,25600,26624,27648,28672,29696,30720,31744,32768,33792,34816,35840,36864,37888,38912,39936,40960,41984,43008,44032,45056,46080,47104,48128,49152,50176,51200,52224,53248,54272,55296,56320,57344,58368,59392,60416,61440,62464,63488,64512,65536",
+      "MaxIOSizeKiBps": "256",
+      "MinBandwidthMBpsReadOnly": "125"
     }
   },
   "P1_LRS": {
@@ -4303,12 +4300,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 0.792,
+        "unitPrice": 0.792,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "2ebbaf6c-e736-5613-aa01-e62bc5b8a64a",
         "meterName": "P1 LRS Disk",
         "productId": "DZH318Z0BP04",
@@ -5469,21 +5465,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "25",
-      "name": "P1",
-      "MaxBurstIops": "3500",
       "BurstCreditBucketSizeInGiB": "255",
-      "MaxSizeGiB": "4",
       "MaxBurstDurationInMin": "30",
-      "MaxBandwidthMBps": "25",
-      "MaxBurstBandwidthMBps": "170",
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "120",
-      "MaxIOps": "120",
+      "MaxBandwidthMBps": "25",
+      "MinBandwidthMBps": "25",
       "tier": "Premium",
+      "MaxSizeGiB": "4",
+      "MinIOps": "120",
       "MinSizeGiB": "0",
-      "BurstCreditBucketSizeInIO": "6084000"
+      "BurstCreditBucketSizeInIO": "6084000",
+      "MaxIOps": "120",
+      "MaxBurstIops": "3500",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxValueOfMaxShares": "3",
+      "name": "P1"
     }
   },
   "P1_ZRS": {
@@ -5843,12 +5839,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 1.188,
+        "unitPrice": 1.188,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "632202c7-27c9-502f-b3c8-01ba5173e341",
         "meterName": "P1 ZRS Disk",
         "productId": "DZH318Z0BP04",
@@ -6437,21 +6432,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "25",
-      "name": "P1",
-      "MaxBurstIops": "3500",
       "BurstCreditBucketSizeInGiB": "255",
-      "MaxSizeGiB": "4",
       "MaxBurstDurationInMin": "30",
-      "MaxBandwidthMBps": "25",
-      "MaxBurstBandwidthMBps": "170",
       "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "120",
-      "MaxIOps": "120",
+      "MaxBandwidthMBps": "25",
+      "MinBandwidthMBps": "25",
       "tier": "Premium",
+      "MaxSizeGiB": "4",
+      "MinIOps": "120",
       "MinSizeGiB": "0",
-      "BurstCreditBucketSizeInIO": "6084000"
+      "BurstCreditBucketSizeInIO": "6084000",
+      "MaxIOps": "120",
+      "MaxBurstIops": "3500",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxValueOfMaxShares": "3",
+      "name": "P1"
     }
   },
   "P10_LRS": {
@@ -7493,12 +7488,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 21.504,
+        "unitPrice": 21.504,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "a1787df8-796e-542d-b690-58a83f0ffee8",
         "meterName": "P10 LRS Disk",
         "productId": "DZH318Z0BP04",
@@ -7955,21 +7949,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
-      "name": "P10",
-      "MaxBurstIops": "3500",
       "BurstCreditBucketSizeInGiB": "123",
-      "MaxSizeGiB": "128",
       "MaxBurstDurationInMin": "30",
-      "MaxBandwidthMBps": "100",
-      "MaxBurstBandwidthMBps": "170",
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "500",
-      "MaxIOps": "500",
+      "MaxBandwidthMBps": "100",
+      "MinBandwidthMBps": "100",
       "tier": "Premium",
+      "MaxSizeGiB": "128",
+      "MinIOps": "500",
       "MinSizeGiB": "64",
-      "BurstCreditBucketSizeInIO": "5400000"
+      "BurstCreditBucketSizeInIO": "5400000",
+      "MaxIOps": "500",
+      "MaxBurstIops": "3500",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxValueOfMaxShares": "3",
+      "name": "P10"
     }
   },
   "P10_ZRS": {
@@ -8131,12 +8125,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 32.256,
+        "unitPrice": 32.256,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "1655c627-9f3c-5b36-9795-931806c4473e",
         "meterName": "P10 ZRS Disk",
         "productId": "DZH318Z0BP04",
@@ -8923,21 +8916,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
-      "name": "P10",
-      "MaxBurstIops": "3500",
       "BurstCreditBucketSizeInGiB": "123",
-      "MaxSizeGiB": "128",
       "MaxBurstDurationInMin": "30",
-      "MaxBandwidthMBps": "100",
-      "MaxBurstBandwidthMBps": "170",
       "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "500",
-      "MaxIOps": "500",
+      "MaxBandwidthMBps": "100",
+      "MinBandwidthMBps": "100",
       "tier": "Premium",
+      "MaxSizeGiB": "128",
+      "MinIOps": "500",
       "MinSizeGiB": "64",
-      "BurstCreditBucketSizeInIO": "5400000"
+      "BurstCreditBucketSizeInIO": "5400000",
+      "MaxIOps": "500",
+      "MaxBurstIops": "3500",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxValueOfMaxShares": "3",
+      "name": "P10"
     }
   },
   "P15_LRS": {
@@ -9781,12 +9774,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 41.472,
+        "unitPrice": 41.472,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "86330ee7-a43b-5980-ad7f-75bef1f158c7",
         "meterName": "P15 LRS Disk",
         "productId": "DZH318Z0BP04",
@@ -10441,21 +10433,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "125",
-      "name": "P15",
-      "MaxBurstIops": "3500",
       "BurstCreditBucketSizeInGiB": "79",
-      "MaxSizeGiB": "256",
       "MaxBurstDurationInMin": "30",
-      "MaxBandwidthMBps": "125",
-      "MaxBurstBandwidthMBps": "170",
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "1100",
-      "MaxIOps": "1100",
+      "MaxBandwidthMBps": "125",
+      "MinBandwidthMBps": "125",
       "tier": "Premium",
+      "MaxSizeGiB": "256",
+      "MinIOps": "1100",
       "MinSizeGiB": "128",
-      "BurstCreditBucketSizeInIO": "4320000"
+      "BurstCreditBucketSizeInIO": "4320000",
+      "MaxIOps": "1100",
+      "MaxBurstIops": "3500",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxValueOfMaxShares": "3",
+      "name": "P15"
     }
   },
   "P15_ZRS": {
@@ -10661,12 +10653,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 62.208,
+        "unitPrice": 62.208,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "3ccff9f3-2b88-5cf1-a2a5-eedcf361ac92",
         "meterName": "P15 ZRS Disk",
         "productId": "DZH318Z0BP04",
@@ -11409,21 +11400,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "125",
-      "name": "P15",
-      "MaxBurstIops": "3500",
       "BurstCreditBucketSizeInGiB": "79",
-      "MaxSizeGiB": "256",
       "MaxBurstDurationInMin": "30",
-      "MaxBandwidthMBps": "125",
-      "MaxBurstBandwidthMBps": "170",
       "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "1100",
-      "MaxIOps": "1100",
+      "MaxBandwidthMBps": "125",
+      "MinBandwidthMBps": "125",
       "tier": "Premium",
+      "MaxSizeGiB": "256",
+      "MinIOps": "1100",
       "MinSizeGiB": "128",
-      "BurstCreditBucketSizeInIO": "4320000"
+      "BurstCreditBucketSizeInIO": "4320000",
+      "MaxIOps": "1100",
+      "MaxBurstIops": "3500",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxValueOfMaxShares": "3",
+      "name": "P15"
     }
   },
   "P2_LRS": {
@@ -11695,12 +11686,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 1.584,
+        "unitPrice": 1.584,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "34ae5a77-50c3-5637-82f8-dab998c88918",
         "meterName": "P2 LRS Disk",
         "productId": "DZH318Z0BP04",
@@ -12905,21 +12895,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "25",
-      "name": "P2",
-      "MaxBurstIops": "3500",
       "BurstCreditBucketSizeInGiB": "255",
-      "MaxSizeGiB": "8",
       "MaxBurstDurationInMin": "30",
-      "MaxBandwidthMBps": "25",
-      "MaxBurstBandwidthMBps": "170",
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "120",
-      "MaxIOps": "120",
+      "MaxBandwidthMBps": "25",
+      "MinBandwidthMBps": "25",
       "tier": "Premium",
+      "MaxSizeGiB": "8",
+      "MinIOps": "120",
       "MinSizeGiB": "4",
-      "BurstCreditBucketSizeInIO": "6084000"
+      "BurstCreditBucketSizeInIO": "6084000",
+      "MaxIOps": "120",
+      "MaxBurstIops": "3500",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxValueOfMaxShares": "3",
+      "name": "P2"
     }
   },
   "P2_ZRS": {
@@ -13631,12 +13621,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 2.376,
+        "unitPrice": 2.376,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "adb7857a-10ee-5eb6-af10-759904d53474",
         "meterName": "P2 ZRS Disk",
         "productId": "DZH318Z0BP04",
@@ -13873,21 +13862,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "25",
-      "name": "P2",
-      "MaxBurstIops": "3500",
       "BurstCreditBucketSizeInGiB": "255",
-      "MaxSizeGiB": "8",
       "MaxBurstDurationInMin": "30",
-      "MaxBandwidthMBps": "25",
-      "MaxBurstBandwidthMBps": "170",
       "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "120",
-      "MaxIOps": "120",
+      "MaxBandwidthMBps": "25",
+      "MinBandwidthMBps": "25",
       "tier": "Premium",
+      "MaxSizeGiB": "8",
+      "MinIOps": "120",
       "MinSizeGiB": "4",
-      "BurstCreditBucketSizeInIO": "6084000"
+      "BurstCreditBucketSizeInIO": "6084000",
+      "MaxIOps": "120",
+      "MaxBurstIops": "3500",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxValueOfMaxShares": "3",
+      "name": "P2"
     }
   },
   "P20_LRS": {
@@ -14577,12 +14566,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 79.872,
+        "unitPrice": 79.872,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "90f5eec3-1d6e-5958-a63d-e487b267a409",
         "meterName": "P20 LRS Disk",
         "productId": "DZH318Z0BP04",
@@ -15391,21 +15379,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "150",
-      "name": "P20",
-      "MaxBurstIops": "3500",
       "BurstCreditBucketSizeInGiB": "35",
-      "MaxSizeGiB": "512",
       "MaxBurstDurationInMin": "30",
-      "MaxBandwidthMBps": "150",
-      "MaxBurstBandwidthMBps": "170",
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "2300",
-      "MaxIOps": "2300",
+      "MaxBandwidthMBps": "150",
+      "MinBandwidthMBps": "150",
       "tier": "Premium",
+      "MaxSizeGiB": "512",
+      "MinIOps": "2300",
       "MinSizeGiB": "256",
-      "BurstCreditBucketSizeInIO": "2160000"
+      "BurstCreditBucketSizeInIO": "2160000",
+      "MaxIOps": "2300",
+      "MaxBurstIops": "3500",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxValueOfMaxShares": "3",
+      "name": "P20"
     }
   },
   "P20_ZRS": {
@@ -15963,12 +15951,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 119.808,
+        "unitPrice": 119.808,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "b4d06afa-472e-5520-8102-26bb250e3568",
         "meterName": "P20 ZRS Disk",
         "productId": "DZH318Z0BP04",
@@ -16359,21 +16346,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "150",
-      "name": "P20",
-      "MaxBurstIops": "3500",
       "BurstCreditBucketSizeInGiB": "35",
-      "MaxSizeGiB": "512",
       "MaxBurstDurationInMin": "30",
-      "MaxBandwidthMBps": "150",
-      "MaxBurstBandwidthMBps": "170",
       "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "2300",
-      "MaxIOps": "2300",
+      "MaxBandwidthMBps": "150",
+      "MinBandwidthMBps": "150",
       "tier": "Premium",
+      "MaxSizeGiB": "512",
+      "MinIOps": "2300",
       "MinSizeGiB": "256",
-      "BurstCreditBucketSizeInIO": "2160000"
+      "BurstCreditBucketSizeInIO": "2160000",
+      "MaxIOps": "2300",
+      "MaxBurstIops": "3500",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxValueOfMaxShares": "3",
+      "name": "P20"
     }
   },
   "P3_LRS": {
@@ -16843,12 +16830,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 3.168,
+        "unitPrice": 3.168,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "5a175946-f239-5d79-9bc9-0034b4af3d0f",
         "meterName": "P3 LRS Disk",
         "productId": "DZH318Z0BP04",
@@ -17855,21 +17841,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "25",
-      "name": "P3",
-      "MaxBurstIops": "3500",
       "BurstCreditBucketSizeInGiB": "255",
-      "MaxSizeGiB": "16",
       "MaxBurstDurationInMin": "30",
-      "MaxBandwidthMBps": "25",
-      "MaxBurstBandwidthMBps": "170",
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "120",
-      "MaxIOps": "120",
+      "MaxBandwidthMBps": "25",
+      "MinBandwidthMBps": "25",
       "tier": "Premium",
+      "MaxSizeGiB": "16",
+      "MinIOps": "120",
       "MinSizeGiB": "8",
-      "BurstCreditBucketSizeInIO": "6084000"
+      "BurstCreditBucketSizeInIO": "6084000",
+      "MaxIOps": "120",
+      "MaxBurstIops": "3500",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxValueOfMaxShares": "3",
+      "name": "P3"
     }
   },
   "P3_ZRS": {
@@ -18251,12 +18237,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 4.752,
+        "unitPrice": 4.752,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "3a48b861-ef73-54c5-932e-ab6e4933f792",
         "meterName": "P3 ZRS Disk",
         "productId": "DZH318Z0BP04",
@@ -18823,21 +18808,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "25",
-      "name": "P3",
-      "MaxBurstIops": "3500",
       "BurstCreditBucketSizeInGiB": "255",
-      "MaxSizeGiB": "16",
       "MaxBurstDurationInMin": "30",
-      "MaxBandwidthMBps": "25",
-      "MaxBurstBandwidthMBps": "170",
       "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "120",
-      "MaxIOps": "120",
+      "MaxBandwidthMBps": "25",
+      "MinBandwidthMBps": "25",
       "tier": "Premium",
+      "MaxSizeGiB": "16",
+      "MinIOps": "120",
       "MinSizeGiB": "8",
-      "BurstCreditBucketSizeInIO": "6084000"
+      "BurstCreditBucketSizeInIO": "6084000",
+      "MaxIOps": "120",
+      "MaxBurstIops": "3500",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxValueOfMaxShares": "3",
+      "name": "P3"
     }
   },
   "P30_LRS": {
@@ -19092,12 +19077,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 147.456,
+        "unitPrice": 147.456,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "1a0b3a72-c927-5fb5-ba8e-6a223abf279f",
         "meterName": "P30 LRS Disk",
         "productId": "DZH318Z0BP04",
@@ -21468,21 +21452,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "200",
-      "name": "P30",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "1024",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "200",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "5",
-      "MinIOps": "5000",
-      "MaxIOps": "5000",
+      "MaxBandwidthMBps": "200",
+      "MinBandwidthMBps": "200",
       "tier": "Premium",
+      "MaxSizeGiB": "1024",
+      "MinIOps": "5000",
       "MinSizeGiB": "512",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "5000",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "5",
+      "name": "P30"
     }
   },
   "P30_ZRS": {
@@ -21754,12 +21738,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 221.184,
+        "unitPrice": 221.184,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "5e8efd15-58c3-54dc-8162-436cf78ea837",
         "meterName": "P30 ZRS Disk",
         "productId": "DZH318Z0BP04",
@@ -22436,21 +22419,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "200",
-      "name": "P30",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "1024",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "200",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "5",
-      "MinIOps": "5000",
-      "MaxIOps": "5000",
+      "MaxBandwidthMBps": "200",
+      "MinBandwidthMBps": "200",
       "tier": "Premium",
+      "MaxSizeGiB": "1024",
+      "MinIOps": "5000",
       "MinSizeGiB": "512",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "5000",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "5",
+      "name": "P30"
     }
   },
   "P4_LRS": {
@@ -22700,12 +22683,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 5.76012,
+        "unitPrice": 5.76012,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "31adb0cb-9f6c-526d-9327-f3236ac3baee",
         "meterName": "P4 LRS Disk",
         "productId": "DZH318Z0BP04",
@@ -23954,21 +23936,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "25",
-      "name": "P4",
-      "MaxBurstIops": "3500",
       "BurstCreditBucketSizeInGiB": "255",
-      "MaxSizeGiB": "32",
       "MaxBurstDurationInMin": "30",
-      "MaxBandwidthMBps": "25",
-      "MaxBurstBandwidthMBps": "170",
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "120",
-      "MaxIOps": "120",
+      "MaxBandwidthMBps": "25",
+      "MinBandwidthMBps": "25",
       "tier": "Premium",
+      "MaxSizeGiB": "32",
+      "MinIOps": "120",
       "MinSizeGiB": "16",
-      "BurstCreditBucketSizeInIO": "6084000"
+      "BurstCreditBucketSizeInIO": "6084000",
+      "MaxIOps": "120",
+      "MaxBurstIops": "3500",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxValueOfMaxShares": "3",
+      "name": "P4"
     }
   },
   "P4_ZRS": {
@@ -24614,12 +24596,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 8.64018,
+        "unitPrice": 8.64018,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "ca860510-2c40-57d2-a5b1-f9cb127c3d5c",
         "meterName": "P4 ZRS Disk",
         "productId": "DZH318Z0BP04",
@@ -24922,21 +24903,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "25",
-      "name": "P4",
-      "MaxBurstIops": "3500",
       "BurstCreditBucketSizeInGiB": "255",
-      "MaxSizeGiB": "32",
       "MaxBurstDurationInMin": "30",
-      "MaxBandwidthMBps": "25",
-      "MaxBurstBandwidthMBps": "170",
       "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "120",
-      "MaxIOps": "120",
+      "MaxBandwidthMBps": "25",
+      "MinBandwidthMBps": "25",
       "tier": "Premium",
+      "MaxSizeGiB": "32",
+      "MinIOps": "120",
       "MinSizeGiB": "16",
-      "BurstCreditBucketSizeInIO": "6084000"
+      "BurstCreditBucketSizeInIO": "6084000",
+      "MaxIOps": "120",
+      "MaxBurstIops": "3500",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxValueOfMaxShares": "3",
+      "name": "P4"
     }
   },
   "P40_LRS": {
@@ -25963,12 +25944,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 282.624,
+        "unitPrice": 282.624,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "45c0d0b3-0b61-5b36-8590-82d684cf9fa1",
         "meterName": "P40 LRS Disk",
         "productId": "DZH318Z0BP04",
@@ -28648,21 +28628,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "250",
-      "name": "P40",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "2048",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "250",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "5",
-      "MinIOps": "7500",
-      "MaxIOps": "7500",
+      "MaxBandwidthMBps": "250",
+      "MinBandwidthMBps": "250",
       "tier": "Premium",
+      "MaxSizeGiB": "2048",
+      "MinIOps": "7500",
       "MinSizeGiB": "1024",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "7500",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "5",
+      "name": "P40"
     }
   },
   "P40_ZRS": {
@@ -28758,12 +28738,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 423.936,
+        "unitPrice": 423.936,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "0aba40f4-8bc9-5c68-aaa3-0eaf88d41b61",
         "meterName": "P40 ZRS Disk",
         "productId": "DZH318Z0BP04",
@@ -29616,21 +29595,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "250",
-      "name": "P40",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "2048",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "250",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "5",
-      "MinIOps": "7500",
-      "MaxIOps": "7500",
+      "MaxBandwidthMBps": "250",
+      "MinBandwidthMBps": "250",
       "tier": "Premium",
+      "MaxSizeGiB": "2048",
+      "MinIOps": "7500",
       "MinSizeGiB": "1024",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "7500",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "5",
+      "name": "P40"
     }
   },
   "P50_LRS": {
@@ -31965,12 +31944,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 540.672,
+        "unitPrice": 540.672,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "b7c60554-4ec8-52b6-8250-ba96bdf00356",
         "meterName": "P50 LRS Disk",
         "productId": "DZH318Z0BP04",
@@ -33342,21 +33320,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "250",
-      "name": "P50",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "4096",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "250",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "5",
-      "MinIOps": "7500",
-      "MaxIOps": "7500",
+      "MaxBandwidthMBps": "250",
+      "MinBandwidthMBps": "250",
       "tier": "Premium",
+      "MaxSizeGiB": "4096",
+      "MinIOps": "7500",
       "MinSizeGiB": "2048",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "7500",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "5",
+      "name": "P50"
     }
   },
   "P50_ZRS": {
@@ -34200,12 +34178,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 811.008,
+        "unitPrice": 811.008,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "f840c0b8-8ff0-5f6c-9081-67dcd5d54001",
         "meterName": "P50 ZRS Disk",
         "productId": "DZH318Z0BP04",
@@ -34310,21 +34287,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "250",
-      "name": "P50",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "4096",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "250",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "5",
-      "MinIOps": "7500",
-      "MaxIOps": "7500",
+      "MaxBandwidthMBps": "250",
+      "MinBandwidthMBps": "250",
       "tier": "Premium",
+      "MaxSizeGiB": "4096",
+      "MinIOps": "7500",
       "MinSizeGiB": "2048",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "7500",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "5",
+      "name": "P50"
     }
   },
   "P6_LRS": {
@@ -35740,12 +35717,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 11.13612,
+        "unitPrice": 11.13612,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "eda5de78-67c3-5694-a345-54d83e48c897",
         "meterName": "P6 LRS Disk",
         "productId": "DZH318Z0BP04",
@@ -35828,21 +35804,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "50",
-      "name": "P6",
-      "MaxBurstIops": "3500",
       "BurstCreditBucketSizeInGiB": "211",
-      "MaxSizeGiB": "64",
       "MaxBurstDurationInMin": "30",
-      "MaxBandwidthMBps": "50",
-      "MaxBurstBandwidthMBps": "170",
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "240",
-      "MaxIOps": "240",
+      "MaxBandwidthMBps": "50",
+      "MinBandwidthMBps": "50",
       "tier": "Premium",
+      "MaxSizeGiB": "64",
+      "MinIOps": "240",
       "MinSizeGiB": "32",
-      "BurstCreditBucketSizeInIO": "5868000"
+      "BurstCreditBucketSizeInIO": "5868000",
+      "MaxIOps": "240",
+      "MaxBurstIops": "3500",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxValueOfMaxShares": "3",
+      "name": "P6"
     }
   },
   "P6_ZRS": {
@@ -36048,12 +36024,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 16.70418,
+        "unitPrice": 16.70418,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "2257cdd7-65ff-562f-af5b-2b636d58e82a",
         "meterName": "P6 ZRS Disk",
         "productId": "DZH318Z0BP04",
@@ -36796,21 +36771,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "50",
-      "name": "P6",
-      "MaxBurstIops": "3500",
       "BurstCreditBucketSizeInGiB": "211",
-      "MaxSizeGiB": "64",
       "MaxBurstDurationInMin": "30",
-      "MaxBandwidthMBps": "50",
-      "MaxBurstBandwidthMBps": "170",
       "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "3",
-      "MinIOps": "240",
-      "MaxIOps": "240",
+      "MaxBandwidthMBps": "50",
+      "MinBandwidthMBps": "50",
       "tier": "Premium",
+      "MaxSizeGiB": "64",
+      "MinIOps": "240",
       "MinSizeGiB": "32",
-      "BurstCreditBucketSizeInIO": "5868000"
+      "BurstCreditBucketSizeInIO": "5868000",
+      "MaxIOps": "240",
+      "MaxBurstIops": "3500",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxValueOfMaxShares": "3",
+      "name": "P6"
     }
   },
   "P60_LRS": {
@@ -36818,12 +36793,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 1032.19,
+        "unitPrice": 1032.19,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "01624300-2d19-5a6c-8012-99ccf7f0834b",
         "meterName": "P60 LRS Disk",
         "productId": "DZH318Z0BP04",
@@ -40477,21 +40451,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "500",
-      "name": "P60",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "8192",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "500",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "10",
-      "MinIOps": "16000",
-      "MaxIOps": "16000",
+      "MaxBandwidthMBps": "500",
+      "MinBandwidthMBps": "500",
       "tier": "Premium",
+      "MaxSizeGiB": "8192",
+      "MinIOps": "16000",
       "MinSizeGiB": "4096",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "16000",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "10",
+      "name": "P60"
     }
   },
   "P60_ZRS": {
@@ -41071,12 +41045,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 1548.285,
+        "unitPrice": 1548.285,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "b6251eba-8959-5791-b68f-f0363f6a74bd",
         "meterName": "P60 ZRS Disk",
         "productId": "DZH318Z0BP04",
@@ -41445,21 +41418,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "500",
-      "name": "P60",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "8192",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "500",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "10",
-      "MinIOps": "16000",
-      "MaxIOps": "16000",
+      "MaxBandwidthMBps": "500",
+      "MinBandwidthMBps": "500",
       "tier": "Premium",
+      "MaxSizeGiB": "8192",
+      "MinIOps": "16000",
       "MinSizeGiB": "4096",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "16000",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "10",
+      "name": "P60"
     }
   },
   "P70_LRS": {
@@ -44224,12 +44197,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 1966.08,
+        "unitPrice": 1966.08,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "c7bc8423-d783-5461-b87f-9bcc085ec278",
         "meterName": "P70 LRS Disk",
         "productId": "DZH318Z0BP04",
@@ -45149,21 +45121,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "750",
-      "name": "P70",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "16384",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "750",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "10",
-      "MinIOps": "18000",
-      "MaxIOps": "18000",
+      "MaxBandwidthMBps": "750",
+      "MinBandwidthMBps": "750",
       "tier": "Premium",
+      "MaxSizeGiB": "16384",
+      "MinIOps": "18000",
       "MinSizeGiB": "8192",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "18000",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "10",
+      "name": "P70"
     }
   },
   "P70_ZRS": {
@@ -45545,12 +45517,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 2949.12,
+        "unitPrice": 2949.12,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "71c78d0b-5dca-57a1-9775-dc81be7ba98b",
         "meterName": "P70 ZRS Disk",
         "productId": "DZH318Z0BP04",
@@ -46117,21 +46088,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "750",
-      "name": "P70",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "16384",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "750",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "10",
-      "MinIOps": "18000",
-      "MaxIOps": "18000",
+      "MaxBandwidthMBps": "750",
+      "MinBandwidthMBps": "750",
       "tier": "Premium",
+      "MaxSizeGiB": "16384",
+      "MinIOps": "18000",
       "MinSizeGiB": "8192",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "18000",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "10",
+      "name": "P70"
     }
   },
   "P80_LRS": {
@@ -47155,12 +47126,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 3932.16,
+        "unitPrice": 3932.16,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "3dd10945-374b-500a-9d3c-ed0c61d4f8cf",
         "meterName": "P80 LRS Disk",
         "productId": "DZH318Z0BP04",
@@ -49821,21 +49791,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "900",
-      "name": "P80",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "32767",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "900",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "10",
-      "MinIOps": "20000",
-      "MaxIOps": "20000",
+      "MaxBandwidthMBps": "900",
+      "MinBandwidthMBps": "900",
       "tier": "Premium",
+      "MaxSizeGiB": "32767",
+      "MinIOps": "20000",
       "MinSizeGiB": "16384",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "20000",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "10",
+      "name": "P80"
     }
   },
   "P80_ZRS": {
@@ -50635,12 +50605,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 5898.24,
+        "unitPrice": 5898.24,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "d3811094-ac97-5226-a795-6a8687dc2f91",
         "meterName": "P80 ZRS Disk",
         "productId": "DZH318Z0BP04",
@@ -50789,21 +50758,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "900",
-      "name": "P80",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "32767",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "900",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "ZRS",
-      "MaxValueOfMaxShares": "10",
-      "MinIOps": "20000",
-      "MaxIOps": "20000",
+      "MaxBandwidthMBps": "900",
+      "MinBandwidthMBps": "900",
       "tier": "Premium",
+      "MaxSizeGiB": "32767",
+      "MinIOps": "20000",
       "MinSizeGiB": "16384",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "20000",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "10",
+      "name": "P80"
     }
   },
   "E1_LRS": {
@@ -51163,12 +51132,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 0.36,
+        "unitPrice": 0.36,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "4606b592-d23e-5932-92b4-61c8c4931cbb",
         "meterName": "E1 LRS Disk",
         "productId": "DZH318Z0BP88",
@@ -52285,16 +52253,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E1",
-      "MaxSizeGiB": "4",
-      "redundancy": "LRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E1",
       "MinSizeGiB": "0",
-      "MaxValueOfMaxShares": "3"
+      "redundancy": "LRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "4",
+      "tier": "StandardSSD"
     }
   },
   "E1_ZRS": {
@@ -52456,12 +52424,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 0.54,
+        "unitPrice": 0.54,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "39ee8a9a-f746-5e45-b33e-f76b1b1d5965",
         "meterName": "E1 ZRS Disk",
         "productId": "DZH318Z0BP88",
@@ -53226,16 +53193,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E1",
-      "MaxSizeGiB": "4",
-      "redundancy": "ZRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E1",
       "MinSizeGiB": "0",
-      "MaxValueOfMaxShares": "3"
+      "redundancy": "ZRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "4",
+      "tier": "StandardSSD"
     }
   },
   "E10_LRS": {
@@ -54695,12 +54662,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 11.52,
+        "unitPrice": 11.52,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "ef609df6-a365-5709-9993-bdade0e85956",
         "meterName": "E10 LRS Disk",
         "productId": "DZH318Z0BP88",
@@ -54783,16 +54749,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E10",
-      "MaxSizeGiB": "128",
-      "redundancy": "LRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E10",
       "MinSizeGiB": "64",
-      "MaxValueOfMaxShares": "3"
+      "redundancy": "LRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "128",
+      "tier": "StandardSSD"
     }
   },
   "E10_ZRS": {
@@ -55064,12 +55030,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 17.28,
+        "unitPrice": 17.28,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "56faf797-2f5a-5195-b8fa-a7387e925d3b",
         "meterName": "E10 ZRS Disk",
         "productId": "DZH318Z0BP88",
@@ -55724,16 +55689,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E10",
-      "MaxSizeGiB": "128",
-      "redundancy": "ZRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E10",
       "MinSizeGiB": "64",
-      "MaxValueOfMaxShares": "3"
+      "redundancy": "ZRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "128",
+      "tier": "StandardSSD"
     }
   },
   "E15_LRS": {
@@ -56357,12 +56322,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 23.04,
+        "unitPrice": 23.04,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "53f69e76-af24-5165-b1d6-2c54eb617f63",
         "meterName": "E15 LRS Disk",
         "productId": "DZH318Z0BP88",
@@ -57259,16 +57223,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E15",
-      "MaxSizeGiB": "256",
-      "redundancy": "LRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E15",
       "MinSizeGiB": "128",
-      "MaxValueOfMaxShares": "3"
+      "redundancy": "LRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "256",
+      "tier": "StandardSSD"
     }
   },
   "E15_ZRS": {
@@ -58002,12 +57966,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 34.56,
+        "unitPrice": 34.56,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "debfc6e3-7a04-5615-abd3-99a9fb0ae0af",
         "meterName": "E15 ZRS Disk",
         "productId": "DZH318Z0BP88",
@@ -58200,16 +58163,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E15",
-      "MaxSizeGiB": "256",
-      "redundancy": "ZRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E15",
       "MinSizeGiB": "128",
-      "MaxValueOfMaxShares": "3"
+      "redundancy": "ZRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "256",
+      "tier": "StandardSSD"
     }
   },
   "E2_LRS": {
@@ -58525,12 +58488,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 0.72,
+        "unitPrice": 0.72,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "4922f427-8ad9-59c3-b6ef-c1246ad43129",
         "meterName": "E2 LRS Disk",
         "productId": "DZH318Z0BP88",
@@ -59713,16 +59675,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E2",
-      "MaxSizeGiB": "8",
-      "redundancy": "LRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E2",
       "MinSizeGiB": "4",
-      "MaxValueOfMaxShares": "3"
+      "redundancy": "LRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "8",
+      "tier": "StandardSSD"
     }
   },
   "E2_ZRS": {
@@ -60214,12 +60176,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 1.08,
+        "unitPrice": 1.08,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "9a8f24a9-265d-5566-9c1f-4ee0c863e4d5",
         "meterName": "E2 ZRS Disk",
         "productId": "DZH318Z0BP88",
@@ -60654,16 +60615,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E2",
-      "MaxSizeGiB": "8",
-      "redundancy": "ZRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E2",
       "MinSizeGiB": "4",
-      "MaxValueOfMaxShares": "3"
+      "redundancy": "ZRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "8",
+      "tier": "StandardSSD"
     }
   },
   "E20_LRS": {
@@ -61881,12 +61842,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 46.08,
+        "unitPrice": 46.08,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "c858f744-5c94-5601-8558-46e5ec4141c9",
         "meterName": "E20 LRS Disk",
         "productId": "DZH318Z0BP88",
@@ -62189,16 +62149,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E20",
-      "MaxSizeGiB": "512",
-      "redundancy": "LRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E20",
       "MinSizeGiB": "256",
-      "MaxValueOfMaxShares": "3"
+      "redundancy": "LRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "512",
+      "tier": "StandardSSD"
     }
   },
   "E20_ZRS": {
@@ -62294,12 +62254,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 69.12,
+        "unitPrice": 69.12,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "17a4bd09-eec7-5c12-aa89-03e7c8915e3b",
         "meterName": "E20 ZRS Disk",
         "productId": "DZH318Z0BP88",
@@ -63130,16 +63089,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E20",
-      "MaxSizeGiB": "512",
-      "redundancy": "ZRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E20",
       "MinSizeGiB": "256",
-      "MaxValueOfMaxShares": "3"
+      "redundancy": "ZRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "512",
+      "tier": "StandardSSD"
     }
   },
   "E3_LRS": {
@@ -63895,12 +63854,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 1.44,
+        "unitPrice": 1.44,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "7f96538a-ce1f-5cf9-acf2-8495e8a63021",
         "meterName": "E3 LRS Disk",
         "productId": "DZH318Z0BP88",
@@ -64643,16 +64601,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E3",
-      "MaxSizeGiB": "16",
-      "redundancy": "LRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E3",
       "MinSizeGiB": "8",
-      "MaxValueOfMaxShares": "3"
+      "redundancy": "LRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "16",
+      "tier": "StandardSSD"
     }
   },
   "E3_ZRS": {
@@ -65254,12 +65212,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 2.16,
+        "unitPrice": 2.16,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "9935567a-f706-56b3-a06a-068f5d0d2577",
         "meterName": "E3 ZRS Disk",
         "productId": "DZH318Z0BP88",
@@ -65584,16 +65541,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E3",
-      "MaxSizeGiB": "16",
-      "redundancy": "ZRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E3",
       "MinSizeGiB": "8",
-      "MaxValueOfMaxShares": "3"
+      "redundancy": "ZRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "16",
+      "tier": "StandardSSD"
     }
   },
   "E30_LRS": {
@@ -66503,12 +66460,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 92.16,
+        "unitPrice": 92.16,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "980d5d4c-130f-5d37-8ea6-1d63958ac29e",
         "meterName": "E30 LRS Disk",
         "productId": "DZH318Z0BP88",
@@ -67119,16 +67075,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "5",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E30",
-      "MaxSizeGiB": "1024",
-      "redundancy": "LRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E30",
       "MinSizeGiB": "512",
-      "MaxValueOfMaxShares": "5"
+      "redundancy": "LRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "1024",
+      "tier": "StandardSSD"
     }
   },
   "E30_ZRS": {
@@ -67202,12 +67158,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 138.24,
+        "unitPrice": 138.24,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "22d408f9-b462-5025-80dc-ea797e6bc264",
         "meterName": "E30 ZRS Disk",
         "productId": "DZH318Z0BP88",
@@ -68060,16 +68015,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "5",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E30",
-      "MaxSizeGiB": "1024",
-      "redundancy": "ZRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E30",
       "MinSizeGiB": "512",
-      "MaxValueOfMaxShares": "5"
+      "redundancy": "ZRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "1024",
+      "tier": "StandardSSD"
     }
   },
   "E4_LRS": {
@@ -69353,12 +69308,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 2.88,
+        "unitPrice": 2.88,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "dbde8428-11fc-554f-844e-bf59a475e8fb",
         "meterName": "E4 LRS Disk",
         "productId": "DZH318Z0BP88",
@@ -69595,16 +69549,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E4",
-      "MaxSizeGiB": "32",
-      "redundancy": "LRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E4",
       "MinSizeGiB": "16",
-      "MaxValueOfMaxShares": "3"
+      "redundancy": "LRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "32",
+      "tier": "StandardSSD"
     }
   },
   "E4_ZRS": {
@@ -69810,12 +69764,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 4.32,
+        "unitPrice": 4.32,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "5bfe7e23-4474-5a60-a4ea-a4b8a346cfe7",
         "meterName": "E4 ZRS Disk",
         "productId": "DZH318Z0BP88",
@@ -70536,16 +70489,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E4",
-      "MaxSizeGiB": "32",
-      "redundancy": "ZRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E4",
       "MinSizeGiB": "16",
-      "MaxValueOfMaxShares": "3"
+      "redundancy": "ZRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "32",
+      "tier": "StandardSSD"
     }
   },
   "E40_LRS": {
@@ -71763,12 +71716,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 184.32,
+        "unitPrice": 184.32,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "d0ccf5d1-875b-5b37-908c-cd501702fb63",
         "meterName": "E40 LRS Disk",
         "productId": "DZH318Z0BP88",
@@ -72049,16 +72001,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "5",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E40",
-      "MaxSizeGiB": "2048",
-      "redundancy": "LRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E40",
       "MinSizeGiB": "1024",
-      "MaxValueOfMaxShares": "5"
+      "redundancy": "LRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "2048",
+      "tier": "StandardSSD"
     }
   },
   "E40_ZRS": {
@@ -72858,12 +72810,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 276.48,
+        "unitPrice": 276.48,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "c3e09be7-9fad-5f84-b5e0-600dbb60006e",
         "meterName": "E40 ZRS Disk",
         "productId": "DZH318Z0BP88",
@@ -72990,16 +72941,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "5",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E40",
-      "MaxSizeGiB": "2048",
-      "redundancy": "ZRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E40",
       "MinSizeGiB": "1024",
-      "MaxValueOfMaxShares": "5"
+      "redundancy": "ZRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "2048",
+      "tier": "StandardSSD"
     }
   },
   "E50_LRS": {
@@ -73161,12 +73112,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 368.64,
+        "unitPrice": 368.64,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "2bb67ea5-eaad-5aa1-b75f-16efb6f54cc1",
         "meterName": "E50 LRS Disk",
         "productId": "DZH318Z0BP88",
@@ -74503,16 +74453,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "5",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E50",
-      "MaxSizeGiB": "4096",
-      "redundancy": "LRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E50",
       "MinSizeGiB": "2048",
-      "MaxValueOfMaxShares": "5"
+      "redundancy": "LRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "4096",
+      "tier": "StandardSSD"
     }
   },
   "E50_ZRS": {
@@ -74982,12 +74932,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 552.96,
+        "unitPrice": 552.96,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "872f5dd4-71d6-5e29-b0a9-af9e00f51e96",
         "meterName": "E50 ZRS Disk",
         "productId": "DZH318Z0BP88",
@@ -75444,16 +75393,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "5",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E50",
-      "MaxSizeGiB": "4096",
-      "redundancy": "ZRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E50",
       "MinSizeGiB": "2048",
-      "MaxValueOfMaxShares": "5"
+      "redundancy": "ZRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "4096",
+      "tier": "StandardSSD"
     }
   },
   "E6_LRS": {
@@ -76935,12 +76884,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 5.76,
+        "unitPrice": 5.76,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "ff087c1d-5ffc-5b28-9023-edc08c6cce85",
         "meterName": "E6 LRS Disk",
         "productId": "DZH318Z0BP88",
@@ -76957,16 +76905,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E6",
-      "MaxSizeGiB": "64",
-      "redundancy": "LRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E6",
       "MinSizeGiB": "32",
-      "MaxValueOfMaxShares": "3"
+      "redundancy": "LRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "64",
+      "tier": "StandardSSD"
     }
   },
   "E6_ZRS": {
@@ -77634,12 +77582,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 8.64,
+        "unitPrice": 8.64,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "9549351b-68b0-590d-8c64-49e53a646e93",
         "meterName": "E6 ZRS Disk",
         "productId": "DZH318Z0BP88",
@@ -77898,16 +77845,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
       "MaxIOps": "500",
-      "MaxBandwidthMBps": "100",
-      "name": "E6",
-      "MaxSizeGiB": "64",
-      "redundancy": "ZRS",
+      "MinBandwidthMBps": "100",
       "MinIOps": "500",
-      "tier": "StandardSSD",
+      "name": "E6",
       "MinSizeGiB": "32",
-      "MaxValueOfMaxShares": "3"
+      "redundancy": "ZRS",
+      "MaxBandwidthMBps": "100",
+      "MaxSizeGiB": "64",
+      "tier": "StandardSSD"
     }
   },
   "E60_LRS": {
@@ -77959,12 +77906,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 737.28,
+        "unitPrice": 737.28,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "11189295-8eeb-5262-acb2-a46d1127378e",
         "meterName": "E60 LRS Disk",
         "productId": "DZH318Z0BP88",
@@ -79389,16 +79335,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "400",
+      "MaxValueOfMaxShares": "10",
       "MaxIOps": "2000",
-      "MaxBandwidthMBps": "400",
-      "name": "E60",
-      "MaxSizeGiB": "8192",
-      "redundancy": "LRS",
+      "MinBandwidthMBps": "400",
       "MinIOps": "2000",
-      "tier": "StandardSSD",
+      "name": "E60",
       "MinSizeGiB": "4096",
-      "MaxValueOfMaxShares": "10"
+      "redundancy": "LRS",
+      "MaxBandwidthMBps": "400",
+      "MaxSizeGiB": "8192",
+      "tier": "StandardSSD"
     }
   },
   "E60_ZRS": {
@@ -79868,12 +79814,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 1105.92,
+        "unitPrice": 1105.92,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "a4054503-0e19-591c-85b6-3b9871e0e614",
         "meterName": "E60 ZRS Disk",
         "productId": "DZH318Z0BP88",
@@ -80330,16 +80275,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "400",
+      "MaxValueOfMaxShares": "10",
       "MaxIOps": "2000",
-      "MaxBandwidthMBps": "400",
-      "name": "E60",
-      "MaxSizeGiB": "8192",
-      "redundancy": "ZRS",
+      "MinBandwidthMBps": "400",
       "MinIOps": "2000",
-      "tier": "StandardSSD",
+      "name": "E60",
       "MinSizeGiB": "4096",
-      "MaxValueOfMaxShares": "10"
+      "redundancy": "ZRS",
+      "MaxBandwidthMBps": "400",
+      "MaxSizeGiB": "8192",
+      "tier": "StandardSSD"
     }
   },
   "E70_LRS": {
@@ -81535,12 +81480,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 1474.56,
+        "unitPrice": 1474.56,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "e242c5ef-2536-5c53-bac1-cd1b319c2389",
         "meterName": "E70 LRS Disk",
         "productId": "DZH318Z0BP88",
@@ -81821,16 +81765,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "600",
+      "MaxValueOfMaxShares": "10",
       "MaxIOps": "4000",
-      "MaxBandwidthMBps": "600",
-      "name": "E70",
-      "MaxSizeGiB": "16384",
-      "redundancy": "LRS",
+      "MinBandwidthMBps": "600",
       "MinIOps": "4000",
-      "tier": "StandardSSD",
+      "name": "E70",
       "MinSizeGiB": "8192",
-      "MaxValueOfMaxShares": "10"
+      "redundancy": "LRS",
+      "MaxBandwidthMBps": "600",
+      "MaxSizeGiB": "16384",
+      "tier": "StandardSSD"
     }
   },
   "E70_ZRS": {
@@ -81882,12 +81826,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 2211.84,
+        "unitPrice": 2211.84,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "0c82a6c3-e831-50e1-9e6c-56704090e36f",
         "meterName": "E70 ZRS Disk",
         "productId": "DZH318Z0BP88",
@@ -82762,16 +82705,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "600",
+      "MaxValueOfMaxShares": "10",
       "MaxIOps": "4000",
-      "MaxBandwidthMBps": "600",
-      "name": "E70",
-      "MaxSizeGiB": "16384",
-      "redundancy": "ZRS",
+      "MinBandwidthMBps": "600",
       "MinIOps": "4000",
-      "tier": "StandardSSD",
+      "name": "E70",
       "MinSizeGiB": "8192",
-      "MaxValueOfMaxShares": "10"
+      "redundancy": "ZRS",
+      "MaxBandwidthMBps": "600",
+      "MaxSizeGiB": "16384",
+      "tier": "StandardSSD"
     }
   },
   "E80_LRS": {
@@ -84121,12 +84064,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 2949.12,
+        "unitPrice": 2949.12,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "e4f9d0fc-4dca-50e2-805a-e04e813552c8",
         "meterName": "E80 LRS Disk",
         "productId": "DZH318Z0BP88",
@@ -84253,16 +84195,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "750",
+      "MaxValueOfMaxShares": "10",
       "MaxIOps": "6000",
-      "MaxBandwidthMBps": "750",
-      "name": "E80",
-      "MaxSizeGiB": "32767",
-      "redundancy": "LRS",
+      "MinBandwidthMBps": "750",
       "MinIOps": "6000",
-      "tier": "StandardSSD",
+      "name": "E80",
       "MinSizeGiB": "16384",
-      "MaxValueOfMaxShares": "10"
+      "redundancy": "LRS",
+      "MaxBandwidthMBps": "750",
+      "MaxSizeGiB": "32767",
+      "tier": "StandardSSD"
     }
   },
   "E80_ZRS": {
@@ -84490,12 +84432,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 4423.68,
+        "unitPrice": 4423.68,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "45a31806-63c8-5e50-a555-92a9d4500600",
         "meterName": "E80 ZRS Disk",
         "productId": "DZH318Z0BP88",
@@ -85194,16 +85135,16 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "750",
+      "MaxValueOfMaxShares": "10",
       "MaxIOps": "6000",
-      "MaxBandwidthMBps": "750",
-      "name": "E80",
-      "MaxSizeGiB": "32767",
-      "redundancy": "ZRS",
+      "MinBandwidthMBps": "750",
       "MinIOps": "6000",
-      "tier": "StandardSSD",
+      "name": "E80",
       "MinSizeGiB": "16384",
-      "MaxValueOfMaxShares": "10"
+      "redundancy": "ZRS",
+      "MaxBandwidthMBps": "750",
+      "MaxSizeGiB": "32767",
+      "tier": "StandardSSD"
     }
   },
   "S10_LRS": {
@@ -85893,12 +85834,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 7.0656,
+        "unitPrice": 7.0656,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "6ee5c831-a6c3-58c6-a895-760431046328",
         "meterName": "S10 LRS Disk",
         "productId": "DZH318Z0BP0L",
@@ -86663,21 +86603,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "60",
-      "name": "S10",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "128",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "60",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "1",
-      "MinIOps": "500",
-      "MaxIOps": "500",
+      "MaxBandwidthMBps": "60",
+      "MinBandwidthMBps": "60",
       "tier": "Standard",
+      "MaxSizeGiB": "128",
+      "MinIOps": "500",
       "MinSizeGiB": "64",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "500",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "1",
+      "name": "S10"
     }
   },
   "S15_LRS": {
@@ -87499,12 +87439,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 13.5936,
+        "unitPrice": 13.5936,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "9542276a-0b80-5492-8099-27d4c1748de1",
         "meterName": "S15 LRS Disk",
         "productId": "DZH318Z0BP0L",
@@ -88137,21 +88076,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "60",
-      "name": "S15",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "256",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "60",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "1",
-      "MinIOps": "500",
-      "MaxIOps": "500",
+      "MaxBandwidthMBps": "60",
+      "MinBandwidthMBps": "60",
       "tier": "Standard",
+      "MaxSizeGiB": "256",
+      "MinIOps": "500",
       "MinSizeGiB": "128",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "500",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "1",
+      "name": "S15"
     }
   },
   "S20_LRS": {
@@ -88511,12 +88450,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 26.112,
+        "unitPrice": 26.112,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "198dd0ba-b7a9-5649-a85c-b36061588fe4",
         "meterName": "S20 LRS Disk",
         "productId": "DZH318Z0BP0L",
@@ -89611,21 +89549,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "60",
-      "name": "S20",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "512",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "60",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "2",
-      "MinIOps": "500",
-      "MaxIOps": "500",
+      "MaxBandwidthMBps": "60",
+      "MinBandwidthMBps": "60",
       "tier": "Standard",
+      "MaxSizeGiB": "512",
+      "MinIOps": "500",
       "MinSizeGiB": "256",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "500",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "2",
+      "name": "S20"
     }
   },
   "S30_LRS": {
@@ -90557,12 +90495,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 49.152,
+        "unitPrice": 49.152,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "7f147ea5-87d6-5637-b843-05a7af5c78f7",
         "meterName": "S30 LRS Disk",
         "productId": "DZH318Z0BP0L",
@@ -91085,21 +91022,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "60",
-      "name": "S30",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "1024",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "60",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "5",
-      "MinIOps": "500",
-      "MaxIOps": "500",
+      "MaxBandwidthMBps": "60",
+      "MinBandwidthMBps": "60",
       "tier": "Standard",
+      "MaxSizeGiB": "1024",
+      "MinIOps": "500",
       "MinSizeGiB": "512",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "500",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "5",
+      "name": "S30"
     }
   },
   "S4_LRS": {
@@ -92515,12 +92452,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 1.8432,
+        "unitPrice": 1.8432,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "f54aed4c-0129-5adf-a710-737dfca3bc68",
         "meterName": "S4 LRS Disk",
         "productId": "DZH318Z0BP0L",
@@ -92559,21 +92495,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "60",
-      "name": "S4",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "32",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "60",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "1",
-      "MinIOps": "500",
-      "MaxIOps": "500",
+      "MaxBandwidthMBps": "60",
+      "MinBandwidthMBps": "60",
       "tier": "Standard",
+      "MaxSizeGiB": "32",
+      "MinIOps": "500",
       "MinSizeGiB": "0",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "500",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "1",
+      "name": "S4"
     }
   },
   "S40_LRS": {
@@ -93175,12 +93111,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 93.389,
+        "unitPrice": 93.389,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "6189eebf-5b31-5069-bab4-7c685de25103",
         "meterName": "S40 LRS Disk",
         "productId": "DZH318Z0BP0L",
@@ -94033,21 +93968,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "60",
-      "name": "S40",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "2048",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "60",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "5",
-      "MinIOps": "500",
-      "MaxIOps": "500",
+      "MaxBandwidthMBps": "60",
+      "MinBandwidthMBps": "60",
       "tier": "Standard",
+      "MaxSizeGiB": "2048",
+      "MinIOps": "500",
       "MinSizeGiB": "1024",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "500",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "5",
+      "name": "S40"
     }
   },
   "S50_LRS": {
@@ -94583,12 +94518,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 172.03,
+        "unitPrice": 172.03,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "5216c29c-53f3-521d-a9ba-e8dc5500233d",
         "meterName": "S50 LRS Disk",
         "productId": "DZH318Z0BP0L",
@@ -95507,21 +95441,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "60",
-      "name": "S50",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "4096",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "60",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "5",
-      "MinIOps": "500",
-      "MaxIOps": "500",
+      "MaxBandwidthMBps": "60",
+      "MinBandwidthMBps": "60",
       "tier": "Standard",
+      "MaxSizeGiB": "4096",
+      "MinIOps": "500",
       "MinSizeGiB": "2048",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "500",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "5",
+      "name": "S50"
     }
   },
   "S6_LRS": {
@@ -95617,12 +95551,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 3.6096,
+        "unitPrice": 3.6096,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "148ff219-b9ab-5a49-97d1-3a56735be63d",
         "meterName": "S6 LRS Disk",
         "productId": "DZH318Z0BP0L",
@@ -96981,21 +96914,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "60",
-      "name": "S6",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "64",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "60",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "1",
-      "MinIOps": "500",
-      "MaxIOps": "500",
+      "MaxBandwidthMBps": "60",
+      "MinBandwidthMBps": "60",
       "tier": "Standard",
+      "MaxSizeGiB": "64",
+      "MinIOps": "500",
       "MinSizeGiB": "32",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "500",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "1",
+      "name": "S6"
     }
   },
   "S60_LRS": {
@@ -97333,12 +97266,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 314.57,
+        "unitPrice": 314.57,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "447bfd04-25a2-5a72-ba66-a97d36523a43",
         "meterName": "S60 LRS Disk",
         "productId": "DZH318Z0BP0L",
@@ -98455,21 +98387,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "60",
-      "name": "S60",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "8192",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "300",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "5",
-      "MinIOps": "500",
-      "MaxIOps": "1300",
+      "MaxBandwidthMBps": "300",
+      "MinBandwidthMBps": "60",
       "tier": "Standard",
+      "MaxSizeGiB": "8192",
+      "MinIOps": "500",
       "MinSizeGiB": "4096",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "1300",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "5",
+      "name": "S60"
     }
   },
   "S70_LRS": {
@@ -99599,12 +99531,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 629.15,
+        "unitPrice": 629.15,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "baa8de99-5983-56e1-99a0-ad0c70866057",
         "meterName": "S70 LRS Disk",
         "productId": "DZH318Z0BP0L",
@@ -99929,21 +99860,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "300",
-      "name": "S70",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "16384",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "500",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "5",
-      "MinIOps": "1300",
-      "MaxIOps": "2000",
+      "MaxBandwidthMBps": "500",
+      "MinBandwidthMBps": "300",
       "tier": "Standard",
+      "MaxSizeGiB": "16384",
+      "MinIOps": "1300",
       "MinSizeGiB": "8192",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "2000",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "5",
+      "name": "S70"
     }
   },
   "S80_LRS": {
@@ -100567,12 +100498,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.01,
-        "unitPrice": 0.01,
+        "retailPrice": 1258.29,
+        "unitPrice": 1258.29,
         "armRegionName": "saudiarabiaeast",
         "location": "SA East",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "79861a52-cfad-5767-89d3-153d375a4121",
         "meterName": "S80 LRS Disk",
         "productId": "DZH318Z0BP0L",
@@ -101403,21 +101333,21 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBps": "500",
-      "name": "S80",
-      "MaxBurstIops": null,
       "BurstCreditBucketSizeInGiB": null,
-      "MaxSizeGiB": "32767",
       "MaxBurstDurationInMin": null,
-      "MaxBandwidthMBps": "500",
-      "MaxBurstBandwidthMBps": null,
       "redundancy": "LRS",
-      "MaxValueOfMaxShares": "5",
-      "MinIOps": "2000",
-      "MaxIOps": "2000",
+      "MaxBandwidthMBps": "500",
+      "MinBandwidthMBps": "500",
       "tier": "Standard",
+      "MaxSizeGiB": "32767",
+      "MinIOps": "2000",
       "MinSizeGiB": "16384",
-      "BurstCreditBucketSizeInIO": null
+      "BurstCreditBucketSizeInIO": null,
+      "MaxIOps": "2000",
+      "MaxBurstIops": null,
+      "MaxBurstBandwidthMBps": null,
+      "MaxValueOfMaxShares": "5",
+      "name": "S80"
     }
   },
   "U_LRS": {
@@ -102195,12 +102125,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.000164,
-        "unitPrice": 0.000164,
+        "retailPrice": 0.00023,
+        "unitPrice": 0.00023,
         "armRegionName": "australiasoutheast",
         "location": "AU Southeast",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "b3b92c0f-50f8-5f7a-8bc2-b2f38dc719ea",
         "meterName": "Ultra LRS Provisioned Capacity",
         "productId": "DZH318Z0BP68",
@@ -102658,12 +102587,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 5.1E-05,
-        "unitPrice": 5.1E-05,
+        "retailPrice": 6.8E-05,
+        "unitPrice": 6.8E-05,
         "armRegionName": "westus2",
         "location": "US West 2",
-        "effectiveStartDate": "2025-08-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
+        "effectiveStartDate": "2026-11-01T00:00:00Z",
         "meterId": "0f06bb9b-5bdb-4a3a-a43e-8b8e5df634e2",
         "meterName": "Ultra LRS Provisioned IOPS",
         "productId": "DZH318Z0BP68",
@@ -102703,12 +102631,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 3.4E-05,
-        "unitPrice": 3.4E-05,
+        "retailPrice": 8.5E-05,
+        "unitPrice": 8.5E-05,
         "armRegionName": "uksouth",
         "location": "UK South",
-        "effectiveStartDate": "2025-08-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
+        "effectiveStartDate": "2026-11-01T00:00:00Z",
         "meterId": "1ba22246-9067-4087-bf36-c29bfbbcd165",
         "meterName": "Ultra LRS Provisioned IOPS",
         "productId": "DZH318Z0BP68",
@@ -102880,12 +102807,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 6.8E-05,
-        "unitPrice": 6.8E-05,
+        "retailPrice": 9.5E-05,
+        "unitPrice": 9.5E-05,
         "armRegionName": "australiasoutheast",
         "location": "AU Southeast",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "43ae37d6-e874-5a48-935a-b7ba9fc5289d",
         "meterName": "Ultra LRS Provisioned IOPS",
         "productId": "DZH318Z0BP68",
@@ -103563,12 +103489,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 5.5E-05,
-        "unitPrice": 5.5E-05,
+        "retailPrice": 8.4E-05,
+        "unitPrice": 8.4E-05,
         "armRegionName": "centralus",
         "location": "US Central",
-        "effectiveStartDate": "2025-08-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
+        "effectiveStartDate": "2026-11-01T00:00:00Z",
         "meterId": "c918abb8-9d74-46a1-a1d9-e945ce04e4ea",
         "meterName": "Ultra LRS Provisioned IOPS",
         "productId": "DZH318Z0BP68",
@@ -103806,12 +103731,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.000111,
-        "unitPrice": 0.000111,
+        "retailPrice": 0.000556,
+        "unitPrice": 0.000556,
         "armRegionName": "uksouth",
         "location": "UK South",
-        "effectiveStartDate": "2025-08-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
+        "effectiveStartDate": "2026-11-01T00:00:00Z",
         "meterId": "0a8412aa-8bc3-4feb-acdd-0cb13bc64bb9",
         "meterName": "Ultra LRS Provisioned Throughput (MBps)",
         "productId": "DZH318Z0BP68",
@@ -104203,12 +104127,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.00024,
-        "unitPrice": 0.00024,
+        "retailPrice": 0.000479,
+        "unitPrice": 0.000479,
         "armRegionName": "westus2",
         "location": "US West 2",
-        "effectiveStartDate": "2025-08-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
+        "effectiveStartDate": "2026-11-01T00:00:00Z",
         "meterId": "5f5f8553-a20b-42e1-99dc-f7ff441eb9e7",
         "meterName": "Ultra LRS Provisioned Throughput (MBps)",
         "productId": "DZH318Z0BP68",
@@ -104512,12 +104435,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.00137,
-        "unitPrice": 0.00137,
+        "retailPrice": 0.000671,
+        "unitPrice": 0.000671,
         "armRegionName": "australiasoutheast",
         "location": "AU Southeast",
         "effectiveStartDate": "2026-11-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
         "meterId": "936aff11-0cdd-50dd-bc08-649b43e9adfb",
         "meterName": "Ultra LRS Provisioned Throughput (MBps)",
         "productId": "DZH318Z0BP68",
@@ -104843,12 +104765,11 @@
       {
         "currencyCode": "USD",
         "tierMinimumUnits": 0.0,
-        "retailPrice": 0.000136,
-        "unitPrice": 0.000136,
+        "retailPrice": 0.000542,
+        "unitPrice": 0.000542,
         "armRegionName": "centralus",
         "location": "US Central",
-        "effectiveStartDate": "2025-08-01T00:00:00Z",
-        "effectiveEndDate": "2026-10-31T23:59:00Z",
+        "effectiveStartDate": "2026-11-01T00:00:00Z",
         "meterId": "ec3a0837-1ec5-441e-aa8a-8e95e93dc833",
         "meterName": "Ultra LRS Provisioned Throughput (MBps)",
         "productId": "DZH318Z0BP68",
@@ -104997,28 +104918,28 @@
       }
     ],
     "specs": {
-      "MinBandwidthMBpsReadOnly": "1",
-      "MinSizeGiB": "4",
+      "MinIopsReadOnly": "100",
+      "MaxIopsReadOnly": "400000",
       "MinIopsPerGiBReadOnly": "0",
-      "MaxIOSizeKiBps": "256",
-      "MinIopsPerGiBReadWrite": "0",
-      "MaxValueOfMaxShares": "15",
-      "tier": "UltraSSD",
-      "name": "UltraSSD",
-      "PlatformFaultDomainCount": "2",
-      "MaxIOpsReadWrite": "400000",
-      "MinIOSizeKiBps": "0",
       "MinIOpsReadWrite": "100",
+      "MaxIopsPerGiBReadWrite": "1000",
+      "tier": "UltraSSD",
       "MaxBandwidthMBpsReadOnly": "10000",
       "MinBandwidthMBpsReadWrite": "1",
+      "MinSizeGiB": "4",
+      "MinIOSizeKiBps": "0",
+      "MaxValueOfMaxShares": "15",
+      "MinIopsPerGiBReadWrite": "0",
+      "MaxIOpsReadWrite": "400000",
+      "MaxSizeGiB": "65536",
       "MaxBandwidthMBpsReadWrite": "10000",
       "MaxIopsPerGiBReadOnly": "1000",
       "redundancy": "LRS",
-      "MaxSizeGiB": "65536",
-      "MaxIopsReadOnly": "400000",
-      "MinIopsReadOnly": "100",
-      "MaxIopsPerGiBReadWrite": "1000",
-      "BillingPartitionSizes": "4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 3072, 4096, 5120, 6144, 7168, 8192, 9216, 10240, 11264, 12288, 13312, 14336, 15360, 16384, 17408, 18432, 19456, 20480, 21504, 22528, 23552,24576,25600,26624,27648,28672,29696,30720,31744,32768,33792,34816,35840,36864,37888,38912,39936,40960,41984,43008,44032,45056,46080,47104,48128,49152,50176,51200,52224,53248,54272,55296,56320,57344,58368,59392,60416,61440,62464,63488,64512,65536"
+      "PlatformFaultDomainCount": "2",
+      "name": "UltraSSD",
+      "BillingPartitionSizes": "4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 3072, 4096, 5120, 6144, 7168, 8192, 9216, 10240, 11264, 12288, 13312, 14336, 15360, 16384, 17408, 18432, 19456, 20480, 21504, 22528, 23552,24576,25600,26624,27648,28672,29696,30720,31744,32768,33792,34816,35840,36864,37888,38912,39936,40960,41984,43008,44032,45056,46080,47104,48128,49152,50176,51200,52224,53248,54272,55296,56320,57344,58368,59392,60416,61440,62464,63488,64512,65536",
+      "MaxIOSizeKiBps": "256",
+      "MinBandwidthMBpsReadOnly": "1"
     }
   }
 }
