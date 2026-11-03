@@ -3963,28 +3963,28 @@
       }
     ],
     "specs": {
-      "MinIopsReadOnly": "3000",
       "MaxIopsReadOnly": "80000",
-      "MinIopsPerGiBReadOnly": "1",
       "MinIOpsReadWrite": "3000",
-      "MaxIopsPerGiBReadWrite": "500",
-      "tier": "PremiumV2",
-      "MaxBandwidthMBpsReadOnly": "2000",
-      "MinBandwidthMBpsReadWrite": "125",
-      "MinSizeGiB": "1",
-      "MinIOSizeKiBps": "4",
-      "MaxValueOfMaxShares": "15",
-      "MinIopsPerGiBReadWrite": "1",
-      "MaxIOpsReadWrite": "80000",
-      "MaxSizeGiB": "65536",
-      "MaxBandwidthMBpsReadWrite": "2000",
-      "MaxIopsPerGiBReadOnly": "500",
-      "redundancy": "LRS",
-      "PlatformFaultDomainCount": "2",
-      "name": "PremiumV2",
-      "BillingPartitionSizes": "1, 2, 3, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 3072, 4096, 5120, 6144, 7168, 8192, 9216, 10240, 11264, 12288, 13312, 14336, 15360, 16384, 17408, 18432, 19456, 20480, 21504, 22528, 23552,24576,25600,26624,27648,28672,29696,30720,31744,32768,33792,34816,35840,36864,37888,38912,39936,40960,41984,43008,44032,45056,46080,47104,48128,49152,50176,51200,52224,53248,54272,55296,56320,57344,58368,59392,60416,61440,62464,63488,64512,65536",
       "MaxIOSizeKiBps": "256",
-      "MinBandwidthMBpsReadOnly": "125"
+      "MaxBandwidthMBpsReadWrite": "2000",
+      "BillingPartitionSizes": "1, 2, 3, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 3072, 4096, 5120, 6144, 7168, 8192, 9216, 10240, 11264, 12288, 13312, 14336, 15360, 16384, 17408, 18432, 19456, 20480, 21504, 22528, 23552,24576,25600,26624,27648,28672,29696,30720,31744,32768,33792,34816,35840,36864,37888,38912,39936,40960,41984,43008,44032,45056,46080,47104,48128,49152,50176,51200,52224,53248,54272,55296,56320,57344,58368,59392,60416,61440,62464,63488,64512,65536",
+      "MinIopsPerGiBReadOnly": "1",
+      "MaxBandwidthMBpsReadOnly": "2000",
+      "MaxSizeGiB": "65536",
+      "MaxValueOfMaxShares": "15",
+      "MaxIOpsReadWrite": "80000",
+      "tier": "PremiumV2",
+      "MinBandwidthMBpsReadOnly": "125",
+      "MaxIopsPerGiBReadWrite": "500",
+      "MinIopsPerGiBReadWrite": "1",
+      "redundancy": "LRS",
+      "MaxIopsPerGiBReadOnly": "500",
+      "MinSizeGiB": "1",
+      "PlatformFaultDomainCount": "2",
+      "MinIopsReadOnly": "3000",
+      "MinBandwidthMBpsReadWrite": "125",
+      "MinIOSizeKiBps": "4",
+      "name": "PremiumV2"
     }
   },
   "P1_LRS": {
@@ -5465,21 +5465,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": "255",
-      "MaxBurstDurationInMin": "30",
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": "6084000",
       "MaxBandwidthMBps": "25",
       "MinBandwidthMBps": "25",
+      "MaxValueOfMaxShares": "3",
+      "BurstCreditBucketSizeInGiB": "255",
       "tier": "Premium",
-      "MaxSizeGiB": "4",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxIOps": "120",
+      "MaxBurstDurationInMin": "30",
+      "name": "P1",
       "MinIOps": "120",
       "MinSizeGiB": "0",
-      "BurstCreditBucketSizeInIO": "6084000",
-      "MaxIOps": "120",
-      "MaxBurstIops": "3500",
-      "MaxBurstBandwidthMBps": "170",
-      "MaxValueOfMaxShares": "3",
-      "name": "P1"
+      "MaxSizeGiB": "4",
+      "MaxBurstIops": "3500"
     }
   },
   "P1_ZRS": {
@@ -6432,21 +6432,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": "255",
-      "MaxBurstDurationInMin": "30",
       "redundancy": "ZRS",
+      "BurstCreditBucketSizeInIO": "6084000",
       "MaxBandwidthMBps": "25",
       "MinBandwidthMBps": "25",
+      "MaxValueOfMaxShares": "3",
+      "BurstCreditBucketSizeInGiB": "255",
       "tier": "Premium",
-      "MaxSizeGiB": "4",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxIOps": "120",
+      "MaxBurstDurationInMin": "30",
+      "name": "P1",
       "MinIOps": "120",
       "MinSizeGiB": "0",
-      "BurstCreditBucketSizeInIO": "6084000",
-      "MaxIOps": "120",
-      "MaxBurstIops": "3500",
-      "MaxBurstBandwidthMBps": "170",
-      "MaxValueOfMaxShares": "3",
-      "name": "P1"
+      "MaxSizeGiB": "4",
+      "MaxBurstIops": "3500"
     }
   },
   "P10_LRS": {
@@ -7949,21 +7949,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": "123",
-      "MaxBurstDurationInMin": "30",
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": "5400000",
       "MaxBandwidthMBps": "100",
       "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
+      "BurstCreditBucketSizeInGiB": "123",
       "tier": "Premium",
-      "MaxSizeGiB": "128",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxIOps": "500",
+      "MaxBurstDurationInMin": "30",
+      "name": "P10",
       "MinIOps": "500",
       "MinSizeGiB": "64",
-      "BurstCreditBucketSizeInIO": "5400000",
-      "MaxIOps": "500",
-      "MaxBurstIops": "3500",
-      "MaxBurstBandwidthMBps": "170",
-      "MaxValueOfMaxShares": "3",
-      "name": "P10"
+      "MaxSizeGiB": "128",
+      "MaxBurstIops": "3500"
     }
   },
   "P10_ZRS": {
@@ -8916,21 +8916,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": "123",
-      "MaxBurstDurationInMin": "30",
       "redundancy": "ZRS",
+      "BurstCreditBucketSizeInIO": "5400000",
       "MaxBandwidthMBps": "100",
       "MinBandwidthMBps": "100",
+      "MaxValueOfMaxShares": "3",
+      "BurstCreditBucketSizeInGiB": "123",
       "tier": "Premium",
-      "MaxSizeGiB": "128",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxIOps": "500",
+      "MaxBurstDurationInMin": "30",
+      "name": "P10",
       "MinIOps": "500",
       "MinSizeGiB": "64",
-      "BurstCreditBucketSizeInIO": "5400000",
-      "MaxIOps": "500",
-      "MaxBurstIops": "3500",
-      "MaxBurstBandwidthMBps": "170",
-      "MaxValueOfMaxShares": "3",
-      "name": "P10"
+      "MaxSizeGiB": "128",
+      "MaxBurstIops": "3500"
     }
   },
   "P15_LRS": {
@@ -10433,21 +10433,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": "79",
-      "MaxBurstDurationInMin": "30",
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": "4320000",
       "MaxBandwidthMBps": "125",
       "MinBandwidthMBps": "125",
+      "MaxValueOfMaxShares": "3",
+      "BurstCreditBucketSizeInGiB": "79",
       "tier": "Premium",
-      "MaxSizeGiB": "256",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxIOps": "1100",
+      "MaxBurstDurationInMin": "30",
+      "name": "P15",
       "MinIOps": "1100",
       "MinSizeGiB": "128",
-      "BurstCreditBucketSizeInIO": "4320000",
-      "MaxIOps": "1100",
-      "MaxBurstIops": "3500",
-      "MaxBurstBandwidthMBps": "170",
-      "MaxValueOfMaxShares": "3",
-      "name": "P15"
+      "MaxSizeGiB": "256",
+      "MaxBurstIops": "3500"
     }
   },
   "P15_ZRS": {
@@ -11400,21 +11400,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": "79",
-      "MaxBurstDurationInMin": "30",
       "redundancy": "ZRS",
+      "BurstCreditBucketSizeInIO": "4320000",
       "MaxBandwidthMBps": "125",
       "MinBandwidthMBps": "125",
+      "MaxValueOfMaxShares": "3",
+      "BurstCreditBucketSizeInGiB": "79",
       "tier": "Premium",
-      "MaxSizeGiB": "256",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxIOps": "1100",
+      "MaxBurstDurationInMin": "30",
+      "name": "P15",
       "MinIOps": "1100",
       "MinSizeGiB": "128",
-      "BurstCreditBucketSizeInIO": "4320000",
-      "MaxIOps": "1100",
-      "MaxBurstIops": "3500",
-      "MaxBurstBandwidthMBps": "170",
-      "MaxValueOfMaxShares": "3",
-      "name": "P15"
+      "MaxSizeGiB": "256",
+      "MaxBurstIops": "3500"
     }
   },
   "P2_LRS": {
@@ -12895,21 +12895,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": "255",
-      "MaxBurstDurationInMin": "30",
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": "6084000",
       "MaxBandwidthMBps": "25",
       "MinBandwidthMBps": "25",
+      "MaxValueOfMaxShares": "3",
+      "BurstCreditBucketSizeInGiB": "255",
       "tier": "Premium",
-      "MaxSizeGiB": "8",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxIOps": "120",
+      "MaxBurstDurationInMin": "30",
+      "name": "P2",
       "MinIOps": "120",
       "MinSizeGiB": "4",
-      "BurstCreditBucketSizeInIO": "6084000",
-      "MaxIOps": "120",
-      "MaxBurstIops": "3500",
-      "MaxBurstBandwidthMBps": "170",
-      "MaxValueOfMaxShares": "3",
-      "name": "P2"
+      "MaxSizeGiB": "8",
+      "MaxBurstIops": "3500"
     }
   },
   "P2_ZRS": {
@@ -13862,21 +13862,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": "255",
-      "MaxBurstDurationInMin": "30",
       "redundancy": "ZRS",
+      "BurstCreditBucketSizeInIO": "6084000",
       "MaxBandwidthMBps": "25",
       "MinBandwidthMBps": "25",
+      "MaxValueOfMaxShares": "3",
+      "BurstCreditBucketSizeInGiB": "255",
       "tier": "Premium",
-      "MaxSizeGiB": "8",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxIOps": "120",
+      "MaxBurstDurationInMin": "30",
+      "name": "P2",
       "MinIOps": "120",
       "MinSizeGiB": "4",
-      "BurstCreditBucketSizeInIO": "6084000",
-      "MaxIOps": "120",
-      "MaxBurstIops": "3500",
-      "MaxBurstBandwidthMBps": "170",
-      "MaxValueOfMaxShares": "3",
-      "name": "P2"
+      "MaxSizeGiB": "8",
+      "MaxBurstIops": "3500"
     }
   },
   "P20_LRS": {
@@ -15379,21 +15379,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": "35",
-      "MaxBurstDurationInMin": "30",
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": "2160000",
       "MaxBandwidthMBps": "150",
       "MinBandwidthMBps": "150",
+      "MaxValueOfMaxShares": "3",
+      "BurstCreditBucketSizeInGiB": "35",
       "tier": "Premium",
-      "MaxSizeGiB": "512",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxIOps": "2300",
+      "MaxBurstDurationInMin": "30",
+      "name": "P20",
       "MinIOps": "2300",
       "MinSizeGiB": "256",
-      "BurstCreditBucketSizeInIO": "2160000",
-      "MaxIOps": "2300",
-      "MaxBurstIops": "3500",
-      "MaxBurstBandwidthMBps": "170",
-      "MaxValueOfMaxShares": "3",
-      "name": "P20"
+      "MaxSizeGiB": "512",
+      "MaxBurstIops": "3500"
     }
   },
   "P20_ZRS": {
@@ -16346,21 +16346,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": "35",
-      "MaxBurstDurationInMin": "30",
       "redundancy": "ZRS",
+      "BurstCreditBucketSizeInIO": "2160000",
       "MaxBandwidthMBps": "150",
       "MinBandwidthMBps": "150",
+      "MaxValueOfMaxShares": "3",
+      "BurstCreditBucketSizeInGiB": "35",
       "tier": "Premium",
-      "MaxSizeGiB": "512",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxIOps": "2300",
+      "MaxBurstDurationInMin": "30",
+      "name": "P20",
       "MinIOps": "2300",
       "MinSizeGiB": "256",
-      "BurstCreditBucketSizeInIO": "2160000",
-      "MaxIOps": "2300",
-      "MaxBurstIops": "3500",
-      "MaxBurstBandwidthMBps": "170",
-      "MaxValueOfMaxShares": "3",
-      "name": "P20"
+      "MaxSizeGiB": "512",
+      "MaxBurstIops": "3500"
     }
   },
   "P3_LRS": {
@@ -17841,21 +17841,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": "255",
-      "MaxBurstDurationInMin": "30",
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": "6084000",
       "MaxBandwidthMBps": "25",
       "MinBandwidthMBps": "25",
+      "MaxValueOfMaxShares": "3",
+      "BurstCreditBucketSizeInGiB": "255",
       "tier": "Premium",
-      "MaxSizeGiB": "16",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxIOps": "120",
+      "MaxBurstDurationInMin": "30",
+      "name": "P3",
       "MinIOps": "120",
       "MinSizeGiB": "8",
-      "BurstCreditBucketSizeInIO": "6084000",
-      "MaxIOps": "120",
-      "MaxBurstIops": "3500",
-      "MaxBurstBandwidthMBps": "170",
-      "MaxValueOfMaxShares": "3",
-      "name": "P3"
+      "MaxSizeGiB": "16",
+      "MaxBurstIops": "3500"
     }
   },
   "P3_ZRS": {
@@ -18808,21 +18808,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": "255",
-      "MaxBurstDurationInMin": "30",
       "redundancy": "ZRS",
+      "BurstCreditBucketSizeInIO": "6084000",
       "MaxBandwidthMBps": "25",
       "MinBandwidthMBps": "25",
+      "MaxValueOfMaxShares": "3",
+      "BurstCreditBucketSizeInGiB": "255",
       "tier": "Premium",
-      "MaxSizeGiB": "16",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxIOps": "120",
+      "MaxBurstDurationInMin": "30",
+      "name": "P3",
       "MinIOps": "120",
       "MinSizeGiB": "8",
-      "BurstCreditBucketSizeInIO": "6084000",
-      "MaxIOps": "120",
-      "MaxBurstIops": "3500",
-      "MaxBurstBandwidthMBps": "170",
-      "MaxValueOfMaxShares": "3",
-      "name": "P3"
+      "MaxSizeGiB": "16",
+      "MaxBurstIops": "3500"
     }
   },
   "P30_LRS": {
@@ -21452,21 +21452,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "200",
       "MinBandwidthMBps": "200",
+      "MaxValueOfMaxShares": "5",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Premium",
-      "MaxSizeGiB": "1024",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "5000",
+      "MaxBurstDurationInMin": null,
+      "name": "P30",
       "MinIOps": "5000",
       "MinSizeGiB": "512",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "5000",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "5",
-      "name": "P30"
+      "MaxSizeGiB": "1024",
+      "MaxBurstIops": null
     }
   },
   "P30_ZRS": {
@@ -22419,21 +22419,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "ZRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "200",
       "MinBandwidthMBps": "200",
+      "MaxValueOfMaxShares": "5",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Premium",
-      "MaxSizeGiB": "1024",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "5000",
+      "MaxBurstDurationInMin": null,
+      "name": "P30",
       "MinIOps": "5000",
       "MinSizeGiB": "512",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "5000",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "5",
-      "name": "P30"
+      "MaxSizeGiB": "1024",
+      "MaxBurstIops": null
     }
   },
   "P4_LRS": {
@@ -23936,21 +23936,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": "255",
-      "MaxBurstDurationInMin": "30",
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": "6084000",
       "MaxBandwidthMBps": "25",
       "MinBandwidthMBps": "25",
+      "MaxValueOfMaxShares": "3",
+      "BurstCreditBucketSizeInGiB": "255",
       "tier": "Premium",
-      "MaxSizeGiB": "32",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxIOps": "120",
+      "MaxBurstDurationInMin": "30",
+      "name": "P4",
       "MinIOps": "120",
       "MinSizeGiB": "16",
-      "BurstCreditBucketSizeInIO": "6084000",
-      "MaxIOps": "120",
-      "MaxBurstIops": "3500",
-      "MaxBurstBandwidthMBps": "170",
-      "MaxValueOfMaxShares": "3",
-      "name": "P4"
+      "MaxSizeGiB": "32",
+      "MaxBurstIops": "3500"
     }
   },
   "P4_ZRS": {
@@ -24903,21 +24903,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": "255",
-      "MaxBurstDurationInMin": "30",
       "redundancy": "ZRS",
+      "BurstCreditBucketSizeInIO": "6084000",
       "MaxBandwidthMBps": "25",
       "MinBandwidthMBps": "25",
+      "MaxValueOfMaxShares": "3",
+      "BurstCreditBucketSizeInGiB": "255",
       "tier": "Premium",
-      "MaxSizeGiB": "32",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxIOps": "120",
+      "MaxBurstDurationInMin": "30",
+      "name": "P4",
       "MinIOps": "120",
       "MinSizeGiB": "16",
-      "BurstCreditBucketSizeInIO": "6084000",
-      "MaxIOps": "120",
-      "MaxBurstIops": "3500",
-      "MaxBurstBandwidthMBps": "170",
-      "MaxValueOfMaxShares": "3",
-      "name": "P4"
+      "MaxSizeGiB": "32",
+      "MaxBurstIops": "3500"
     }
   },
   "P40_LRS": {
@@ -28628,21 +28628,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "250",
       "MinBandwidthMBps": "250",
+      "MaxValueOfMaxShares": "5",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Premium",
-      "MaxSizeGiB": "2048",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "7500",
+      "MaxBurstDurationInMin": null,
+      "name": "P40",
       "MinIOps": "7500",
       "MinSizeGiB": "1024",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "7500",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "5",
-      "name": "P40"
+      "MaxSizeGiB": "2048",
+      "MaxBurstIops": null
     }
   },
   "P40_ZRS": {
@@ -29595,21 +29595,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "ZRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "250",
       "MinBandwidthMBps": "250",
+      "MaxValueOfMaxShares": "5",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Premium",
-      "MaxSizeGiB": "2048",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "7500",
+      "MaxBurstDurationInMin": null,
+      "name": "P40",
       "MinIOps": "7500",
       "MinSizeGiB": "1024",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "7500",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "5",
-      "name": "P40"
+      "MaxSizeGiB": "2048",
+      "MaxBurstIops": null
     }
   },
   "P50_LRS": {
@@ -33320,21 +33320,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "250",
       "MinBandwidthMBps": "250",
+      "MaxValueOfMaxShares": "5",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Premium",
-      "MaxSizeGiB": "4096",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "7500",
+      "MaxBurstDurationInMin": null,
+      "name": "P50",
       "MinIOps": "7500",
       "MinSizeGiB": "2048",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "7500",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "5",
-      "name": "P50"
+      "MaxSizeGiB": "4096",
+      "MaxBurstIops": null
     }
   },
   "P50_ZRS": {
@@ -34287,21 +34287,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "ZRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "250",
       "MinBandwidthMBps": "250",
+      "MaxValueOfMaxShares": "5",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Premium",
-      "MaxSizeGiB": "4096",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "7500",
+      "MaxBurstDurationInMin": null,
+      "name": "P50",
       "MinIOps": "7500",
       "MinSizeGiB": "2048",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "7500",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "5",
-      "name": "P50"
+      "MaxSizeGiB": "4096",
+      "MaxBurstIops": null
     }
   },
   "P6_LRS": {
@@ -35804,21 +35804,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": "211",
-      "MaxBurstDurationInMin": "30",
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": "5868000",
       "MaxBandwidthMBps": "50",
       "MinBandwidthMBps": "50",
+      "MaxValueOfMaxShares": "3",
+      "BurstCreditBucketSizeInGiB": "211",
       "tier": "Premium",
-      "MaxSizeGiB": "64",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxIOps": "240",
+      "MaxBurstDurationInMin": "30",
+      "name": "P6",
       "MinIOps": "240",
       "MinSizeGiB": "32",
-      "BurstCreditBucketSizeInIO": "5868000",
-      "MaxIOps": "240",
-      "MaxBurstIops": "3500",
-      "MaxBurstBandwidthMBps": "170",
-      "MaxValueOfMaxShares": "3",
-      "name": "P6"
+      "MaxSizeGiB": "64",
+      "MaxBurstIops": "3500"
     }
   },
   "P6_ZRS": {
@@ -36771,21 +36771,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": "211",
-      "MaxBurstDurationInMin": "30",
       "redundancy": "ZRS",
+      "BurstCreditBucketSizeInIO": "5868000",
       "MaxBandwidthMBps": "50",
       "MinBandwidthMBps": "50",
+      "MaxValueOfMaxShares": "3",
+      "BurstCreditBucketSizeInGiB": "211",
       "tier": "Premium",
-      "MaxSizeGiB": "64",
+      "MaxBurstBandwidthMBps": "170",
+      "MaxIOps": "240",
+      "MaxBurstDurationInMin": "30",
+      "name": "P6",
       "MinIOps": "240",
       "MinSizeGiB": "32",
-      "BurstCreditBucketSizeInIO": "5868000",
-      "MaxIOps": "240",
-      "MaxBurstIops": "3500",
-      "MaxBurstBandwidthMBps": "170",
-      "MaxValueOfMaxShares": "3",
-      "name": "P6"
+      "MaxSizeGiB": "64",
+      "MaxBurstIops": "3500"
     }
   },
   "P60_LRS": {
@@ -40451,21 +40451,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "500",
       "MinBandwidthMBps": "500",
+      "MaxValueOfMaxShares": "10",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Premium",
-      "MaxSizeGiB": "8192",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "16000",
+      "MaxBurstDurationInMin": null,
+      "name": "P60",
       "MinIOps": "16000",
       "MinSizeGiB": "4096",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "16000",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "10",
-      "name": "P60"
+      "MaxSizeGiB": "8192",
+      "MaxBurstIops": null
     }
   },
   "P60_ZRS": {
@@ -41418,21 +41418,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "ZRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "500",
       "MinBandwidthMBps": "500",
+      "MaxValueOfMaxShares": "10",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Premium",
-      "MaxSizeGiB": "8192",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "16000",
+      "MaxBurstDurationInMin": null,
+      "name": "P60",
       "MinIOps": "16000",
       "MinSizeGiB": "4096",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "16000",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "10",
-      "name": "P60"
+      "MaxSizeGiB": "8192",
+      "MaxBurstIops": null
     }
   },
   "P70_LRS": {
@@ -45121,21 +45121,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "750",
       "MinBandwidthMBps": "750",
+      "MaxValueOfMaxShares": "10",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Premium",
-      "MaxSizeGiB": "16384",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "18000",
+      "MaxBurstDurationInMin": null,
+      "name": "P70",
       "MinIOps": "18000",
       "MinSizeGiB": "8192",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "18000",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "10",
-      "name": "P70"
+      "MaxSizeGiB": "16384",
+      "MaxBurstIops": null
     }
   },
   "P70_ZRS": {
@@ -46088,21 +46088,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "ZRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "750",
       "MinBandwidthMBps": "750",
+      "MaxValueOfMaxShares": "10",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Premium",
-      "MaxSizeGiB": "16384",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "18000",
+      "MaxBurstDurationInMin": null,
+      "name": "P70",
       "MinIOps": "18000",
       "MinSizeGiB": "8192",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "18000",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "10",
-      "name": "P70"
+      "MaxSizeGiB": "16384",
+      "MaxBurstIops": null
     }
   },
   "P80_LRS": {
@@ -49791,21 +49791,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "900",
       "MinBandwidthMBps": "900",
+      "MaxValueOfMaxShares": "10",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Premium",
-      "MaxSizeGiB": "32767",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "20000",
+      "MaxBurstDurationInMin": null,
+      "name": "P80",
       "MinIOps": "20000",
       "MinSizeGiB": "16384",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "20000",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "10",
-      "name": "P80"
+      "MaxSizeGiB": "32767",
+      "MaxBurstIops": null
     }
   },
   "P80_ZRS": {
@@ -50758,21 +50758,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "ZRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "900",
       "MinBandwidthMBps": "900",
+      "MaxValueOfMaxShares": "10",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Premium",
-      "MaxSizeGiB": "32767",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "20000",
+      "MaxBurstDurationInMin": null,
+      "name": "P80",
       "MinIOps": "20000",
       "MinSizeGiB": "16384",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "20000",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "10",
-      "name": "P80"
+      "MaxSizeGiB": "32767",
+      "MaxBurstIops": null
     }
   },
   "E1_LRS": {
@@ -52253,16 +52253,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "3",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E1",
-      "MinSizeGiB": "0",
       "redundancy": "LRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "3",
+      "name": "E1",
+      "MaxIOps": "500",
+      "MinSizeGiB": "0",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "4",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "4"
     }
   },
   "E1_ZRS": {
@@ -53193,16 +53193,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "3",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E1",
-      "MinSizeGiB": "0",
       "redundancy": "ZRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "3",
+      "name": "E1",
+      "MaxIOps": "500",
+      "MinSizeGiB": "0",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "4",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "4"
     }
   },
   "E10_LRS": {
@@ -54749,16 +54749,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "3",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E10",
-      "MinSizeGiB": "64",
       "redundancy": "LRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "3",
+      "name": "E10",
+      "MaxIOps": "500",
+      "MinSizeGiB": "64",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "128",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "128"
     }
   },
   "E10_ZRS": {
@@ -55689,16 +55689,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "3",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E10",
-      "MinSizeGiB": "64",
       "redundancy": "ZRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "3",
+      "name": "E10",
+      "MaxIOps": "500",
+      "MinSizeGiB": "64",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "128",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "128"
     }
   },
   "E15_LRS": {
@@ -57223,16 +57223,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "3",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E15",
-      "MinSizeGiB": "128",
       "redundancy": "LRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "3",
+      "name": "E15",
+      "MaxIOps": "500",
+      "MinSizeGiB": "128",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "256",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "256"
     }
   },
   "E15_ZRS": {
@@ -58163,16 +58163,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "3",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E15",
-      "MinSizeGiB": "128",
       "redundancy": "ZRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "3",
+      "name": "E15",
+      "MaxIOps": "500",
+      "MinSizeGiB": "128",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "256",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "256"
     }
   },
   "E2_LRS": {
@@ -59675,16 +59675,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "3",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E2",
-      "MinSizeGiB": "4",
       "redundancy": "LRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "3",
+      "name": "E2",
+      "MaxIOps": "500",
+      "MinSizeGiB": "4",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "8",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "8"
     }
   },
   "E2_ZRS": {
@@ -60615,16 +60615,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "3",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E2",
-      "MinSizeGiB": "4",
       "redundancy": "ZRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "3",
+      "name": "E2",
+      "MaxIOps": "500",
+      "MinSizeGiB": "4",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "8",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "8"
     }
   },
   "E20_LRS": {
@@ -62149,16 +62149,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "3",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E20",
-      "MinSizeGiB": "256",
       "redundancy": "LRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "3",
+      "name": "E20",
+      "MaxIOps": "500",
+      "MinSizeGiB": "256",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "512",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "512"
     }
   },
   "E20_ZRS": {
@@ -63089,16 +63089,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "3",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E20",
-      "MinSizeGiB": "256",
       "redundancy": "ZRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "3",
+      "name": "E20",
+      "MaxIOps": "500",
+      "MinSizeGiB": "256",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "512",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "512"
     }
   },
   "E3_LRS": {
@@ -64601,16 +64601,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "3",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E3",
-      "MinSizeGiB": "8",
       "redundancy": "LRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "3",
+      "name": "E3",
+      "MaxIOps": "500",
+      "MinSizeGiB": "8",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "16",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "16"
     }
   },
   "E3_ZRS": {
@@ -65541,16 +65541,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "3",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E3",
-      "MinSizeGiB": "8",
       "redundancy": "ZRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "3",
+      "name": "E3",
+      "MaxIOps": "500",
+      "MinSizeGiB": "8",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "16",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "16"
     }
   },
   "E30_LRS": {
@@ -67075,16 +67075,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "5",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E30",
-      "MinSizeGiB": "512",
       "redundancy": "LRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "5",
+      "name": "E30",
+      "MaxIOps": "500",
+      "MinSizeGiB": "512",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "1024",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "1024"
     }
   },
   "E30_ZRS": {
@@ -68015,16 +68015,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "5",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E30",
-      "MinSizeGiB": "512",
       "redundancy": "ZRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "5",
+      "name": "E30",
+      "MaxIOps": "500",
+      "MinSizeGiB": "512",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "1024",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "1024"
     }
   },
   "E4_LRS": {
@@ -69549,16 +69549,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "3",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E4",
-      "MinSizeGiB": "16",
       "redundancy": "LRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "3",
+      "name": "E4",
+      "MaxIOps": "500",
+      "MinSizeGiB": "16",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "32",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "32"
     }
   },
   "E4_ZRS": {
@@ -70489,16 +70489,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "3",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E4",
-      "MinSizeGiB": "16",
       "redundancy": "ZRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "3",
+      "name": "E4",
+      "MaxIOps": "500",
+      "MinSizeGiB": "16",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "32",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "32"
     }
   },
   "E40_LRS": {
@@ -72001,16 +72001,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "5",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E40",
-      "MinSizeGiB": "1024",
       "redundancy": "LRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "5",
+      "name": "E40",
+      "MaxIOps": "500",
+      "MinSizeGiB": "1024",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "2048",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "2048"
     }
   },
   "E40_ZRS": {
@@ -72941,16 +72941,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "5",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E40",
-      "MinSizeGiB": "1024",
       "redundancy": "ZRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "5",
+      "name": "E40",
+      "MaxIOps": "500",
+      "MinSizeGiB": "1024",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "2048",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "2048"
     }
   },
   "E50_LRS": {
@@ -74453,16 +74453,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "5",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E50",
-      "MinSizeGiB": "2048",
       "redundancy": "LRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "5",
+      "name": "E50",
+      "MaxIOps": "500",
+      "MinSizeGiB": "2048",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "4096",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "4096"
     }
   },
   "E50_ZRS": {
@@ -75393,16 +75393,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "5",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E50",
-      "MinSizeGiB": "2048",
       "redundancy": "ZRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "5",
+      "name": "E50",
+      "MaxIOps": "500",
+      "MinSizeGiB": "2048",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "4096",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "4096"
     }
   },
   "E6_LRS": {
@@ -76905,16 +76905,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "3",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E6",
-      "MinSizeGiB": "32",
       "redundancy": "LRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "3",
+      "name": "E6",
+      "MaxIOps": "500",
+      "MinSizeGiB": "32",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "64",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "64"
     }
   },
   "E6_ZRS": {
@@ -77845,16 +77845,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "3",
-      "MaxIOps": "500",
       "MinBandwidthMBps": "100",
-      "MinIOps": "500",
-      "name": "E6",
-      "MinSizeGiB": "32",
       "redundancy": "ZRS",
+      "MinIOps": "500",
+      "MaxValueOfMaxShares": "3",
+      "name": "E6",
+      "MaxIOps": "500",
+      "MinSizeGiB": "32",
       "MaxBandwidthMBps": "100",
-      "MaxSizeGiB": "64",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "64"
     }
   },
   "E60_LRS": {
@@ -79335,16 +79335,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "10",
-      "MaxIOps": "2000",
       "MinBandwidthMBps": "400",
-      "MinIOps": "2000",
-      "name": "E60",
-      "MinSizeGiB": "4096",
       "redundancy": "LRS",
+      "MinIOps": "2000",
+      "MaxValueOfMaxShares": "10",
+      "name": "E60",
+      "MaxIOps": "2000",
+      "MinSizeGiB": "4096",
       "MaxBandwidthMBps": "400",
-      "MaxSizeGiB": "8192",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "8192"
     }
   },
   "E60_ZRS": {
@@ -80275,16 +80275,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "10",
-      "MaxIOps": "2000",
       "MinBandwidthMBps": "400",
-      "MinIOps": "2000",
-      "name": "E60",
-      "MinSizeGiB": "4096",
       "redundancy": "ZRS",
+      "MinIOps": "2000",
+      "MaxValueOfMaxShares": "10",
+      "name": "E60",
+      "MaxIOps": "2000",
+      "MinSizeGiB": "4096",
       "MaxBandwidthMBps": "400",
-      "MaxSizeGiB": "8192",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "8192"
     }
   },
   "E70_LRS": {
@@ -81765,16 +81765,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "10",
-      "MaxIOps": "4000",
       "MinBandwidthMBps": "600",
-      "MinIOps": "4000",
-      "name": "E70",
-      "MinSizeGiB": "8192",
       "redundancy": "LRS",
+      "MinIOps": "4000",
+      "MaxValueOfMaxShares": "10",
+      "name": "E70",
+      "MaxIOps": "4000",
+      "MinSizeGiB": "8192",
       "MaxBandwidthMBps": "600",
-      "MaxSizeGiB": "16384",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "16384"
     }
   },
   "E70_ZRS": {
@@ -82705,16 +82705,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "10",
-      "MaxIOps": "4000",
       "MinBandwidthMBps": "600",
-      "MinIOps": "4000",
-      "name": "E70",
-      "MinSizeGiB": "8192",
       "redundancy": "ZRS",
+      "MinIOps": "4000",
+      "MaxValueOfMaxShares": "10",
+      "name": "E70",
+      "MaxIOps": "4000",
+      "MinSizeGiB": "8192",
       "MaxBandwidthMBps": "600",
-      "MaxSizeGiB": "16384",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "16384"
     }
   },
   "E80_LRS": {
@@ -84195,16 +84195,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "10",
-      "MaxIOps": "6000",
       "MinBandwidthMBps": "750",
-      "MinIOps": "6000",
-      "name": "E80",
-      "MinSizeGiB": "16384",
       "redundancy": "LRS",
+      "MinIOps": "6000",
+      "MaxValueOfMaxShares": "10",
+      "name": "E80",
+      "MaxIOps": "6000",
+      "MinSizeGiB": "16384",
       "MaxBandwidthMBps": "750",
-      "MaxSizeGiB": "32767",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "32767"
     }
   },
   "E80_ZRS": {
@@ -85135,16 +85135,16 @@
       }
     ],
     "specs": {
-      "MaxValueOfMaxShares": "10",
-      "MaxIOps": "6000",
       "MinBandwidthMBps": "750",
-      "MinIOps": "6000",
-      "name": "E80",
-      "MinSizeGiB": "16384",
       "redundancy": "ZRS",
+      "MinIOps": "6000",
+      "MaxValueOfMaxShares": "10",
+      "name": "E80",
+      "MaxIOps": "6000",
+      "MinSizeGiB": "16384",
       "MaxBandwidthMBps": "750",
-      "MaxSizeGiB": "32767",
-      "tier": "StandardSSD"
+      "tier": "StandardSSD",
+      "MaxSizeGiB": "32767"
     }
   },
   "S10_LRS": {
@@ -86603,21 +86603,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "60",
       "MinBandwidthMBps": "60",
+      "MaxValueOfMaxShares": "1",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Standard",
-      "MaxSizeGiB": "128",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "500",
+      "MaxBurstDurationInMin": null,
+      "name": "S10",
       "MinIOps": "500",
       "MinSizeGiB": "64",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "500",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "1",
-      "name": "S10"
+      "MaxSizeGiB": "128",
+      "MaxBurstIops": null
     }
   },
   "S15_LRS": {
@@ -88076,21 +88076,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "60",
       "MinBandwidthMBps": "60",
+      "MaxValueOfMaxShares": "1",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Standard",
-      "MaxSizeGiB": "256",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "500",
+      "MaxBurstDurationInMin": null,
+      "name": "S15",
       "MinIOps": "500",
       "MinSizeGiB": "128",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "500",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "1",
-      "name": "S15"
+      "MaxSizeGiB": "256",
+      "MaxBurstIops": null
     }
   },
   "S20_LRS": {
@@ -89549,21 +89549,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "60",
       "MinBandwidthMBps": "60",
+      "MaxValueOfMaxShares": "2",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Standard",
-      "MaxSizeGiB": "512",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "500",
+      "MaxBurstDurationInMin": null,
+      "name": "S20",
       "MinIOps": "500",
       "MinSizeGiB": "256",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "500",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "2",
-      "name": "S20"
+      "MaxSizeGiB": "512",
+      "MaxBurstIops": null
     }
   },
   "S30_LRS": {
@@ -91022,21 +91022,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "60",
       "MinBandwidthMBps": "60",
+      "MaxValueOfMaxShares": "5",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Standard",
-      "MaxSizeGiB": "1024",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "500",
+      "MaxBurstDurationInMin": null,
+      "name": "S30",
       "MinIOps": "500",
       "MinSizeGiB": "512",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "500",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "5",
-      "name": "S30"
+      "MaxSizeGiB": "1024",
+      "MaxBurstIops": null
     }
   },
   "S4_LRS": {
@@ -92495,21 +92495,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "60",
       "MinBandwidthMBps": "60",
+      "MaxValueOfMaxShares": "1",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Standard",
-      "MaxSizeGiB": "32",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "500",
+      "MaxBurstDurationInMin": null,
+      "name": "S4",
       "MinIOps": "500",
       "MinSizeGiB": "0",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "500",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "1",
-      "name": "S4"
+      "MaxSizeGiB": "32",
+      "MaxBurstIops": null
     }
   },
   "S40_LRS": {
@@ -93968,21 +93968,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "60",
       "MinBandwidthMBps": "60",
+      "MaxValueOfMaxShares": "5",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Standard",
-      "MaxSizeGiB": "2048",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "500",
+      "MaxBurstDurationInMin": null,
+      "name": "S40",
       "MinIOps": "500",
       "MinSizeGiB": "1024",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "500",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "5",
-      "name": "S40"
+      "MaxSizeGiB": "2048",
+      "MaxBurstIops": null
     }
   },
   "S50_LRS": {
@@ -95441,21 +95441,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "60",
       "MinBandwidthMBps": "60",
+      "MaxValueOfMaxShares": "5",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Standard",
-      "MaxSizeGiB": "4096",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "500",
+      "MaxBurstDurationInMin": null,
+      "name": "S50",
       "MinIOps": "500",
       "MinSizeGiB": "2048",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "500",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "5",
-      "name": "S50"
+      "MaxSizeGiB": "4096",
+      "MaxBurstIops": null
     }
   },
   "S6_LRS": {
@@ -96914,21 +96914,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "60",
       "MinBandwidthMBps": "60",
+      "MaxValueOfMaxShares": "1",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Standard",
-      "MaxSizeGiB": "64",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "500",
+      "MaxBurstDurationInMin": null,
+      "name": "S6",
       "MinIOps": "500",
       "MinSizeGiB": "32",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "500",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "1",
-      "name": "S6"
+      "MaxSizeGiB": "64",
+      "MaxBurstIops": null
     }
   },
   "S60_LRS": {
@@ -98387,21 +98387,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "300",
       "MinBandwidthMBps": "60",
+      "MaxValueOfMaxShares": "5",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Standard",
-      "MaxSizeGiB": "8192",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "1300",
+      "MaxBurstDurationInMin": null,
+      "name": "S60",
       "MinIOps": "500",
       "MinSizeGiB": "4096",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "1300",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "5",
-      "name": "S60"
+      "MaxSizeGiB": "8192",
+      "MaxBurstIops": null
     }
   },
   "S70_LRS": {
@@ -99860,21 +99860,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "500",
       "MinBandwidthMBps": "300",
+      "MaxValueOfMaxShares": "5",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Standard",
-      "MaxSizeGiB": "16384",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "2000",
+      "MaxBurstDurationInMin": null,
+      "name": "S70",
       "MinIOps": "1300",
       "MinSizeGiB": "8192",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "2000",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "5",
-      "name": "S70"
+      "MaxSizeGiB": "16384",
+      "MaxBurstIops": null
     }
   },
   "S80_LRS": {
@@ -101333,21 +101333,21 @@
       }
     ],
     "specs": {
-      "BurstCreditBucketSizeInGiB": null,
-      "MaxBurstDurationInMin": null,
       "redundancy": "LRS",
+      "BurstCreditBucketSizeInIO": null,
       "MaxBandwidthMBps": "500",
       "MinBandwidthMBps": "500",
+      "MaxValueOfMaxShares": "5",
+      "BurstCreditBucketSizeInGiB": null,
       "tier": "Standard",
-      "MaxSizeGiB": "32767",
+      "MaxBurstBandwidthMBps": null,
+      "MaxIOps": "2000",
+      "MaxBurstDurationInMin": null,
+      "name": "S80",
       "MinIOps": "2000",
       "MinSizeGiB": "16384",
-      "BurstCreditBucketSizeInIO": null,
-      "MaxIOps": "2000",
-      "MaxBurstIops": null,
-      "MaxBurstBandwidthMBps": null,
-      "MaxValueOfMaxShares": "5",
-      "name": "S80"
+      "MaxSizeGiB": "32767",
+      "MaxBurstIops": null
     }
   },
   "U_LRS": {
@@ -104918,28 +104918,28 @@
       }
     ],
     "specs": {
-      "MinIopsReadOnly": "100",
       "MaxIopsReadOnly": "400000",
-      "MinIopsPerGiBReadOnly": "0",
       "MinIOpsReadWrite": "100",
-      "MaxIopsPerGiBReadWrite": "1000",
-      "tier": "UltraSSD",
-      "MaxBandwidthMBpsReadOnly": "10000",
-      "MinBandwidthMBpsReadWrite": "1",
-      "MinSizeGiB": "4",
-      "MinIOSizeKiBps": "0",
-      "MaxValueOfMaxShares": "15",
-      "MinIopsPerGiBReadWrite": "0",
-      "MaxIOpsReadWrite": "400000",
-      "MaxSizeGiB": "65536",
-      "MaxBandwidthMBpsReadWrite": "10000",
-      "MaxIopsPerGiBReadOnly": "1000",
-      "redundancy": "LRS",
-      "PlatformFaultDomainCount": "2",
-      "name": "UltraSSD",
-      "BillingPartitionSizes": "4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 3072, 4096, 5120, 6144, 7168, 8192, 9216, 10240, 11264, 12288, 13312, 14336, 15360, 16384, 17408, 18432, 19456, 20480, 21504, 22528, 23552,24576,25600,26624,27648,28672,29696,30720,31744,32768,33792,34816,35840,36864,37888,38912,39936,40960,41984,43008,44032,45056,46080,47104,48128,49152,50176,51200,52224,53248,54272,55296,56320,57344,58368,59392,60416,61440,62464,63488,64512,65536",
       "MaxIOSizeKiBps": "256",
-      "MinBandwidthMBpsReadOnly": "1"
+      "MaxBandwidthMBpsReadWrite": "10000",
+      "BillingPartitionSizes": "4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 3072, 4096, 5120, 6144, 7168, 8192, 9216, 10240, 11264, 12288, 13312, 14336, 15360, 16384, 17408, 18432, 19456, 20480, 21504, 22528, 23552,24576,25600,26624,27648,28672,29696,30720,31744,32768,33792,34816,35840,36864,37888,38912,39936,40960,41984,43008,44032,45056,46080,47104,48128,49152,50176,51200,52224,53248,54272,55296,56320,57344,58368,59392,60416,61440,62464,63488,64512,65536",
+      "MinIopsPerGiBReadOnly": "0",
+      "MaxBandwidthMBpsReadOnly": "10000",
+      "MaxSizeGiB": "65536",
+      "MaxValueOfMaxShares": "15",
+      "MaxIOpsReadWrite": "400000",
+      "tier": "UltraSSD",
+      "MinBandwidthMBpsReadOnly": "1",
+      "MaxIopsPerGiBReadWrite": "1000",
+      "MinIopsPerGiBReadWrite": "0",
+      "redundancy": "LRS",
+      "MaxIopsPerGiBReadOnly": "1000",
+      "MinSizeGiB": "4",
+      "PlatformFaultDomainCount": "2",
+      "MinIopsReadOnly": "100",
+      "MinBandwidthMBpsReadWrite": "1",
+      "MinIOSizeKiBps": "0",
+      "name": "UltraSSD"
     }
   }
 }
